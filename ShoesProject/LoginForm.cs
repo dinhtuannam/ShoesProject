@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ShoesProject
 {
-    public partial class Home : Form
+    public partial class LoginForm : Form
     {
-        public Home()
+        public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
