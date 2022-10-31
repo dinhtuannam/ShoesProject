@@ -19,7 +19,13 @@ namespace ShoesProject
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+           
         }
     }
 }
