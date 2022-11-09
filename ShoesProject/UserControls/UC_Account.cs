@@ -21,5 +21,10 @@ namespace ShoesProject.UserControls
         {
 
         }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

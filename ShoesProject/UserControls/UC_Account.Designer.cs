@@ -193,6 +193,7 @@
             this.btnEditAccount.TabIndex = 1;
             this.btnEditAccount.Text = "Sửa";
             this.btnEditAccount.UseVisualStyleBackColor = true;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
             // panel1
             // 
