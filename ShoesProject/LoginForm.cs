@@ -39,7 +39,7 @@ namespace ShoesProject
             }
             if(pass == "")
             {
-                txtError.Text = "Password cannot be requiredddd";
+                txtError.Text = "Password cannot be required";
                 return false;
             }
             txtError.Text = "";
