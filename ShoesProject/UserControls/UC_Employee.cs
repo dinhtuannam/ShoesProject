@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ShoesProject.UserControls
 {
-    public partial class UC_Account : UserControl
+    public partial class UC_Employee : UserControl
     {
-        public UC_Account()
+        public UC_Employee()
         {
             InitializeComponent();
             LoadAccountList();

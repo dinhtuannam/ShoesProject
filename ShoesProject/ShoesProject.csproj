@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AccountManagement.Designer.cs">
-      <DependentUpon>AccountManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -76,15 +70,24 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UC_Account.cs">
+    <Compile Include="UserControls\UC_Customers.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Account.Designer.cs">
-      <DependentUpon>UC_Account.cs</DependentUpon>
+    <Compile Include="UserControls\UC_Customers.Designer.cs">
+      <DependentUpon>UC_Customers.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountManagement.resx">
-      <DependentUpon>AccountManagement.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="UserControls\UC_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Employee.Designer.cs">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC_Products.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Products.Designer.cs">
+      <DependentUpon>UC_Products.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,8 +106,14 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UC_Account.resx">
-      <DependentUpon>UC_Account.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UC_Customers.resx">
+      <DependentUpon>UC_Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Employee.resx">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Products.resx">
+      <DependentUpon>UC_Products.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

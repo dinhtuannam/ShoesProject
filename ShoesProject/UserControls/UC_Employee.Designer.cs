@@ -1,6 +1,6 @@
 ﻿namespace ShoesProject.UserControls
 {
-    partial class UC_Account
+    partial class UC_Employee
     {
         /// <summary> 
         /// Required designer variable.
