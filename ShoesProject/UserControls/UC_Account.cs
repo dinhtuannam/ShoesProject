@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +16,15 @@ namespace ShoesProject.UserControls
         public UC_Account()
         {
             InitializeComponent();
+            LoadAccountList();
         }
 
+        private void LoadAccountList()
+        {
+            string query = "Select * from TAIKHOAN";
+            DataProvider provider = new DataProvider();
+            dtgvAccount.DataSource = provider.ExecuteQuery(query); 
+        }
         private void btnAddAccount_Click(object sender, EventArgs e)
         {
 
