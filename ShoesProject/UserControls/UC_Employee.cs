@@ -22,8 +22,7 @@ namespace ShoesProject.UserControls
         private void LoadAccountList()
         {
             string query = "Select * from TAIKHOAN";
-            DataProvider provider = new DataProvider();
-            dtgvAccount.DataSource = provider.ExecuteQuery(query); 
+            dtgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query); 
         }
         private void btnAddAccount_Click(object sender, EventArgs e)
         {

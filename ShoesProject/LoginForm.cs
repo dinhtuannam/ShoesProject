@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -48,8 +49,39 @@ namespace ShoesProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Boolean result = validate();
-            
+            if(validate() && login())
+            {
+                MessageBox.Show("Login Success");
+                this.Hide();
+                Home home = new Home();
+                home.ShowDialog();
+                this.Close();
+            }
+        }
+
+        private Boolean login()
+        {
+            string name = txtName.Text;
+            string pass = txtPass.Text;
+            DataTable dt = DAO_Employee.Instance.Login(name, pass);
+            if (dt.Rows.Count <= 0)
+            {
+                txtError.Text = "Username or Password not correct";
+                return false;
+            }
+            else
+            {
+                string text = Convert.ToString( dt.Rows[0][4] );
+                string[] subs = text.Split(' ');
+                string permission = subs[0];
+                if (String.Equals(permission, "AD"))
+                    return true;
+                else
+                {
+                    MessageBox.Show("You dont have permission to login here");
+                    return false;
+                }
+            }
         }
     }
 }
