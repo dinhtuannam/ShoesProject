@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAO_Employee.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
