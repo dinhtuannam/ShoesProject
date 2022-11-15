@@ -23,6 +23,18 @@ namespace ShoesProject.UserControls
         {
             string query = "Select * from TAIKHOAN";
             dtgvAccount.DataSource = DataProvider.Instance.ExecuteQuery(query); 
+<<<<<<< HEAD
+=======
+        }
+        private void btnAddAccount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> a278921957f272b261c5975e3fd51f736fe559c0
         }
     
     }
