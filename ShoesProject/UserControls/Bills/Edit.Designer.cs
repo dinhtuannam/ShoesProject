@@ -46,6 +46,7 @@
             this.dtpicker = new Guna.UI.WinForms.GunaDateTimePicker();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.lbtrangthai = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +104,7 @@
             // 
             this.txttotal.BackColor = System.Drawing.Color.White;
             this.txttotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txttotal.Enabled = false;
             this.txttotal.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txttotal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txttotal.LineColor = System.Drawing.Color.Gainsboro;
@@ -173,7 +175,7 @@
             // 
             this.btnConfirm.AnimationHoverSpeed = 0.07F;
             this.btnConfirm.AnimationSpeed = 0.03F;
-            this.btnConfirm.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnConfirm.BaseColor = System.Drawing.Color.Black;
             this.btnConfirm.BorderColor = System.Drawing.Color.Black;
             this.btnConfirm.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnConfirm.FocusedColor = System.Drawing.Color.Empty;
@@ -312,11 +314,24 @@
             this.gunaLabel6.TabIndex = 42;
             this.gunaLabel6.Text = "So luong";
             // 
+            // lbtrangthai
+            // 
+            this.lbtrangthai.AutoSize = true;
+            this.lbtrangthai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtrangthai.ForeColor = System.Drawing.Color.Red;
+            this.lbtrangthai.Location = new System.Drawing.Point(219, 142);
+            this.lbtrangthai.Name = "lbtrangthai";
+            this.lbtrangthai.Size = new System.Drawing.Size(76, 20);
+            this.lbtrangthai.TabIndex = 43;
+            this.lbtrangthai.Text = "trang thai";
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(619, 394);
+            this.Controls.Add(this.lbtrangthai);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.dtpicker);
@@ -341,7 +356,7 @@
             this.Name = "Edit";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit";
             this.Load += new System.EventHandler(this.Edit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -370,5 +385,6 @@
         private Guna.UI.WinForms.GunaDateTimePicker dtpicker;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaLabel lbtrangthai;
     }
 }

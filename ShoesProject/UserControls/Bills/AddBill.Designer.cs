@@ -46,6 +46,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.lbtrangthai = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,7 +161,8 @@
             // 
             this.btnAdd.AnimationHoverSpeed = 0.07F;
             this.btnAdd.AnimationSpeed = 0.03F;
-            this.btnAdd.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnAdd.BackColor = System.Drawing.Color.Black;
+            this.btnAdd.BaseColor = System.Drawing.Color.Black;
             this.btnAdd.BorderColor = System.Drawing.Color.Black;
             this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
@@ -310,11 +312,24 @@
             this.gunaLabel6.TabIndex = 38;
             this.gunaLabel6.Text = "Id san pham";
             // 
+            // lbtrangthai
+            // 
+            this.lbtrangthai.AutoSize = true;
+            this.lbtrangthai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtrangthai.ForeColor = System.Drawing.Color.Red;
+            this.lbtrangthai.Location = new System.Drawing.Point(218, 131);
+            this.lbtrangthai.Name = "lbtrangthai";
+            this.lbtrangthai.Size = new System.Drawing.Size(76, 20);
+            this.lbtrangthai.TabIndex = 39;
+            this.lbtrangthai.Text = "trang thai";
+            // 
             // AddBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(612, 396);
+            this.Controls.Add(this.lbtrangthai);
             this.Controls.Add(this.gunaLabel6);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.dataGridView1);
@@ -339,7 +354,7 @@
             this.Name = "AddBill";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBill";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddBill_FormClosing);
             this.Load += new System.EventHandler(this.AddBill_Load);
@@ -369,5 +384,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private Guna.UI.WinForms.GunaLabel lbtrangthai;
     }
 }

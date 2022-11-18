@@ -36,6 +36,9 @@
             this.btnRemove = new Guna.UI.WinForms.GunaButton();
             this.btnRefresh = new Guna.UI.WinForms.GunaButton();
             this.btnDetail = new Guna.UI.WinForms.GunaButton();
+            this.txtsearch = new Guna.UI.WinForms.GunaLineTextBox();
+            this.lbtrangthai = new Guna.UI.WinForms.GunaLabel();
+            this.btnSearch = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(286, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Bills Management";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 
@@ -185,10 +187,61 @@
             this.btnDetail.Text = "Detail";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
+            // txtsearch
+            // 
+            this.txtsearch.BackColor = System.Drawing.Color.White;
+            this.txtsearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtsearch.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtsearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtsearch.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtsearch.Location = new System.Drawing.Point(86, 49);
+            this.txtsearch.Name = "txtsearch";
+            this.txtsearch.PasswordChar = '\0';
+            this.txtsearch.SelectedText = "";
+            this.txtsearch.Size = new System.Drawing.Size(111, 26);
+            this.txtsearch.TabIndex = 9;
+            // 
+            // lbtrangthai
+            // 
+            this.lbtrangthai.AutoSize = true;
+            this.lbtrangthai.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtrangthai.ForeColor = System.Drawing.Color.Red;
+            this.lbtrangthai.Location = new System.Drawing.Point(14, 25);
+            this.lbtrangthai.Name = "lbtrangthai";
+            this.lbtrangthai.Size = new System.Drawing.Size(82, 21);
+            this.lbtrangthai.TabIndex = 12;
+            this.lbtrangthai.Text = "Trang thai";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AnimationHoverSpeed = 0.07F;
+            this.btnSearch.AnimationSpeed = 0.03F;
+            this.btnSearch.BaseColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSearch.Location = new System.Drawing.Point(42, 48);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSearch.OnHoverImage = null;
+            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSearch.Size = new System.Drawing.Size(38, 27);
+            this.btnSearch.TabIndex = 13;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // BillsManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.lbtrangthai);
+            this.Controls.Add(this.txtsearch);
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnRemove);
@@ -214,5 +267,8 @@
         private Guna.UI.WinForms.GunaButton btnRemove;
         private Guna.UI.WinForms.GunaButton btnRefresh;
         private Guna.UI.WinForms.GunaButton btnDetail;
+        private Guna.UI.WinForms.GunaLineTextBox txtsearch;
+        private Guna.UI.WinForms.GunaLabel lbtrangthai;
+        private Guna.UI.WinForms.GunaButton btnSearch;
     }
 }

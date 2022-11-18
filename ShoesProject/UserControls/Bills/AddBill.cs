@@ -20,6 +20,7 @@ namespace ShoesProject.UserControls.Bills
 
         private void AddBill_Load(object sender, EventArgs e)
         {
+            lbtrangthai.Text = "";
             table = new DataTable();
             table.Columns.Add("ID san pham");
             table.Columns.Add("Don gia");
@@ -30,12 +31,43 @@ namespace ShoesProject.UserControls.Bills
 
         private void btnaddsanpham_Click(object sender, EventArgs e)
         {
-            
+            if (txtidsanpham.Text.Trim().Equals(""))
+            {
+                lbtrangthai.Text = "Vui long nhap id san pham";
+                return;
+            }
+            if (txtamount.Text.Trim().Equals(""))
+            {
+                lbtrangthai.Text = "Vui long chon so luong";
+                return;
+            }
+            int result;
+            if (!int.TryParse(txtamount.Text,out result))
+            {
+                lbtrangthai.Text = "Vui long nhap so luong hop le";
+                return;
+            }
+            if (int.Parse(txtamount.Text)<=0)
+            {
+                lbtrangthai.Text = "Ko nhap so luong duoi 1";
+                return;
+            }
             SQLData sqldata = new SQLData();
             string query = String.Format("Select gia from sanpham where idsp='{0}'",txtidsanpham.Text);
-            DataTable datatable = sqldata.getData(query);
+            Boolean success = false;
+            object test = sqldata.Scalar(query, ref success);
+            if (success && test == null)
+            {
+                lbtrangthai.Text = "Ko tim thay id san pham=" + txtidsanpham.Text + " trong table sanpham";
+                return;
+            }
+            if (!success)
+            {
+                lbtrangthai.Text = "Ko ket noi duoc table sanpham";
+                return;
+            }
+            float dongia = float.Parse(test.ToString());
             float tongtien=0;int amount=0;
-            float dongia = float.Parse(datatable.Rows[0][0].ToString());
             int n = table.Rows.Count;
             for(int i = 0;i < n; i++)
             {
@@ -56,14 +88,30 @@ namespace ShoesProject.UserControls.Bills
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int n = table.Rows.Count;
+            if (n == 0)
+            {
+                lbtrangthai.Text = "Vui long chon it nhat 1 san pham";
+                return;
+            }
             SQLData sqldata = new SQLData();
             string query = String.Format("insert into hoadon values ('{0}','{1}','{2}','{3}','{4}','{5}')",txtid.Text,txtidnhanvien.Text,txtidcustomer.Text,date.Value.ToString("yyyyMMdd hh:mm:ss tt"),txttotal.Text,null);
-            sqldata.Execute(query);
-            int n = table.Rows.Count;
+            Boolean success = false;
+            sqldata.Execute(query,ref success);
+            if (!success)
+            {
+                lbtrangthai.Text = "Them hoa don that bai";
+                return;
+            }
             for(int i =0;i < n; i++)
             {
-                query = String.Format("insert into cthd values('{0}','{1}','{2}','{3}')", txtid.Text, table.Rows[i][0].ToString(), table.Rows[i][2].ToString(), table.Rows[i][3].ToString());
-                sqldata.Execute(query);
+                query =String.Format("insert into cthd values('{0}','{1}','{2}','{3}')", txtid.Text, table.Rows[i][0].ToString(), table.Rows[i][2].ToString(), table.Rows[i][3].ToString());
+                sqldata.Execute(query,ref success);
+                if (!success)
+                {
+                    lbtrangthai.Text = "Them cthd that bai";
+                    return;
+                }
             }
             Close();
         }
@@ -75,12 +123,28 @@ namespace ShoesProject.UserControls.Bills
 
         private void btnremovesp_Click(object sender, EventArgs e)
         {
+            if (dataGridView1 == null)
+            {
+                lbtrangthai.Text = "Bang du lieu null";
+                return;
+            }
+            if (dataGridView1.CurrentRow == null)
+            {
+                lbtrangthai.Text = "Vui long chon 1 san pham de xoa";
+                return;
+            }
             int row = dataGridView1.CurrentRow.Index;
             table.Rows[row].Delete();
             txttotal.Text = CaculateTotal().ToString();
         }
         private float CaculateTotal()
         {
+
+            if (dataGridView1 == null)
+            {
+                lbtrangthai.Text = "Bang du lieu null";
+                return 0;
+            }
             int n = table.Rows.Count;
             float sum = 0;
             for(int i =0;i < n; i++)

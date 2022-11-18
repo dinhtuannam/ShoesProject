@@ -5,33 +5,110 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.CodeDom.Compiler;
 
 namespace ShoesProject.UserControls.Bills
 {
     internal class SQLData
     {
-            string strconnect = "Data Source=ADMIN-PC\\HACO;Initial Catalog=QLShopGiay;Integrated Security=True";
+        string strconnect = "Data Source=ADMIN-PC\\HACO;Initial Catalog=QLShopGiay;Integrated Security=True";
             public SQLData()
             {
 
             }
-            public DataTable getData(string query)
+            public DataTable getData(string query,ref Boolean success)
+           
             {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, strconnect);
-                
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                return table;
+            if (query.Equals(""))
+            {
+                MessageBox.Show("Cau truy van trong rong");
+                success = false;
+                return null;
             }
-            public void Execute(string query)
+            DataTable table = new DataTable();
+            try
             {
-                SqlConnection connect = new SqlConnection(strconnect);
+                using (SqlDataAdapter adapter = new SqlDataAdapter(query, strconnect)){
+                    adapter.Fill(table);
+                    success = true;
+                    return table;
+                    
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Exception:" + ex.Message);
+                success = false;
+                return null;
+            }
+            }
+            public void Execute(string query,ref Boolean success)
+            {
+            if (query.Equals(""))
+            {
+                MessageBox.Show("Cau truy van trong rong");
+                success = false;
+                return ;
+            }
+            SqlConnection connect = null ;
+            try
+            {
+                connect = new SqlConnection(strconnect);
                 connect.Open();
                 SqlCommand command = new SqlCommand();
                 command = connect.CreateCommand();
                 command.CommandText = query;
                 command.ExecuteNonQuery();
-                 connect.Close();
+                success = true;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Exception:" + e.Message);
+                success = false;
+            }
+            finally
+            {
+                if (connect != null)
+                connect.Close();
+                
+            }
+                 
+            }
+            public object Scalar(string query,ref Boolean success)
+            {
+            if (query.Equals(""))
+            {
+                MessageBox.Show("Cau truy van trong rong");
+                success = false;
+                return null;
+            }
+            SqlConnection connect = null;
+            try
+            {
+                connect = new SqlConnection(strconnect);
+                connect.Open();
+                SqlCommand command = new SqlCommand();
+                command = connect.CreateCommand();
+                command.CommandText = query;
+                object temp = command.ExecuteScalar();
+                success = true;
+                return temp;
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show("Exception:" + e.Message);
+                success = false;
+                return null;
+            }
+            finally
+            {
+                if (connect != null)
+                {
+                    connect.Close();
+                }
+                
+            }
             }
 
 

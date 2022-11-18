@@ -43,6 +43,7 @@
             this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lbtrangthai = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,7 +130,7 @@
             this.txtdate.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txtdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdate.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtdate.Location = new System.Drawing.Point(135, 172);
+            this.txtdate.Location = new System.Drawing.Point(133, 172);
             this.txtdate.Name = "txtdate";
             this.txtdate.PasswordChar = '\0';
             this.txtdate.SelectedText = "";
@@ -234,12 +235,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(575, 106);
             this.dataGridView1.TabIndex = 15;
             // 
+            // lbtrangthai
+            // 
+            this.lbtrangthai.AutoSize = true;
+            this.lbtrangthai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtrangthai.ForeColor = System.Drawing.Color.Red;
+            this.lbtrangthai.Location = new System.Drawing.Point(299, 178);
+            this.lbtrangthai.Name = "lbtrangthai";
+            this.lbtrangthai.Size = new System.Drawing.Size(76, 20);
+            this.lbtrangthai.TabIndex = 16;
+            this.lbtrangthai.Text = "trang thai";
+            // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(599, 349);
+            this.Controls.Add(this.lbtrangthai);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.gunaLabel7);
             this.Controls.Add(this.gunaLabel6);
@@ -261,7 +274,7 @@
             this.Name = "Detail";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detail";
             this.Load += new System.EventHandler(this.Detail_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -287,5 +300,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
         private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI.WinForms.GunaLabel lbtrangthai;
     }
 }

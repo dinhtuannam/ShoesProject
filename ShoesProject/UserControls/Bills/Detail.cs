@@ -22,19 +22,29 @@ namespace ShoesProject.UserControls.Bills
 
         private void Detail_Load(object sender, EventArgs e)
         {
+            lbtrangthai.Text = "";
             string idcustomer = table.Rows[0][2].ToString().Trim();
             string idhoadon = table.Rows[0][0].ToString().Trim();
             string idnhanvien = table.Rows[0][1].ToString().Trim();
             string date = table.Rows[0][3].ToString();
             string total = table.Rows[0][4].ToString();
             SQLData sqldata = new SQLData();
-            
-            string namenhanvien =sqldata.getData(String.Format("Select tennv from nhanvien where idnv='{0}'", idnhanvien)).Rows[0][0].ToString();
-            
-            string namekhachhang = sqldata.getData(String.Format("Select tenkhachhang from khachhang where idkh ='{0}'", idcustomer)).Rows[0][0].ToString();
-       
-            table = sqldata.getData(String.Format("Select idsp ,soluong,tongtien from cthd where idhd='{0}'", idhoadon));
-           
+            Boolean success = false;
+            string namenhanvien =sqldata.Scalar(String.Format("Select tennv from nhanvien where idnv='{0}'", idnhanvien),ref success).ToString();
+            if (!success)
+            {
+                lbtrangthai.Text = "Ko ket noi duoc table nhanvien";
+            }
+            string namekhachhang = sqldata.Scalar(String.Format("Select tenkhachhang from khachhang where idkh ='{0}'", idcustomer),ref success).ToString();
+            if (!success)
+            {
+                lbtrangthai.Text = "Ko ket noi duoc table khachhang";
+            }
+            table = sqldata.getData(String.Format("Select idsp ,soluong,tongtien from cthd where idhd='{0}'", idhoadon),ref success);
+            if (!success)
+            {
+                lbtrangthai.Text = "Ko ket noi duoc table cthd";
+            }          
             int n = table.Rows.Count;
 
             DataTable newtable = new DataTable();
