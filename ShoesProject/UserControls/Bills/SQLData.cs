@@ -12,7 +12,7 @@ namespace ShoesProject.UserControls.Bills
 {
     internal class SQLData
     {
-        string strconnect = "Data Source=ADMIN-PC\\HACO;Initial Catalog=QLShopGiay;Integrated Security=True";
+        string strconnect = "Data source= ADMIN\\SQLEXPRESS ;database= QLShopGiay ;Integrated Security = True";
             public SQLData()
             {
 
