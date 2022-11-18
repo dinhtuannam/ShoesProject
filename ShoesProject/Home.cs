@@ -1,4 +1,5 @@
 ﻿using ShoesProject.UserControls;
+using ShoesProject.UserControls.Bills;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,7 +65,8 @@ namespace ShoesProject
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            BillsManagement bills = new BillsManagement();
+            addUserControl(bills);
         }
     }
 }
