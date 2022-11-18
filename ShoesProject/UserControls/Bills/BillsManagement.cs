@@ -169,5 +169,15 @@ namespace ShoesProject.UserControls.Bills
                 lbtrangthai.Text = "Ko ket noi duoc table hoadon";
             }
         }
+
+        private void txtsearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbtrangthai_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

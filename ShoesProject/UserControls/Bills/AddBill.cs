@@ -159,5 +159,10 @@ namespace ShoesProject.UserControls.Bills
         {
 
         }
+
+        private void txtidsanpham_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,201 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtid = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txtidnhanvien = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txtidcustomer = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txtnhanvien = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txtcustomer = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txtdate = new Guna.UI.WinForms.GunaLineTextBox();
-            this.txttotal = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel7 = new Guna.UI.WinForms.GunaLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lbtrangthai = new Guna.UI.WinForms.GunaLabel();
+            this.txtidcustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtidnhanvien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtdate = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lbtrangthai = new System.Windows.Forms.Label();
+            this.txtcustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtnhanvien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txttotal = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtid
-            // 
-            this.txtid.BackColor = System.Drawing.Color.White;
-            this.txtid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtid.Enabled = false;
-            this.txtid.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtid.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtid.Location = new System.Drawing.Point(135, 27);
-            this.txtid.Name = "txtid";
-            this.txtid.PasswordChar = '\0';
-            this.txtid.SelectedText = "";
-            this.txtid.Size = new System.Drawing.Size(160, 26);
-            this.txtid.TabIndex = 0;
-            // 
-            // txtidnhanvien
-            // 
-            this.txtidnhanvien.BackColor = System.Drawing.Color.White;
-            this.txtidnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtidnhanvien.Enabled = false;
-            this.txtidnhanvien.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtidnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtidnhanvien.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtidnhanvien.Location = new System.Drawing.Point(135, 78);
-            this.txtidnhanvien.Name = "txtidnhanvien";
-            this.txtidnhanvien.PasswordChar = '\0';
-            this.txtidnhanvien.SelectedText = "";
-            this.txtidnhanvien.Size = new System.Drawing.Size(160, 26);
-            this.txtidnhanvien.TabIndex = 1;
-            // 
-            // txtidcustomer
-            // 
-            this.txtidcustomer.BackColor = System.Drawing.Color.White;
-            this.txtidcustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtidcustomer.Enabled = false;
-            this.txtidcustomer.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtidcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtidcustomer.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtidcustomer.Location = new System.Drawing.Point(135, 125);
-            this.txtidcustomer.Name = "txtidcustomer";
-            this.txtidcustomer.PasswordChar = '\0';
-            this.txtidcustomer.SelectedText = "";
-            this.txtidcustomer.Size = new System.Drawing.Size(160, 26);
-            this.txtidcustomer.TabIndex = 2;
-            // 
-            // txtnhanvien
-            // 
-            this.txtnhanvien.BackColor = System.Drawing.Color.White;
-            this.txtnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtnhanvien.Enabled = false;
-            this.txtnhanvien.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtnhanvien.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtnhanvien.Location = new System.Drawing.Point(313, 78);
-            this.txtnhanvien.Name = "txtnhanvien";
-            this.txtnhanvien.PasswordChar = '\0';
-            this.txtnhanvien.SelectedText = "";
-            this.txtnhanvien.Size = new System.Drawing.Size(160, 26);
-            this.txtnhanvien.TabIndex = 3;
-            // 
-            // txtcustomer
-            // 
-            this.txtcustomer.BackColor = System.Drawing.Color.White;
-            this.txtcustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtcustomer.Enabled = false;
-            this.txtcustomer.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtcustomer.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtcustomer.Location = new System.Drawing.Point(313, 125);
-            this.txtcustomer.Name = "txtcustomer";
-            this.txtcustomer.PasswordChar = '\0';
-            this.txtcustomer.SelectedText = "";
-            this.txtcustomer.Size = new System.Drawing.Size(160, 26);
-            this.txtcustomer.TabIndex = 4;
-            // 
-            // txtdate
-            // 
-            this.txtdate.BackColor = System.Drawing.Color.White;
-            this.txtdate.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtdate.Enabled = false;
-            this.txtdate.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtdate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtdate.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtdate.Location = new System.Drawing.Point(133, 172);
-            this.txtdate.Name = "txtdate";
-            this.txtdate.PasswordChar = '\0';
-            this.txtdate.SelectedText = "";
-            this.txtdate.Size = new System.Drawing.Size(160, 26);
-            this.txtdate.TabIndex = 5;
-            // 
-            // txttotal
-            // 
-            this.txttotal.BackColor = System.Drawing.Color.White;
-            this.txttotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txttotal.Enabled = false;
-            this.txttotal.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txttotal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txttotal.LineColor = System.Drawing.Color.Gainsboro;
-            this.txttotal.Location = new System.Drawing.Point(233, 317);
-            this.txttotal.Name = "txttotal";
-            this.txttotal.PasswordChar = '\0';
-            this.txttotal.SelectedText = "";
-            this.txttotal.Size = new System.Drawing.Size(160, 26);
-            this.txttotal.TabIndex = 7;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel1.Location = new System.Drawing.Point(135, 9);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(68, 15);
-            this.gunaLabel1.TabIndex = 8;
-            this.gunaLabel1.Text = "ID Hoa Don";
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(135, 154);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(62, 15);
-            this.gunaLabel2.TabIndex = 9;
-            this.gunaLabel2.Text = "Ngay Mua";
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(135, 56);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(76, 15);
-            this.gunaLabel3.TabIndex = 10;
-            this.gunaLabel3.Text = "ID Nhan Vien";
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(135, 107);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(86, 15);
-            this.gunaLabel4.TabIndex = 11;
-            this.gunaLabel4.Text = "ID Khach Hang";
-            // 
-            // gunaLabel5
-            // 
-            this.gunaLabel5.AutoSize = true;
-            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel5.Location = new System.Drawing.Point(310, 107);
-            this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(93, 15);
-            this.gunaLabel5.TabIndex = 12;
-            this.gunaLabel5.Text = "Ten Khach Hang";
-            this.gunaLabel5.Click += new System.EventHandler(this.gunaLabel5_Click);
-            // 
-            // gunaLabel6
-            // 
-            this.gunaLabel6.AutoSize = true;
-            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel6.Location = new System.Drawing.Point(310, 60);
-            this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(83, 15);
-            this.gunaLabel6.TabIndex = 13;
-            this.gunaLabel6.Text = "Ten Nhan Vien";
-            this.gunaLabel6.Click += new System.EventHandler(this.gunaLabel6_Click);
-            // 
-            // gunaLabel7
-            // 
-            this.gunaLabel7.AutoSize = true;
-            this.gunaLabel7.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel7.Location = new System.Drawing.Point(156, 317);
-            this.gunaLabel7.Name = "gunaLabel7";
-            this.gunaLabel7.Size = new System.Drawing.Size(71, 15);
-            this.gunaLabel7.TabIndex = 14;
-            this.gunaLabel7.Text = "Tong so tien";
             // 
             // dataGridView1
             // 
@@ -235,16 +58,219 @@
             this.dataGridView1.Size = new System.Drawing.Size(575, 106);
             this.dataGridView1.TabIndex = 15;
             // 
+            // txtidcustomer
+            // 
+            this.txtidcustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtidcustomer.DefaultText = "";
+            this.txtidcustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtidcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtidcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidcustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidcustomer.Enabled = false;
+            this.txtidcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtidcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtidcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtidcustomer.Location = new System.Drawing.Point(133, 124);
+            this.txtidcustomer.Name = "txtidcustomer";
+            this.txtidcustomer.PasswordChar = '\0';
+            this.txtidcustomer.PlaceholderText = "";
+            this.txtidcustomer.SelectedText = "";
+            this.txtidcustomer.Size = new System.Drawing.Size(160, 26);
+            this.txtidcustomer.TabIndex = 52;
+            // 
+            // txtidnhanvien
+            // 
+            this.txtidnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtidnhanvien.DefaultText = "";
+            this.txtidnhanvien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtidnhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtidnhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidnhanvien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidnhanvien.Enabled = false;
+            this.txtidnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtidnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtidnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtidnhanvien.Location = new System.Drawing.Point(133, 73);
+            this.txtidnhanvien.Name = "txtidnhanvien";
+            this.txtidnhanvien.PasswordChar = '\0';
+            this.txtidnhanvien.PlaceholderText = "";
+            this.txtidnhanvien.SelectedText = "";
+            this.txtidnhanvien.Size = new System.Drawing.Size(160, 26);
+            this.txtidnhanvien.TabIndex = 51;
+            // 
+            // txtid
+            // 
+            this.txtid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtid.DefaultText = "";
+            this.txtid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtid.Enabled = false;
+            this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtid.Location = new System.Drawing.Point(133, 28);
+            this.txtid.Name = "txtid";
+            this.txtid.PasswordChar = '\0';
+            this.txtid.PlaceholderText = "";
+            this.txtid.SelectedText = "";
+            this.txtid.Size = new System.Drawing.Size(160, 26);
+            this.txtid.TabIndex = 50;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(130, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 13);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "ID Khach Hang";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(130, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "ID Nhan Vien";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(130, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "ID Hoa Don";
+            // 
+            // txtdate
+            // 
+            this.txtdate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtdate.DefaultText = "";
+            this.txtdate.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtdate.Enabled = false;
+            this.txtdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtdate.Location = new System.Drawing.Point(133, 172);
+            this.txtdate.Name = "txtdate";
+            this.txtdate.PasswordChar = '\0';
+            this.txtdate.PlaceholderText = "";
+            this.txtdate.SelectedText = "";
+            this.txtdate.Size = new System.Drawing.Size(160, 26);
+            this.txtdate.TabIndex = 53;
+            // 
             // lbtrangthai
             // 
             this.lbtrangthai.AutoSize = true;
-            this.lbtrangthai.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtrangthai.ForeColor = System.Drawing.Color.Red;
-            this.lbtrangthai.Location = new System.Drawing.Point(299, 178);
+            this.lbtrangthai.Location = new System.Drawing.Point(310, 180);
             this.lbtrangthai.Name = "lbtrangthai";
-            this.lbtrangthai.Size = new System.Drawing.Size(76, 20);
-            this.lbtrangthai.TabIndex = 16;
+            this.lbtrangthai.Size = new System.Drawing.Size(78, 18);
+            this.lbtrangthai.TabIndex = 54;
             this.lbtrangthai.Text = "trang thai";
+            // 
+            // txtcustomer
+            // 
+            this.txtcustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtcustomer.DefaultText = "";
+            this.txtcustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtcustomer.Enabled = false;
+            this.txtcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtcustomer.Location = new System.Drawing.Point(313, 124);
+            this.txtcustomer.Name = "txtcustomer";
+            this.txtcustomer.PasswordChar = '\0';
+            this.txtcustomer.PlaceholderText = "";
+            this.txtcustomer.SelectedText = "";
+            this.txtcustomer.Size = new System.Drawing.Size(160, 26);
+            this.txtcustomer.TabIndex = 55;
+            // 
+            // txtnhanvien
+            // 
+            this.txtnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtnhanvien.DefaultText = "";
+            this.txtnhanvien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtnhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtnhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnhanvien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtnhanvien.Enabled = false;
+            this.txtnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtnhanvien.Location = new System.Drawing.Point(313, 73);
+            this.txtnhanvien.Name = "txtnhanvien";
+            this.txtnhanvien.PasswordChar = '\0';
+            this.txtnhanvien.PlaceholderText = "";
+            this.txtnhanvien.SelectedText = "";
+            this.txtnhanvien.Size = new System.Drawing.Size(160, 26);
+            this.txtnhanvien.TabIndex = 56;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(310, 57);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Ten Nhan Vien";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(130, 156);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "Ngay Mua";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(310, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 13);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Ten Khach Hang";
+            // 
+            // txttotal
+            // 
+            this.txttotal.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txttotal.DefaultText = "";
+            this.txttotal.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txttotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txttotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttotal.Enabled = false;
+            this.txttotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttotal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txttotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txttotal.Location = new System.Drawing.Point(233, 317);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.PasswordChar = '\0';
+            this.txttotal.PlaceholderText = "";
+            this.txttotal.SelectedText = "";
+            this.txttotal.Size = new System.Drawing.Size(160, 26);
+            this.txttotal.TabIndex = 60;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(161, 327);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 61;
+            this.label7.Text = "Tong so tien";
             // 
             // Detail
             // 
@@ -252,22 +278,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(599, 349);
-            this.Controls.Add(this.lbtrangthai);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.gunaLabel7);
-            this.Controls.Add(this.gunaLabel6);
-            this.Controls.Add(this.gunaLabel5);
-            this.Controls.Add(this.gunaLabel4);
-            this.Controls.Add(this.gunaLabel3);
-            this.Controls.Add(this.gunaLabel2);
-            this.Controls.Add(this.gunaLabel1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txttotal);
-            this.Controls.Add(this.txtdate);
-            this.Controls.Add(this.txtcustomer);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtnhanvien);
+            this.Controls.Add(this.txtcustomer);
+            this.Controls.Add(this.lbtrangthai);
+            this.Controls.Add(this.txtdate);
             this.Controls.Add(this.txtidcustomer);
             this.Controls.Add(this.txtidnhanvien);
             this.Controls.Add(this.txtid);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -284,22 +310,21 @@
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaLineTextBox txtid;
-        private Guna.UI.WinForms.GunaLineTextBox txtidnhanvien;
-        private Guna.UI.WinForms.GunaLineTextBox txtidcustomer;
-        private Guna.UI.WinForms.GunaLineTextBox txtnhanvien;
-        private Guna.UI.WinForms.GunaLineTextBox txtcustomer;
-        private Guna.UI.WinForms.GunaLineTextBox txtdate;
-        private Guna.UI.WinForms.GunaLineTextBox txttotal;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
-        private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaLabel gunaLabel4;
-        private Guna.UI.WinForms.GunaLabel gunaLabel5;
-        private Guna.UI.WinForms.GunaLabel gunaLabel6;
-        private Guna.UI.WinForms.GunaLabel gunaLabel7;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private Guna.UI.WinForms.GunaLabel lbtrangthai;
+        private Guna.UI2.WinForms.Guna2TextBox txtidcustomer;
+        private Guna.UI2.WinForms.Guna2TextBox txtidnhanvien;
+        private Guna.UI2.WinForms.Guna2TextBox txtid;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2TextBox txtdate;
+        private System.Windows.Forms.Label lbtrangthai;
+        private Guna.UI2.WinForms.Guna2TextBox txtcustomer;
+        private Guna.UI2.WinForms.Guna2TextBox txtnhanvien;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txttotal;
+        private System.Windows.Forms.Label label7;
     }
 }
