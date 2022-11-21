@@ -38,10 +38,18 @@ namespace ShoesProject
             addUserControl(employee); 
         }
 
-        private void Home_Load(object sender, EventArgs e)
+        private void guna2Button7_Click(object sender, EventArgs e)
         {
-
+            UC_Customers customers = new UC_Customers();
+            addUserControl(customers);
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            BillsManagement bills = new BillsManagement();
+            addUserControl(bills);
+        }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -57,16 +65,16 @@ namespace ShoesProject
 
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
+        
+
+        private void guna2Button6_Click(object sender, EventArgs e)
         {
-            UC_Customers customers = new UC_Customers();
-            addUserControl(customers);
+
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-            BillsManagement bills = new BillsManagement();
-            addUserControl(bills);
+
         }
     }
 }

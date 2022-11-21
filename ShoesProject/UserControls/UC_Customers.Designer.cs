@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.dgvTableCustomer = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbPhoneEmployee = new System.Windows.Forms.Label();
@@ -51,11 +49,11 @@
             this.btnDeleteCustomer = new System.Windows.Forms.Button();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnEditCustomer = new System.Windows.Forms.Button();
+            this.dgvTableCustomer = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblogan = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomer)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -64,40 +62,25 @@
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomer)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.dgvTableCustomer);
-            this.panel6.Location = new System.Drawing.Point(21, 235);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(839, 234);
-            this.panel6.TabIndex = 13;
-            // 
-            // dgvTableCustomer
-            // 
-            this.dgvTableCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTableCustomer.Location = new System.Drawing.Point(6, 3);
-            this.dgvTableCustomer.Name = "dgvTableCustomer";
-            this.dgvTableCustomer.Size = new System.Drawing.Size(830, 228);
-            this.dgvTableCustomer.TabIndex = 0;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel10);
-            this.panel7.Location = new System.Drawing.Point(21, 79);
+            this.panel7.Location = new System.Drawing.Point(21, 12);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(392, 122);
+            this.panel7.Size = new System.Drawing.Size(392, 160);
             this.panel7.TabIndex = 12;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.lbPhoneEmployee);
             this.panel8.Controls.Add(this.tbPhoneEmployee);
-            this.panel8.Location = new System.Drawing.Point(3, 82);
+            this.panel8.Location = new System.Drawing.Point(6, 122);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(386, 35);
             this.panel8.TabIndex = 2;
@@ -106,6 +89,7 @@
             // 
             this.lbPhoneEmployee.AutoSize = true;
             this.lbPhoneEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhoneEmployee.ForeColor = System.Drawing.Color.White;
             this.lbPhoneEmployee.Location = new System.Drawing.Point(8, 10);
             this.lbPhoneEmployee.Name = "lbPhoneEmployee";
             this.lbPhoneEmployee.Size = new System.Drawing.Size(104, 19);
@@ -123,7 +107,7 @@
             // 
             this.panel9.Controls.Add(this.lbNameEmployee);
             this.panel9.Controls.Add(this.tbNameEmployee);
-            this.panel9.Location = new System.Drawing.Point(3, 39);
+            this.panel9.Location = new System.Drawing.Point(3, 63);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(386, 37);
             this.panel9.TabIndex = 1;
@@ -132,6 +116,7 @@
             // 
             this.lbNameEmployee.AutoSize = true;
             this.lbNameEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameEmployee.ForeColor = System.Drawing.Color.White;
             this.lbNameEmployee.Location = new System.Drawing.Point(8, 8);
             this.lbNameEmployee.Name = "lbNameEmployee";
             this.lbNameEmployee.Size = new System.Drawing.Size(112, 19);
@@ -158,6 +143,7 @@
             // 
             this.lbIdEmployee.AutoSize = true;
             this.lbIdEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIdEmployee.ForeColor = System.Drawing.Color.White;
             this.lbIdEmployee.Location = new System.Drawing.Point(8, 10);
             this.lbIdEmployee.Name = "lbIdEmployee";
             this.lbIdEmployee.Size = new System.Drawing.Size(110, 19);
@@ -173,26 +159,28 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(461, 79);
+            this.panel3.Location = new System.Drawing.Point(461, 12);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(396, 87);
+            this.panel3.Size = new System.Drawing.Size(427, 157);
             this.panel3.TabIndex = 11;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.lbEmailEmployee);
             this.panel5.Controls.Add(this.tbEmailCustomer);
-            this.panel5.Location = new System.Drawing.Point(3, 41);
+            this.panel5.Location = new System.Drawing.Point(3, 65);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(390, 35);
+            this.panel5.Size = new System.Drawing.Size(421, 35);
             this.panel5.TabIndex = 1;
             // 
             // lbEmailEmployee
             // 
             this.lbEmailEmployee.AutoSize = true;
             this.lbEmailEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmailEmployee.ForeColor = System.Drawing.Color.White;
             this.lbEmailEmployee.Location = new System.Drawing.Point(15, 9);
             this.lbEmailEmployee.Name = "lbEmailEmployee";
             this.lbEmailEmployee.Size = new System.Drawing.Size(56, 19);
@@ -203,7 +191,7 @@
             // 
             this.tbEmailCustomer.Location = new System.Drawing.Point(99, 8);
             this.tbEmailCustomer.Name = "tbEmailCustomer";
-            this.tbEmailCustomer.Size = new System.Drawing.Size(270, 20);
+            this.tbEmailCustomer.Size = new System.Drawing.Size(312, 20);
             this.tbEmailCustomer.TabIndex = 2;
             // 
             // panel4
@@ -212,13 +200,14 @@
             this.panel4.Controls.Add(this.tbAddrCustomer);
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(390, 35);
+            this.panel4.Size = new System.Drawing.Size(421, 35);
             this.panel4.TabIndex = 0;
             // 
             // lbAddrEmployee
             // 
             this.lbAddrEmployee.AutoSize = true;
             this.lbAddrEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAddrEmployee.ForeColor = System.Drawing.Color.White;
             this.lbAddrEmployee.Location = new System.Drawing.Point(15, 12);
             this.lbAddrEmployee.Name = "lbAddrEmployee";
             this.lbAddrEmployee.Size = new System.Drawing.Size(65, 19);
@@ -229,22 +218,23 @@
             // 
             this.tbAddrCustomer.Location = new System.Drawing.Point(99, 11);
             this.tbAddrCustomer.Name = "tbAddrCustomer";
-            this.tbAddrCustomer.Size = new System.Drawing.Size(270, 20);
+            this.tbAddrCustomer.Size = new System.Drawing.Size(312, 20);
             this.tbAddrCustomer.TabIndex = 1;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnDeleteCustomer);
             this.panel2.Controls.Add(this.btnAddCustomer);
             this.panel2.Controls.Add(this.btnEditCustomer);
-            this.panel2.Location = new System.Drawing.Point(245, 489);
+            this.panel2.Location = new System.Drawing.Point(767, 178);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(435, 49);
+            this.panel2.Size = new System.Drawing.Size(121, 249);
             this.panel2.TabIndex = 10;
             // 
             // btnDeleteCustomer
             // 
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(318, 3);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(10, 194);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
             this.btnDeleteCustomer.Size = new System.Drawing.Size(98, 43);
             this.btnDeleteCustomer.TabIndex = 2;
@@ -253,7 +243,7 @@
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Location = new System.Drawing.Point(14, 3);
+            this.btnAddCustomer.Location = new System.Drawing.Point(10, 64);
             this.btnAddCustomer.Name = "btnAddCustomer";
             this.btnAddCustomer.Size = new System.Drawing.Size(98, 43);
             this.btnAddCustomer.TabIndex = 0;
@@ -262,54 +252,69 @@
             // 
             // btnEditCustomer
             // 
-            this.btnEditCustomer.Location = new System.Drawing.Point(166, 3);
+            this.btnEditCustomer.Location = new System.Drawing.Point(10, 128);
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.Size = new System.Drawing.Size(98, 43);
             this.btnEditCustomer.TabIndex = 1;
             this.btnEditCustomer.Text = "Sửa";
             this.btnEditCustomer.UseVisualStyleBackColor = true;
             // 
+            // dgvTableCustomer
+            // 
+            this.dgvTableCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTableCustomer.Location = new System.Drawing.Point(21, 178);
+            this.dgvTableCustomer.Name = "dgvTableCustomer";
+            this.dgvTableCustomer.Size = new System.Drawing.Size(740, 237);
+            this.dgvTableCustomer.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(10, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 43);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblogan);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(245, 12);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(3, 125);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 51);
-            this.panel1.TabIndex = 8;
-            // 
-            // lblogan
-            // 
-            this.lblogan.AutoSize = true;
-            this.lblogan.Font = new System.Drawing.Font("MS PGothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblogan.Location = new System.Drawing.Point(23, 10);
-            this.lblogan.Name = "lblogan";
-            this.lblogan.Size = new System.Drawing.Size(342, 33);
-            this.lblogan.TabIndex = 7;
-            this.lblogan.Text = "Customer Management";
+            this.panel1.Size = new System.Drawing.Size(421, 35);
+            this.panel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(128, 10);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(15, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 6;
+            this.label1.Size = new System.Drawing.Size(68, 19);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Dữ liệu :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 8);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(312, 20);
+            this.textBox1.TabIndex = 2;
             // 
             // UC_Customers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.Controls.Add(this.dgvTableCustomer);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_Customers";
-            this.Size = new System.Drawing.Size(875, 541);
-            this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomer)).EndInit();
+            this.Size = new System.Drawing.Size(902, 430);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -323,6 +328,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTableCustomer)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -330,9 +336,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dgvTableCustomer;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lbPhoneEmployee;
@@ -355,7 +358,9 @@
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnEditCustomer;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblogan;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dgvTableCustomer;
     }
 }
