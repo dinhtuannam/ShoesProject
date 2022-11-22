@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ShoesProject.DAO
 {
@@ -45,7 +46,7 @@ namespace ShoesProject.DAO
                         }
                     }
                 }
-
+                
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);
                 connection.Close();
