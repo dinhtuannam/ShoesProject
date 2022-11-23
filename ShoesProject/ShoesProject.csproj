@@ -61,6 +61,7 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DTO\DTO_Employee.cs" />
     <Compile Include="DTO\DTO_Genres.cs" />
+    <Compile Include="DTO\DTO_Product.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>

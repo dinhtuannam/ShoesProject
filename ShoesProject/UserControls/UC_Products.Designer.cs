@@ -55,6 +55,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.ProductTable = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.cbSearch = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -102,6 +102,7 @@
             this.txtGenres.Name = "txtGenres";
             this.txtGenres.Size = new System.Drawing.Size(263, 35);
             this.txtGenres.TabIndex = 14;
+            this.txtGenres.SelectedValueChanged += new System.EventHandler(this.txtGenres_SelectedValueChanged);
             // 
             // label5
             // 
@@ -215,6 +216,7 @@
             this.txtID.Location = new System.Drawing.Point(144, 4);
             this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(410, 35);
             this.txtID.TabIndex = 1;
             // 
@@ -376,6 +378,21 @@
             this.panel3.Size = new System.Drawing.Size(652, 136);
             this.panel3.TabIndex = 3;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(483, 74);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(134, 39);
+            this.button6.TabIndex = 18;
+            this.button6.Text = "HỦY";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
@@ -417,6 +434,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "THÊM";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -464,21 +482,6 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(202, 35);
             this.txtSearch.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(483, 74);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(134, 39);
-            this.button6.TabIndex = 18;
-            this.button6.Text = "HỦY";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // UC_Products
             // 

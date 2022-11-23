@@ -1,4 +1,5 @@
 ﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,15 +23,7 @@ namespace ShoesProject.UserControls
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private void UC_Products_Load(object sender, EventArgs e)
         {
@@ -109,6 +102,59 @@ namespace ShoesProject.UserControls
             txtQuantity.Text = "";
             txtGenres.SelectedIndex = txtGenres.FindString("");
             txtSearch.Text = "";
+        }
+
+        private DTO_Product getData()
+        {
+            DTO_Product product = new DTO_Product();
+            product.Id = txtID.Text;
+            product.Name = txtName.Text;
+            product.Img = txtImg.Text;
+            product.Price = long.Parse( getPrice() );
+            product.Des = txtDes.Text;
+            product.Genres = GenresSelected;
+            product.Status = "active";
+            product.Quantity = int.Parse( txtQuantity.Text );
+            return product;
+        }
+
+        private String getPrice()
+        {
+            string[] item = txtPrice.Text.Split('.');
+            MessageBox.Show(item[0]);
+            return item[0];
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (DAO_Product.Instance.insertProduct(getData()))
+            {
+                MessageBox.Show("Thêm sản phẩm thành công ");
+                setNull();
+                loadProductTable(LoadAllProductAction);
+            }
+            else
+            {
+                MessageBox.Show("Thêm sản phẩm thất bại . Vui lòng thử lại ");
+            }
+                
+        }
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtGenres_SelectedValueChanged(object sender, EventArgs e)
+        {
+            GenresSelected = txtGenres.SelectedItem.ToString(); 
         }
     }
 }
