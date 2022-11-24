@@ -182,5 +182,10 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("Xóa sản phẩm thất bại . Vui lòng thử lại ");
             }
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
