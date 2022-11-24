@@ -107,6 +107,12 @@
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Bills\SQLData.cs" />
+    <Compile Include="UserControls\UC_Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_Account.Designer.cs">
+      <DependentUpon>UC_Account.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Customers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Bills\Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_Account.resx">
+      <DependentUpon>UC_Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Customers.resx">
       <DependentUpon>UC_Customers.cs</DependentUpon>
