@@ -28,7 +28,7 @@ namespace ShoesProject.DAO
 
         public DataTable getAllProduct()
         {
-            string query = "Select * from sanpham";
+            string query = "Select * from sanpham where trangthai = 'active' ";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -36,9 +36,9 @@ namespace ShoesProject.DAO
         {
             string query = "";
             if(action == "Name")
-                query = "Select * from sanpham where tenSP like '%"+data+"%' ";
+                query = "Select * from sanpham where tenSP like '%"+data+ "%' and trangthai = 'active'";
             else if(action == "ID")
-                query = "Select * from sanpham where idSP like '%"+data+"%' ";
+                query = "Select * from sanpham where idSP like '%"+data+ "%' and trangthai = 'active'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -56,6 +56,22 @@ namespace ShoesProject.DAO
             Random rnd = new Random();
             string str = "S" + Convert.ToString(rnd.Next(1, 9999));
             return str;
+        }
+
+        public bool updateProduct(DTO_Product data)
+        {
+            int result = 0;
+            string query = "update Sanpham set tenSP = @tensp , hinhanh = @hinhand , gia = @gia , mota = @mota , idTL = @idTL , trangthai = @trangthai , soluong = @soluong where idSP = @idSP ";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { data.Name, data.Img, data.Price, data.Des, data.Genres, data.Status, data.Quantity ,data.Id });
+            return result > 0;
+        }
+
+        public bool deleteProduct(String id)
+        {
+            int result = 0;
+            string query = "update Sanpham set trangthai = 'unactive' where idSP = @idSP ";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            return result > 0;
         }
     }
 }

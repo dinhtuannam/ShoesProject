@@ -121,9 +121,7 @@ namespace ShoesProject.UserControls
         private String getPrice()
         {
             string[] item = txtPrice.Text.Split('.');
-            MessageBox.Show(item[0]);
             return item[0];
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -155,6 +153,34 @@ namespace ShoesProject.UserControls
         private void txtGenres_SelectedValueChanged(object sender, EventArgs e)
         {
             GenresSelected = txtGenres.SelectedItem.ToString(); 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (DAO_Product.Instance.updateProduct(getData()))
+            {
+                MessageBox.Show("Cập nhật sản phẩm thành công ");
+                setNull();
+                loadProductTable(LoadAllProductAction);
+            }
+            else
+            {
+                MessageBox.Show("Cập nhật sản phẩm thất bại . Vui lòng thử lại ");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (DAO_Product.Instance.deleteProduct(txtID.Text))
+            {
+                MessageBox.Show("Xóa sản phẩm thành công ");
+                setNull();
+                loadProductTable(LoadAllProductAction);
+            }
+            else
+            {
+                MessageBox.Show("Xóa sản phẩm thất bại . Vui lòng thử lại ");
+            }
         }
     }
 }
