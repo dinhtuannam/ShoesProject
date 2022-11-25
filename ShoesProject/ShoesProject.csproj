@@ -107,6 +107,12 @@
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Bills\SQLData.cs" />
+    <Compile Include="UserControls\TKKD\TKKD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TKKD\TKKD.Designer.cs">
+      <DependentUpon>TKKD.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Account.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Bills\Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TKKD\TKKD.resx">
+      <DependentUpon>TKKD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Account.resx">
       <DependentUpon>UC_Account.cs</DependentUpon>

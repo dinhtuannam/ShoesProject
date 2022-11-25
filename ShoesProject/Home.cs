@@ -1,5 +1,6 @@
 ﻿using ShoesProject.UserControls;
 using ShoesProject.UserControls.Bills;
+using ShoesProject.UserControls.TKKD;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -75,6 +76,12 @@ namespace ShoesProject
         private void Home_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            TKKD tkkd = new TKKD();
+            addUserControl(tkkd);
         }
     }
 }
