@@ -10,7 +10,7 @@ namespace ShoesProject.DAO
 {
     public class DAO_Customer
     {
-        string condition = "TAIKHOAN.trangthai = 'active' or TAIKHOAN.trangthai = 'banned' ";
+        string condition = "TAIKHOAN.trangthai != 'unactive' ";
         string selectRow = "Select idKH , tenTK , matkhau , tenkhachhang , soDT , diachi , email , trangthai from TAIKHOAN , KHACHHANG ";
         
         private static DAO_Customer instance;
@@ -32,6 +32,22 @@ namespace ShoesProject.DAO
         {
             string query =  selectRow + "where TAIKHOAN.idUser = KHACHHANG.idKH and "+ condition;
             return DataProvider.Instance.ExecuteQuery(query);   
+        }
+
+        public bool banAccount(string id)
+        {
+            int result = 0;
+            string query = "update TAIKHOAN set trangthai = 'banned' where idUser = @id";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            return result > 0;
+        }
+
+        public bool deleteAccount(string id)
+        {
+            int result = 0;
+            string query = "update TAIKHOAN set trangthai = 'unactive' where idUser = @id";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            return result > 0;
         }
     }
 }

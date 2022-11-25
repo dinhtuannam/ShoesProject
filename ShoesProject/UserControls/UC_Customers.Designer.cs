@@ -31,26 +31,26 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbPhoneEmployee = new System.Windows.Forms.Label();
-            this.tbPhoneEmployee = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.lbNameEmployee = new System.Windows.Forms.Label();
-            this.tbNameEmployee = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lbIdEmployee = new System.Windows.Forms.Label();
-            this.tbIdCustomer = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbEmailEmployee = new System.Windows.Forms.Label();
-            this.tbEmailCustomer = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbAddrEmployee = new System.Windows.Forms.Label();
-            this.tbAddrCustomer = new System.Windows.Forms.TextBox();
+            this.txtFullname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.btnDeleteCustomer = new System.Windows.Forms.Button();
@@ -59,7 +59,7 @@
             this.CustomerTable = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -101,7 +101,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.label2);
-            this.panel6.Controls.Add(this.textBox2);
+            this.panel6.Controls.Add(this.txtUsername);
             this.panel6.Location = new System.Drawing.Point(4, 64);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel6.Name = "panel6";
@@ -120,18 +120,18 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên tài khoản";
             // 
-            // textBox2
+            // txtUsername
             // 
-            this.textBox2.Location = new System.Drawing.Point(196, 14);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(265, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtUsername.Location = new System.Drawing.Point(196, 14);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(265, 26);
+            this.txtUsername.TabIndex = 2;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.lbPhoneEmployee);
-            this.panel8.Controls.Add(this.tbPhoneEmployee);
+            this.panel8.Controls.Add(this.txtStatus);
             this.panel8.Location = new System.Drawing.Point(4, 192);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel8.Name = "panel8";
@@ -150,18 +150,19 @@
             this.lbPhoneEmployee.TabIndex = 4;
             this.lbPhoneEmployee.Text = "Trạng thái";
             // 
-            // tbPhoneEmployee
+            // txtStatus
             // 
-            this.tbPhoneEmployee.Location = new System.Drawing.Point(196, 14);
-            this.tbPhoneEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbPhoneEmployee.Name = "tbPhoneEmployee";
-            this.tbPhoneEmployee.Size = new System.Drawing.Size(265, 26);
-            this.tbPhoneEmployee.TabIndex = 3;
+            this.txtStatus.Location = new System.Drawing.Point(196, 14);
+            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(265, 26);
+            this.txtStatus.TabIndex = 3;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.lbNameEmployee);
-            this.panel9.Controls.Add(this.tbNameEmployee);
+            this.panel9.Controls.Add(this.txtPass);
             this.panel9.Location = new System.Drawing.Point(4, 129);
             this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel9.Name = "panel9";
@@ -180,18 +181,18 @@
             this.lbNameEmployee.TabIndex = 3;
             this.lbNameEmployee.Text = "Mật khẩu";
             // 
-            // tbNameEmployee
+            // txtPass
             // 
-            this.tbNameEmployee.Location = new System.Drawing.Point(196, 14);
-            this.tbNameEmployee.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbNameEmployee.Name = "tbNameEmployee";
-            this.tbNameEmployee.Size = new System.Drawing.Size(265, 26);
-            this.tbNameEmployee.TabIndex = 2;
+            this.txtPass.Location = new System.Drawing.Point(196, 14);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(265, 26);
+            this.txtPass.TabIndex = 2;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.lbIdEmployee);
-            this.panel10.Controls.Add(this.tbIdCustomer);
+            this.panel10.Controls.Add(this.txtID);
             this.panel10.Location = new System.Drawing.Point(4, 5);
             this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel10.Name = "panel10";
@@ -210,13 +211,14 @@
             this.lbIdEmployee.TabIndex = 2;
             this.lbIdEmployee.Text = "Mã khách hàng :";
             // 
-            // tbIdCustomer
+            // txtID
             // 
-            this.tbIdCustomer.Location = new System.Drawing.Point(198, 15);
-            this.tbIdCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbIdCustomer.Name = "tbIdCustomer";
-            this.tbIdCustomer.Size = new System.Drawing.Size(263, 26);
-            this.tbIdCustomer.TabIndex = 1;
+            this.txtID.Location = new System.Drawing.Point(198, 15);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(263, 26);
+            this.txtID.TabIndex = 1;
             // 
             // panel3
             // 
@@ -233,7 +235,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Location = new System.Drawing.Point(4, 127);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
@@ -253,18 +255,18 @@
             this.label1.Text = "Số ĐT :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // txtPhone
             // 
-            this.textBox1.Location = new System.Drawing.Point(148, 12);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(263, 26);
-            this.textBox1.TabIndex = 2;
+            this.txtPhone.Location = new System.Drawing.Point(148, 12);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(263, 26);
+            this.txtPhone.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.lbEmailEmployee);
-            this.panel5.Controls.Add(this.tbEmailCustomer);
+            this.panel5.Controls.Add(this.txtEmail);
             this.panel5.Location = new System.Drawing.Point(4, 65);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel5.Name = "panel5";
@@ -283,18 +285,18 @@
             this.lbEmailEmployee.TabIndex = 4;
             this.lbEmailEmployee.Text = "Email :";
             // 
-            // tbEmailCustomer
+            // txtEmail
             // 
-            this.tbEmailCustomer.Location = new System.Drawing.Point(148, 12);
-            this.tbEmailCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbEmailCustomer.Name = "tbEmailCustomer";
-            this.tbEmailCustomer.Size = new System.Drawing.Size(263, 26);
-            this.tbEmailCustomer.TabIndex = 2;
+            this.txtEmail.Location = new System.Drawing.Point(148, 12);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(263, 26);
+            this.txtEmail.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lbAddrEmployee);
-            this.panel4.Controls.Add(this.tbAddrCustomer);
+            this.panel4.Controls.Add(this.txtFullname);
             this.panel4.Location = new System.Drawing.Point(4, 5);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
@@ -313,13 +315,13 @@
             this.lbAddrEmployee.TabIndex = 3;
             this.lbAddrEmployee.Text = "Tên KH :";
             // 
-            // tbAddrCustomer
+            // txtFullname
             // 
-            this.tbAddrCustomer.Location = new System.Drawing.Point(148, 17);
-            this.tbAddrCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbAddrCustomer.Name = "tbAddrCustomer";
-            this.tbAddrCustomer.Size = new System.Drawing.Size(263, 26);
-            this.tbAddrCustomer.TabIndex = 1;
+            this.txtFullname.Location = new System.Drawing.Point(148, 17);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(263, 26);
+            this.txtFullname.TabIndex = 1;
             // 
             // panel2
             // 
@@ -348,6 +350,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Khóa";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnDeleteCustomer
             // 
@@ -363,6 +366,7 @@
             this.btnDeleteCustomer.TabIndex = 2;
             this.btnDeleteCustomer.Text = "Xoá";
             this.btnDeleteCustomer.UseVisualStyleBackColor = false;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // btnAddCustomer
             // 
@@ -408,7 +412,7 @@
             // panel11
             // 
             this.panel11.Controls.Add(this.label3);
-            this.panel11.Controls.Add(this.textBox3);
+            this.panel11.Controls.Add(this.txtAddress);
             this.panel11.Location = new System.Drawing.Point(538, 202);
             this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel11.Name = "panel11";
@@ -428,13 +432,13 @@
             this.label3.Text = "Địa chỉ :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox3
+            // txtAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(150, 12);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(263, 26);
-            this.textBox3.TabIndex = 2;
+            this.txtAddress.Location = new System.Drawing.Point(150, 12);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(263, 26);
+            this.txtAddress.TabIndex = 2;
             // 
             // panel12
             // 
@@ -463,6 +467,7 @@
             this.button3.TabIndex = 17;
             this.button3.Text = "HỦY";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -590,34 +595,34 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label lbPhoneEmployee;
-        private System.Windows.Forms.TextBox tbPhoneEmployee;
+        private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lbNameEmployee;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label lbIdEmployee;
-        private System.Windows.Forms.TextBox tbIdCustomer;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbEmailEmployee;
-        private System.Windows.Forms.TextBox tbEmailCustomer;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbAddrEmployee;
-        private System.Windows.Forms.TextBox tbAddrCustomer;
+        private System.Windows.Forms.TextBox txtFullname;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnDeleteCustomer;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnEditCustomer;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.DataGridView CustomerTable;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
@@ -627,6 +632,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox tbNameEmployee;
+        private System.Windows.Forms.TextBox txtPass;
     }
 }
