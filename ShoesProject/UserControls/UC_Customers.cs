@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,28 @@ namespace ShoesProject.UserControls
 {
     public partial class UC_Customers : UserControl
     {
+        string LoadAllCustomerAction = "LoadAllCustomerAction";
         public UC_Customers()
         {
             InitializeComponent();
+        }
+
+        private void UC_Customers_Load(object sender, EventArgs e)
+        {
+            loadTable(LoadAllCustomerAction);
+        }
+
+        private void loadTable(string action)
+        {
+            DataTable dt = new DataTable();
+            if (action == LoadAllCustomerAction)
+                dt = DAO_Customer.Instance.getAllCustomer();
+            CustomerTable.DataSource = dt;
+        }
+
+        private void dgvTableCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
