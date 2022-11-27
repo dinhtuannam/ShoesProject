@@ -83,5 +83,11 @@ namespace ShoesProject
             TKKD tkkd = new TKKD();
             addUserControl(tkkd);
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            UC_Genres uc = new UC_Genres();
+            addUserControl(uc);
+        }
     }
 }
