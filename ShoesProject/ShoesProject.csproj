@@ -59,6 +59,7 @@
     <Compile Include="DAO\DAO_Genres.cs" />
     <Compile Include="DAO\DAO_Product.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\DTO_Customer.cs" />
     <Compile Include="DTO\DTO_Employee.cs" />
     <Compile Include="DTO\DTO_Genres.cs" />
     <Compile Include="DTO\DTO_Product.cs" />

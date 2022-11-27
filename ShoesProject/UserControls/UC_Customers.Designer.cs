@@ -63,7 +63,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.cbSearch = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
@@ -382,6 +382,7 @@
             this.btnAddCustomer.TabIndex = 0;
             this.btnAddCustomer.Text = "Thêm";
             this.btnAddCustomer.UseVisualStyleBackColor = false;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // btnEditCustomer
             // 
@@ -397,6 +398,7 @@
             this.btnEditCustomer.TabIndex = 1;
             this.btnEditCustomer.Text = "Sửa";
             this.btnEditCustomer.UseVisualStyleBackColor = false;
+            this.btnEditCustomer.Click += new System.EventHandler(this.btnEditCustomer_Click);
             // 
             // CustomerTable
             // 
@@ -445,7 +447,7 @@
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel12.Controls.Add(this.button3);
             this.panel12.Controls.Add(this.button1);
-            this.panel12.Controls.Add(this.textBox4);
+            this.panel12.Controls.Add(this.txtSearch);
             this.panel12.Controls.Add(this.cbSearch);
             this.panel12.Controls.Add(this.label4);
             this.panel12.Location = new System.Drawing.Point(985, 11);
@@ -483,14 +485,15 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox4
+            // txtSearch
             // 
-            this.textBox4.Location = new System.Drawing.Point(19, 70);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(308, 26);
-            this.textBox4.TabIndex = 15;
+            this.txtSearch.Location = new System.Drawing.Point(19, 70);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(308, 26);
+            this.txtSearch.TabIndex = 15;
             // 
             // cbSearch
             // 
@@ -501,6 +504,7 @@
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.Size = new System.Drawing.Size(138, 31);
             this.cbSearch.TabIndex = 14;
+            this.cbSearch.SelectedValueChanged += new System.EventHandler(this.cbSearch_SelectedValueChanged);
             // 
             // label4
             // 
@@ -626,7 +630,7 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox cbSearch;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button button3;

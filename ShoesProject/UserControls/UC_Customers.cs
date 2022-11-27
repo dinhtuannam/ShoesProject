@@ -1,4 +1,5 @@
 ﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,15 +16,26 @@ namespace ShoesProject.UserControls
     public partial class UC_Customers : UserControl
     {
         string LoadAllCustomerAction = "LoadAllCustomerAction";
+        string SearchCustomerAction = "SearchCustomerAction";
+        string searchSelected = "Name";
         public UC_Customers()
         {
             InitializeComponent();
+        }
+
+        private void loadComboboxSearch()
+        {
+            List<string> searchList = new List<string>();
+            searchList.Add("Name");
+            searchList.Add("ID");
+            cbSearch.DataSource = searchList;
         }
 
         private void UC_Customers_Load(object sender, EventArgs e)
         {
             CustomerTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             loadTable(LoadAllCustomerAction);
+            loadComboboxSearch();
             resizeTable();
         }
 
@@ -32,6 +44,8 @@ namespace ShoesProject.UserControls
             DataTable dt = new DataTable();
             if (action == LoadAllCustomerAction)
                 dt = DAO_Customer.Instance.getAllCustomer();
+            if (action == SearchCustomerAction)
+                dt = DAO_Customer.Instance.searchAccount(txtSearch.Text,searchSelected);
             CustomerTable.DataSource = dt;
         }
 
@@ -60,6 +74,7 @@ namespace ShoesProject.UserControls
         private void button3_Click(object sender, EventArgs e)
         {
             setNull();
+            loadTable(LoadAllCustomerAction);
         }
 
         private void setNull()
@@ -72,6 +87,7 @@ namespace ShoesProject.UserControls
             txtAddress.Text = "";
             txtEmail.Text = "";
             txtStatus.Text = "";
+            txtSearch.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -114,6 +130,62 @@ namespace ShoesProject.UserControls
                         MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
                 }
             }
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            if (DAO_Customer.Instance.insertAccount(getData()))
+            {
+                MessageBox.Show("Thêm tài khoản thành công");
+                loadTable(LoadAllCustomerAction);
+                setNull();
+            }
+            else
+            {
+                MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
+            }
+        }
+
+        private DTO_Customer getData()
+        {
+            DTO_Customer cus = new DTO_Customer();
+            cus.Id = txtID.Text;
+            cus.Username = txtUsername.Text;
+            cus.Password = txtPass.Text;
+            cus.Status = "active";
+            cus.Role = "KH";
+            cus.Fullname = txtFullname.Text;
+            cus.Phone = txtPhone.Text;
+            cus.Email = txtEmail.Text;
+            cus.Address = txtAddress.Text;
+            return cus;
+        }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            if (DAO_Customer.Instance.updateAccount(getData()))
+            {
+                MessageBox.Show("Cập nhật tài khoản thành công");
+                loadTable(LoadAllCustomerAction);
+                setNull();
+            }
+            else
+            {
+                MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
+            }
+        }
+
+        private void cbSearch_SelectedValueChanged(object sender, EventArgs e)
+        {
+            searchSelected = cbSearch.SelectedItem.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                MessageBox.Show("Vui lòng nhập dữ liệu tìm kiếm");
+            else
+                loadTable(SearchCustomerAction);
         }
     }
 }

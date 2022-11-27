@@ -463,6 +463,7 @@
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.Size = new System.Drawing.Size(138, 35);
             this.cbSearch.TabIndex = 13;
+            this.cbSearch.SelectedIndexChanged += new System.EventHandler(this.cbSearch_SelectedIndexChanged);
             this.cbSearch.SelectedValueChanged += new System.EventHandler(this.GenresSearch_SelectedValueChanged);
             // 
             // label7

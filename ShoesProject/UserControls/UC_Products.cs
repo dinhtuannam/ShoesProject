@@ -187,5 +187,10 @@ namespace ShoesProject.UserControls
         {
 
         }
+
+        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
