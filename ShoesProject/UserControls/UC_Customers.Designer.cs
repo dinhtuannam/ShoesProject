@@ -92,20 +92,18 @@
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.panel9);
             this.panel7.Controls.Add(this.panel10);
-            this.panel7.Location = new System.Drawing.Point(32, 12);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Location = new System.Drawing.Point(21, 8);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(494, 253);
+            this.panel7.Size = new System.Drawing.Size(330, 165);
             this.panel7.TabIndex = 12;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.label2);
             this.panel6.Controls.Add(this.txtUsername);
-            this.panel6.Location = new System.Drawing.Point(4, 64);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(3, 42);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(477, 57);
+            this.panel6.Size = new System.Drawing.Size(318, 37);
             this.panel6.TabIndex = 3;
             // 
             // label2
@@ -113,29 +111,26 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(12, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(8, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 26);
+            this.label2.Size = new System.Drawing.Size(101, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Tên tài khoản";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(196, 14);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUsername.Location = new System.Drawing.Point(131, 9);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(265, 26);
+            this.txtUsername.Size = new System.Drawing.Size(178, 20);
             this.txtUsername.TabIndex = 2;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.lbPhoneEmployee);
             this.panel8.Controls.Add(this.txtStatus);
-            this.panel8.Location = new System.Drawing.Point(4, 192);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Location = new System.Drawing.Point(3, 125);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(477, 54);
+            this.panel8.Size = new System.Drawing.Size(318, 35);
             this.panel8.TabIndex = 2;
             // 
             // lbPhoneEmployee
@@ -143,30 +138,27 @@
             this.lbPhoneEmployee.AutoSize = true;
             this.lbPhoneEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhoneEmployee.ForeColor = System.Drawing.Color.White;
-            this.lbPhoneEmployee.Location = new System.Drawing.Point(12, 15);
-            this.lbPhoneEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbPhoneEmployee.Location = new System.Drawing.Point(8, 10);
             this.lbPhoneEmployee.Name = "lbPhoneEmployee";
-            this.lbPhoneEmployee.Size = new System.Drawing.Size(119, 26);
+            this.lbPhoneEmployee.Size = new System.Drawing.Size(77, 19);
             this.lbPhoneEmployee.TabIndex = 4;
             this.lbPhoneEmployee.Text = "Trạng thái";
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(196, 14);
-            this.txtStatus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStatus.Location = new System.Drawing.Point(131, 9);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(265, 26);
+            this.txtStatus.Size = new System.Drawing.Size(178, 20);
             this.txtStatus.TabIndex = 3;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.lbNameEmployee);
             this.panel9.Controls.Add(this.txtPass);
-            this.panel9.Location = new System.Drawing.Point(4, 129);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Location = new System.Drawing.Point(3, 84);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(477, 57);
+            this.panel9.Size = new System.Drawing.Size(318, 37);
             this.panel9.TabIndex = 1;
             // 
             // lbNameEmployee
@@ -174,29 +166,26 @@
             this.lbNameEmployee.AutoSize = true;
             this.lbNameEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNameEmployee.ForeColor = System.Drawing.Color.White;
-            this.lbNameEmployee.Location = new System.Drawing.Point(12, 12);
-            this.lbNameEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbNameEmployee.Location = new System.Drawing.Point(8, 8);
             this.lbNameEmployee.Name = "lbNameEmployee";
-            this.lbNameEmployee.Size = new System.Drawing.Size(112, 26);
+            this.lbNameEmployee.Size = new System.Drawing.Size(75, 19);
             this.lbNameEmployee.TabIndex = 3;
             this.lbNameEmployee.Text = "Mật khẩu";
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(196, 14);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPass.Location = new System.Drawing.Point(131, 9);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(265, 26);
+            this.txtPass.Size = new System.Drawing.Size(178, 20);
             this.txtPass.TabIndex = 2;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.lbIdEmployee);
             this.panel10.Controls.Add(this.txtID);
-            this.panel10.Location = new System.Drawing.Point(4, 5);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(477, 54);
+            this.panel10.Size = new System.Drawing.Size(318, 35);
             this.panel10.TabIndex = 0;
             // 
             // lbIdEmployee
@@ -204,20 +193,18 @@
             this.lbIdEmployee.AutoSize = true;
             this.lbIdEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIdEmployee.ForeColor = System.Drawing.Color.White;
-            this.lbIdEmployee.Location = new System.Drawing.Point(12, 15);
-            this.lbIdEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbIdEmployee.Location = new System.Drawing.Point(8, 10);
             this.lbIdEmployee.Name = "lbIdEmployee";
-            this.lbIdEmployee.Size = new System.Drawing.Size(185, 26);
+            this.lbIdEmployee.Size = new System.Drawing.Size(122, 19);
             this.lbIdEmployee.TabIndex = 2;
             this.lbIdEmployee.Text = "Mã khách hàng :";
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(198, 15);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtID.Location = new System.Drawing.Point(132, 10);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(263, 26);
+            this.txtID.Size = new System.Drawing.Size(177, 20);
             this.txtID.TabIndex = 1;
             // 
             // panel3
@@ -226,20 +213,18 @@
             this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(535, 11);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(357, 7);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(443, 254);
+            this.panel3.Size = new System.Drawing.Size(296, 166);
             this.panel3.TabIndex = 11;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtPhone);
-            this.panel1.Location = new System.Drawing.Point(4, 127);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(3, 83);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(427, 54);
+            this.panel1.Size = new System.Drawing.Size(285, 35);
             this.panel1.TabIndex = 2;
             // 
             // label1
@@ -247,30 +232,27 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(22, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 26);
+            this.label1.Size = new System.Drawing.Size(61, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Số ĐT :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(148, 12);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhone.Location = new System.Drawing.Point(99, 8);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(263, 26);
+            this.txtPhone.Size = new System.Drawing.Size(177, 20);
             this.txtPhone.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.lbEmailEmployee);
             this.panel5.Controls.Add(this.txtEmail);
-            this.panel5.Location = new System.Drawing.Point(4, 65);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(3, 42);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(427, 54);
+            this.panel5.Size = new System.Drawing.Size(285, 35);
             this.panel5.TabIndex = 1;
             // 
             // lbEmailEmployee
@@ -278,29 +260,26 @@
             this.lbEmailEmployee.AutoSize = true;
             this.lbEmailEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEmailEmployee.ForeColor = System.Drawing.Color.White;
-            this.lbEmailEmployee.Location = new System.Drawing.Point(22, 14);
-            this.lbEmailEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbEmailEmployee.Location = new System.Drawing.Point(15, 9);
             this.lbEmailEmployee.Name = "lbEmailEmployee";
-            this.lbEmailEmployee.Size = new System.Drawing.Size(87, 26);
+            this.lbEmailEmployee.Size = new System.Drawing.Size(56, 19);
             this.lbEmailEmployee.TabIndex = 4;
             this.lbEmailEmployee.Text = "Email :";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(148, 12);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtEmail.Location = new System.Drawing.Point(99, 8);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(263, 26);
+            this.txtEmail.Size = new System.Drawing.Size(177, 20);
             this.txtEmail.TabIndex = 2;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lbAddrEmployee);
             this.panel4.Controls.Add(this.txtFullname);
-            this.panel4.Location = new System.Drawing.Point(4, 5);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(427, 54);
+            this.panel4.Size = new System.Drawing.Size(285, 35);
             this.panel4.TabIndex = 0;
             // 
             // lbAddrEmployee
@@ -308,19 +287,17 @@
             this.lbAddrEmployee.AutoSize = true;
             this.lbAddrEmployee.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddrEmployee.ForeColor = System.Drawing.Color.White;
-            this.lbAddrEmployee.Location = new System.Drawing.Point(22, 18);
-            this.lbAddrEmployee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbAddrEmployee.Location = new System.Drawing.Point(15, 12);
             this.lbAddrEmployee.Name = "lbAddrEmployee";
-            this.lbAddrEmployee.Size = new System.Drawing.Size(109, 26);
+            this.lbAddrEmployee.Size = new System.Drawing.Size(72, 19);
             this.lbAddrEmployee.TabIndex = 3;
             this.lbAddrEmployee.Text = "Tên KH :";
             // 
             // txtFullname
             // 
-            this.txtFullname.Location = new System.Drawing.Point(148, 17);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtFullname.Location = new System.Drawing.Point(99, 11);
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(263, 26);
+            this.txtFullname.Size = new System.Drawing.Size(177, 20);
             this.txtFullname.TabIndex = 1;
             // 
             // panel2
@@ -330,10 +307,9 @@
             this.panel2.Controls.Add(this.btnDeleteCustomer);
             this.panel2.Controls.Add(this.btnAddCustomer);
             this.panel2.Controls.Add(this.btnEditCustomer);
-            this.panel2.Location = new System.Drawing.Point(1150, 275);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(767, 179);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(182, 365);
+            this.panel2.Size = new System.Drawing.Size(122, 238);
             this.panel2.TabIndex = 10;
             // 
             // button2
@@ -343,10 +319,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(15, 294);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Location = new System.Drawing.Point(10, 191);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(147, 66);
+            this.button2.Size = new System.Drawing.Size(98, 43);
             this.button2.TabIndex = 14;
             this.button2.Text = "Khóa";
             this.button2.UseVisualStyleBackColor = false;
@@ -359,10 +334,9 @@
             this.btnDeleteCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDeleteCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnDeleteCustomer.Location = new System.Drawing.Point(15, 197);
-            this.btnDeleteCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(10, 128);
             this.btnDeleteCustomer.Name = "btnDeleteCustomer";
-            this.btnDeleteCustomer.Size = new System.Drawing.Size(147, 66);
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(98, 43);
             this.btnDeleteCustomer.TabIndex = 2;
             this.btnDeleteCustomer.Text = "Xoá";
             this.btnDeleteCustomer.UseVisualStyleBackColor = false;
@@ -375,10 +349,9 @@
             this.btnAddCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnAddCustomer.Location = new System.Drawing.Point(15, 5);
-            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAddCustomer.Location = new System.Drawing.Point(10, 3);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(147, 66);
+            this.btnAddCustomer.Size = new System.Drawing.Size(98, 43);
             this.btnAddCustomer.TabIndex = 0;
             this.btnAddCustomer.Text = "Thêm";
             this.btnAddCustomer.UseVisualStyleBackColor = false;
@@ -391,10 +364,9 @@
             this.btnEditCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditCustomer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnEditCustomer.Location = new System.Drawing.Point(15, 100);
-            this.btnEditCustomer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditCustomer.Location = new System.Drawing.Point(10, 65);
             this.btnEditCustomer.Name = "btnEditCustomer";
-            this.btnEditCustomer.Size = new System.Drawing.Size(147, 66);
+            this.btnEditCustomer.Size = new System.Drawing.Size(98, 43);
             this.btnEditCustomer.TabIndex = 1;
             this.btnEditCustomer.Text = "Sửa";
             this.btnEditCustomer.UseVisualStyleBackColor = false;
@@ -403,11 +375,10 @@
             // CustomerTable
             // 
             this.CustomerTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CustomerTable.Location = new System.Drawing.Point(32, 275);
-            this.CustomerTable.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.CustomerTable.Location = new System.Drawing.Point(21, 179);
             this.CustomerTable.Name = "CustomerTable";
             this.CustomerTable.RowHeadersWidth = 62;
-            this.CustomerTable.Size = new System.Drawing.Size(1110, 365);
+            this.CustomerTable.Size = new System.Drawing.Size(740, 237);
             this.CustomerTable.TabIndex = 0;
             this.CustomerTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTableCustomer_CellContentClick);
             // 
@@ -415,10 +386,9 @@
             // 
             this.panel11.Controls.Add(this.label3);
             this.panel11.Controls.Add(this.txtAddress);
-            this.panel11.Location = new System.Drawing.Point(538, 202);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel11.Location = new System.Drawing.Point(359, 131);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(427, 54);
+            this.panel11.Size = new System.Drawing.Size(285, 35);
             this.panel11.TabIndex = 3;
             // 
             // label3
@@ -426,20 +396,18 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(22, 14);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(15, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 26);
+            this.label3.Size = new System.Drawing.Size(65, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Địa chỉ :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(150, 12);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtAddress.Location = new System.Drawing.Point(100, 8);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(263, 26);
+            this.txtAddress.Size = new System.Drawing.Size(177, 20);
             this.txtAddress.TabIndex = 2;
             // 
             // panel12
@@ -450,9 +418,10 @@
             this.panel12.Controls.Add(this.txtSearch);
             this.panel12.Controls.Add(this.cbSearch);
             this.panel12.Controls.Add(this.label4);
-            this.panel12.Location = new System.Drawing.Point(985, 11);
+            this.panel12.Location = new System.Drawing.Point(657, 7);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(347, 177);
+            this.panel12.Size = new System.Drawing.Size(232, 116);
             this.panel12.TabIndex = 13;
             // 
             // button3
@@ -462,10 +431,9 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(19, 114);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Location = new System.Drawing.Point(13, 74);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 40);
+            this.button3.Size = new System.Drawing.Size(91, 26);
             this.button3.TabIndex = 17;
             this.button3.Text = "HỦY";
             this.button3.UseVisualStyleBackColor = false;
@@ -478,10 +446,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(180, 114);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(120, 74);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 40);
+            this.button1.Size = new System.Drawing.Size(98, 26);
             this.button1.TabIndex = 16;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = false;
@@ -489,20 +456,18 @@
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(19, 70);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSearch.Location = new System.Drawing.Point(13, 46);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(308, 26);
+            this.txtSearch.Size = new System.Drawing.Size(207, 20);
             this.txtSearch.TabIndex = 15;
             // 
             // cbSearch
             // 
             this.cbSearch.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbSearch.FormattingEnabled = true;
-            this.cbSearch.Location = new System.Drawing.Point(189, 20);
-            this.cbSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.cbSearch.Location = new System.Drawing.Point(126, 13);
             this.cbSearch.Name = "cbSearch";
-            this.cbSearch.Size = new System.Drawing.Size(138, 31);
+            this.cbSearch.Size = new System.Drawing.Size(93, 24);
             this.cbSearch.TabIndex = 14;
             this.cbSearch.SelectedValueChanged += new System.EventHandler(this.cbSearch_SelectedValueChanged);
             // 
@@ -511,10 +476,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(9, 13);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(171, 26);
+            this.label4.Size = new System.Drawing.Size(114, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Nhập Dữ Liệu :";
             // 
@@ -523,9 +487,10 @@
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.button4);
             this.panel13.Controls.Add(this.comboBox1);
-            this.panel13.Location = new System.Drawing.Point(985, 191);
+            this.panel13.Location = new System.Drawing.Point(657, 124);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(347, 74);
+            this.panel13.Size = new System.Drawing.Size(232, 49);
             this.panel13.TabIndex = 14;
             // 
             // button4
@@ -535,10 +500,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(180, 15);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Location = new System.Drawing.Point(120, 10);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 40);
+            this.button4.Size = new System.Drawing.Size(98, 26);
             this.button4.TabIndex = 17;
             this.button4.Text = "LỌC";
             this.button4.UseVisualStyleBackColor = false;
@@ -547,15 +511,14 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 17);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(12, 11);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 31);
+            this.comboBox1.Size = new System.Drawing.Size(93, 24);
             this.comboBox1.TabIndex = 15;
             // 
             // UC_Customers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
             this.Controls.Add(this.panel13);
@@ -565,8 +528,9 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_Customers";
-            this.Size = new System.Drawing.Size(1353, 662);
+            this.Size = new System.Drawing.Size(902, 430);
             this.Load += new System.EventHandler(this.UC_Customers_Load);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

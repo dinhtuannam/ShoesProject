@@ -29,15 +29,18 @@
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDeleteEmployee = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnEditEmployee = new System.Windows.Forms.Button();
+            this.btnAddEmployee = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbEmailEmployee = new System.Windows.Forms.Label();
             this.tbEmailEmployee = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbAddrEmployee = new System.Windows.Forms.Label();
             this.tbAddEmployee = new System.Windows.Forms.TextBox();
-            this.btnDeleteEmployee = new System.Windows.Forms.Button();
-            this.btnAddEmployee = new System.Windows.Forms.Button();
-            this.btnEditEmployee = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbPhoneEmployee = new System.Windows.Forms.Label();
@@ -49,9 +52,6 @@
             this.lbIdEmployee = new System.Windows.Forms.Label();
             this.tbIdEmployee = new System.Windows.Forms.TextBox();
             this.dgvTableEmployee = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -74,6 +74,78 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(375, 191);
             this.panel3.TabIndex = 5;
+            // 
+            // btnDeleteEmployee
+            // 
+            this.btnDeleteEmployee.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnDeleteEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeleteEmployee.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnDeleteEmployee.Location = new System.Drawing.Point(13, 106);
+            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
+            this.btnDeleteEmployee.Size = new System.Drawing.Size(98, 43);
+            this.btnDeleteEmployee.TabIndex = 2;
+            this.btnDeleteEmployee.Text = "Xoá";
+            this.btnDeleteEmployee.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(260, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 44);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Tìm kiếm";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // btnEditEmployee
+            // 
+            this.btnEditEmployee.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnEditEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditEmployee.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEditEmployee.Location = new System.Drawing.Point(260, 105);
+            this.btnEditEmployee.Name = "btnEditEmployee";
+            this.btnEditEmployee.Size = new System.Drawing.Size(98, 44);
+            this.btnEditEmployee.TabIndex = 1;
+            this.btnEditEmployee.Text = "Sửa";
+            this.btnEditEmployee.UseVisualStyleBackColor = false;
+            // 
+            // btnAddEmployee
+            // 
+            this.btnAddEmployee.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddEmployee.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnAddEmployee.Location = new System.Drawing.Point(139, 105);
+            this.btnAddEmployee.Name = "btnAddEmployee";
+            this.btnAddEmployee.Size = new System.Drawing.Size(98, 43);
+            this.btnAddEmployee.TabIndex = 0;
+            this.btnAddEmployee.Text = "Thêm";
+            this.btnAddEmployee.UseVisualStyleBackColor = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(13, 45);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(241, 22);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(245, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NHẬP DỮ LIỆU CẦN TÌM";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel5
             // 
@@ -128,33 +200,6 @@
             this.tbAddEmployee.Name = "tbAddEmployee";
             this.tbAddEmployee.Size = new System.Drawing.Size(352, 20);
             this.tbAddEmployee.TabIndex = 1;
-            // 
-            // btnDeleteEmployee
-            // 
-            this.btnDeleteEmployee.Location = new System.Drawing.Point(13, 106);
-            this.btnDeleteEmployee.Name = "btnDeleteEmployee";
-            this.btnDeleteEmployee.Size = new System.Drawing.Size(98, 43);
-            this.btnDeleteEmployee.TabIndex = 2;
-            this.btnDeleteEmployee.Text = "Xoá";
-            this.btnDeleteEmployee.UseVisualStyleBackColor = true;
-            // 
-            // btnAddEmployee
-            // 
-            this.btnAddEmployee.Location = new System.Drawing.Point(139, 105);
-            this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(98, 43);
-            this.btnAddEmployee.TabIndex = 0;
-            this.btnAddEmployee.Text = "Thêm";
-            this.btnAddEmployee.UseVisualStyleBackColor = true;
-            // 
-            // btnEditEmployee
-            // 
-            this.btnEditEmployee.Location = new System.Drawing.Point(260, 105);
-            this.btnEditEmployee.Name = "btnEditEmployee";
-            this.btnEditEmployee.Size = new System.Drawing.Size(98, 44);
-            this.btnEditEmployee.TabIndex = 1;
-            this.btnEditEmployee.Text = "Sửa";
-            this.btnEditEmployee.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
@@ -257,35 +302,6 @@
             this.dgvTableEmployee.Name = "dgvTableEmployee";
             this.dgvTableEmployee.Size = new System.Drawing.Size(874, 197);
             this.dgvTableEmployee.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(260, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 44);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Tìm kiếm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(245, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NHẬP DỮ LIỆU CẦN TÌM";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(13, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 22);
-            this.textBox1.TabIndex = 1;
             // 
             // UC_Employee
             // 
