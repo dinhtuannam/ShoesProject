@@ -134,6 +134,7 @@ namespace ShoesProject.UserControls
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
+            validate();
             if (DAO_Customer.Instance.insertAccount(getData()))
             {
                 MessageBox.Show("Thêm tài khoản thành công");
@@ -186,6 +187,58 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("Vui lòng nhập dữ liệu tìm kiếm");
             else
                 loadTable(SearchCustomerAction);
+        }
+
+        private bool validate()
+        {
+            string strRegex = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";         
+            if (txtID.Text == "")
+            {
+                MessageBox.Show("Vui long nhập mã khách hàng");
+                return false;
+            }    
+            if(txtFullname.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng");
+                return false;
+            }    
+            if (txtPass.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu");
+                return false;
+            }    
+            if (txtStatus.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập trạng thái");
+                return false;
+            }    
+            if (txtUsername.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản");
+                return false;
+            }    
+            if (txtEmail.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập email khách hàng");
+                return false;
+            }    
+            if (txtEmail.Text != strRegex)
+            {
+                MessageBox.Show("Email không hợp lệ");
+                return false;
+            }   
+            if (txtPhone.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số điện thoại khách hàng");
+                return false;
+            }    
+            if (txtAddress.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ khách hàng");
+                return false;
+            }    
+            return true;
+
         }
     }
 }
