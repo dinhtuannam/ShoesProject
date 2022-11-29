@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,19 @@ namespace ShoesProject.DTO
            
         }
 
+        public DTO_Employee()
+        {
+            id = "";
+            username = "";
+            password = "";
+            status = "";
+            permission = "";
+            fullname = "";
+            phone = "";
+            email = "";
+            address = "";
+        }
+
         public string Id { get => id; set => id = value; }
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
@@ -41,5 +55,6 @@ namespace ShoesProject.DTO
         public string Phone { get => phone; set => phone = value; }
         public string Address { get => address; set => address = value; }
         public string Email { get => email; set => email = value; }
+        public static object Instance { get; internal set; }
     }
 }
