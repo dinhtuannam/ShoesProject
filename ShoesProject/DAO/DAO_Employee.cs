@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ShoesProject.DAO
@@ -12,7 +13,7 @@ namespace ShoesProject.DAO
     public class DAO_Employee
     {
         string condition = "TAIKHOAN.trangthai != 'unactive' ";
-        string selectRow = "Select idNV , tenNV , matkhau , tennhanvien , soDT , diachi , email , trangthai from TAIKHOAN , NHANVIEN ";
+        string selectRow = "Select idNV , tenTK , matkhau , tenNV , soDT , diachi , email , trangthai from TAIKHOAN , NHANVIEN ";
         private static DAO_Employee instance;
 
         public static DAO_Employee Instance
@@ -48,7 +49,7 @@ namespace ShoesProject.DAO
             string id = GenerateID();
             string query1 = "insert into TAIKHOAN(idUser,tenTK,matkhau,trangthai,idQuyen) values( @id , @username , @pass , @status , @permission )";
             result = DataProvider.Instance.ExecuteNonQuery(query1, new object[] { id, item.Username, item.Password, item.Status, item.Permission });
-            string query2 = "insert into NHANVIEN(idNV,tennhanvien,soDT,email,diaChi) values( @id , @fullname , @phone , @email , @address )";
+            string query2 = "insert into NHANVIEN(idNV,tenNV,soDT,email,diachi) values( @id , @fullname , @phone , @email , @address )";
             result = result + DataProvider.Instance.ExecuteNonQuery(query2, new object[] { id, item.Fullname, item.Phone, item.Email, item.Address });
             return result == 2;
         }
@@ -88,9 +89,10 @@ namespace ShoesProject.DAO
         {
             int result = 0;
             string query1 = "update TAIKHOAN set tenTK = @username , matkhau = @pass , trangthai = @status , idQuyen = @permission where idUser = @id ";
+            string query2 = "update NHANVIEN set tenNV = @fullname , soDT = @phone , email = @email , diachi = @address where idNV = @id ";
             result = DataProvider.Instance.ExecuteNonQuery(query1, new object[] { item.Username, item.Password, item.Status, item.Permission, item.Id });
-            string query2 = "update NHANVIEN set tennhanvien = @fullname , soDT = @phone , email = @email , diaChi = @address where idNV = @id ";
             result = result + DataProvider.Instance.ExecuteNonQuery(query2, new object[] { item.Fullname, item.Phone, item.Email, item.Address, item.Id });
+            
             return result == 2;
         }
 

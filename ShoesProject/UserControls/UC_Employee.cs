@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,6 +29,28 @@ namespace ShoesProject.UserControls
            
         }
 
+        private void UC_Employee_Load_1(object sender, EventArgs e)
+        {
+            EmployeeTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+            loadTable(LoadAllEmployeeAction);
+            loadComboboxSearch();
+            resizeTable();
+        }
+
+        private void loadComboboxSearch()
+        {
+            List<string> searchList = new List<string>();
+            searchList.Add("Name");
+            searchList.Add("ID");
+            cbSearchE.DataSource = searchList;
+        }
+
+        private void cbSearchE_SelectedValueChanged(object sender, EventArgs e)
+        {
+            searchSelected = cbSearchE.SelectedItem.ToString();
+        }
+
+
         private void loadTable(string action)
         {
             DataTable dt = new DataTable();
@@ -36,27 +59,6 @@ namespace ShoesProject.UserControls
             if (action == SearchEmployeeAction)
                 dt = DAO_Employee.Instance.searchAccount(txtSearchE.Text, searchSelected);
             EmployeeTable.DataSource = dt;
-        }
-
-        private void UC_Employee_Load(object sender, EventArgs e)
-        {
-            EmployeeTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-            loadTable(LoadAllEmployeeAction);
-            resizeTable();
-        }
-        private void btnAddEmployee_Click(object sender, EventArgs e)
-        {
-            validate();
-            if (DAO_Employee.Instance.insertAccount(getData()))
-            {
-                MessageBox.Show("Thêm tài khoản thành công");
-                loadTable(LoadAllEmployeeAction);
-                setNull();
-            }
-            else
-            {
-                MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
-            }
         }
 
         private void resizeTable()
@@ -87,7 +89,7 @@ namespace ShoesProject.UserControls
             emp.Username = txtUsernameE.Text;
             emp.Password = txtPassE.Text;
             emp.Status = "active";
-            emp.Permission = "NV";
+            emp.Permission = "AD";
             emp.Fullname = txtFullnameE.Text;
             emp.Phone = txtPhoneE.Text;
             emp.Address = txtAddressE.Text;
@@ -95,43 +97,10 @@ namespace ShoesProject.UserControls
             return emp;
         }
 
-        private void btnEditEmployee_Click(object sender, EventArgs e)
-        {
-            if (DAO_Employee.Instance.updateAccount(getData()))
-            {
-                MessageBox.Show("Cập nhật tài khoản thành công");
-                loadTable(LoadAllEmployeeAction);
-                setNull();
-            }
-            else
-            {
-                MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
-            }
-
-        }
-
-        private void dgvTableEmployee_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int indexSelect = EmployeeTable.CurrentRow.Index;
-            int i = indexSelect;
-            txtIDE.Text = EmployeeTable.Rows[i].Cells[0].Value.ToString();
-            txtUsernameE.Text = EmployeeTable.Rows[i].Cells[1].Value.ToString();
-            txtPassE.Text = EmployeeTable.Rows[i].Cells[2].Value.ToString();
-            txtFullnameE.Text = EmployeeTable.Rows[i].Cells[3].Value.ToString();
-            txtPhoneE.Text = EmployeeTable.Rows[i].Cells[4].Value.ToString();
-            txtAddressE.Text = EmployeeTable.Rows[i].Cells[5].Value.ToString();
-            txtEmailE.Text = EmployeeTable.Rows[i].Cells[6].Value.ToString();
-            txtStatusE.Text = EmployeeTable.Rows[i].Cells[7].Value.ToString();
-        }
-
         private bool validate()
         {
-            string strRegex = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
-            if (txtIDE.Text == "")
-            {
-                MessageBox.Show("Vui long nhập mã khách hàng");
-                return false;
-            }
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(txtEmailE.Text);
             if (txtFullnameE.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tên khách hàng");
@@ -140,11 +109,6 @@ namespace ShoesProject.UserControls
             if (txtPassE.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu");
-                return false;
-            }
-            if (txtStatusE.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập trạng thái");
                 return false;
             }
             if (txtUsernameE.Text == "")
@@ -157,7 +121,7 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("Vui lòng nhập email khách hàng");
                 return false;
             }
-            if (txtEmailE.Text != strRegex)
+            if (!match.Success)
             {
                 MessageBox.Show("Email không hợp lệ");
                 return false;
@@ -210,5 +174,62 @@ namespace ShoesProject.UserControls
             setNull();
             loadTable(LoadAllEmployeeAction);
         }
+
+        
+
+        private void EmployeeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexSelect = EmployeeTable.CurrentRow.Index;
+            int i = indexSelect;
+            txtIDE.Text = EmployeeTable.Rows[i].Cells[0].Value.ToString();
+            txtUsernameE.Text = EmployeeTable.Rows[i].Cells[1].Value.ToString();
+            txtPassE.Text = EmployeeTable.Rows[i].Cells[2].Value.ToString();
+            txtFullnameE.Text = EmployeeTable.Rows[i].Cells[3].Value.ToString();
+            txtPhoneE.Text = EmployeeTable.Rows[i].Cells[4].Value.ToString();
+            txtAddressE.Text = EmployeeTable.Rows[i].Cells[5].Value.ToString();
+            txtEmailE.Text = EmployeeTable.Rows[i].Cells[6].Value.ToString();
+            txtStatusE.Text = EmployeeTable.Rows[i].Cells[7].Value.ToString();
+        }
+
+        private void btnAddEmployee_Click_1(object sender, EventArgs e)
+        {
+            if (validate())
+            {
+                if (DAO_Employee.Instance.insertAccount(getData()))
+                {
+                   MessageBox.Show("Thêm tài khoản thành công");
+                   loadTable(LoadAllEmployeeAction);
+                   setNull();
+                }
+                else
+                {
+                   MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
+                }
+            }
+            
+        }
+
+        private void btnEditEmployee_Click_1(object sender, EventArgs e)
+        {
+            if (validate())
+            {
+                if (DAO_Employee.Instance.updateAccount(getData()))
+                {
+                    MessageBox.Show("Cập nhật tài khoản thành công");
+                    loadTable(LoadAllEmployeeAction);
+                    setNull();
+                }
+                else
+                {
+                    MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
+                }
+            }
+        }
+
+        private void btnPrimaryEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
