@@ -80,7 +80,7 @@ namespace ShoesProject
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            TKKD tkkd = new TKKD();
+            UC_TKKD tkkd = new UC_TKKD();
             addUserControl(tkkd);
         }
 
