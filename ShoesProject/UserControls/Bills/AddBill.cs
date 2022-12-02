@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,21 +53,9 @@ namespace ShoesProject.UserControls.Bills
                 lbtrangthai.Text = "Ko nhap so luong duoi 1";
                 return;
             }
-            SQLData sqldata = new SQLData();
-            string query = String.Format("Select gia from sanpham where idsp='{0}'",txtidsanpham.Text);
-            Boolean success = false;
-            object test = sqldata.Scalar(query, ref success);
-            if (success && test == null)
-            {
-                lbtrangthai.Text = "Ko tim thay id san pham=" + txtidsanpham.Text + " trong table sanpham";
-                return;
-            }
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc table sanpham";
-                return;
-            }
-            float dongia = float.Parse(test.ToString());
+
+            object temp = DAO_Bill.Instance.getPriceByID(txtidsanpham.Text);
+            float dongia = float.Parse(temp.ToString());
             float tongtien=0;int amount=0;
             int n = table.Rows.Count;
             for(int i = 0;i < n; i++)
@@ -94,25 +83,19 @@ namespace ShoesProject.UserControls.Bills
                 lbtrangthai.Text = "Vui long chon it nhat 1 san pham";
                 return;
             }
-            SQLData sqldata = new SQLData();
-            string query = String.Format("insert into hoadon values ('{0}','{1}','{2}','{3}','{4}','{5}')",txtid.Text,txtidnhanvien.Text,txtidcustomer.Text,date.Value.ToString("yyyyMMdd hh:mm:ss tt"),txttotal.Text,null);
-            Boolean success = false;
-            sqldata.Execute(query,ref success);
-            if (!success)
+            string[] soluong=new string[n];
+            string[] totalsp=new string[n];
+            string[] idsp = new string[n];
+            for( int i=0; i < n; i++)
             {
-                lbtrangthai.Text = "Them hoa don that bai";
-                return;
+                idsp[i] = table.Rows[i][0].ToString();
+                soluong[i] = table.Rows[i][2].ToString();
+                totalsp[i] = table.Rows[i][3].ToString();
             }
-            for(int i =0;i < n; i++)
-            {
-                query =String.Format("insert into cthd values('{0}','{1}','{2}','{3}')", txtid.Text, table.Rows[i][0].ToString(), table.Rows[i][2].ToString(), table.Rows[i][3].ToString());
-                sqldata.Execute(query,ref success);
-                if (!success)
-                {
-                    lbtrangthai.Text = "Them cthd that bai";
-                    return;
-                }
-            }
+            DAO_Bill.Instance.addBill(txtid.Text,txtidnhanvien.Text,txtidcustomer.Text, date.Value.ToString("yyyyMMdd hh:mm:ss tt"),txttotal.Text,null);
+            DAO_Bill.Instance.addCTHD(txtid.Text, idsp, soluong, totalsp);
+          
+           
             Close();
         }
 
@@ -125,7 +108,7 @@ namespace ShoesProject.UserControls.Bills
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu null";
+                lbtrangthai.Text = "Bang du lieu trong rong";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
@@ -142,7 +125,7 @@ namespace ShoesProject.UserControls.Bills
 
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu null";
+                lbtrangthai.Text = "Bang du lieu trong rong";
                 return 0;
             }
             int n = table.Rows.Count;

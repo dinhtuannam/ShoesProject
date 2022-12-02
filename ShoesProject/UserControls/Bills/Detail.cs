@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.Logging;
+using ShoesProject.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,31 +29,19 @@ namespace ShoesProject.UserControls.Bills
             string idnhanvien = table.Rows[0][1].ToString().Trim();
             string date = table.Rows[0][3].ToString();
             string total = table.Rows[0][4].ToString();
-            SQLData sqldata = new SQLData();
-            Boolean success = false;
-            string namenhanvien =sqldata.Scalar(String.Format("Select tennv from nhanvien where idnv='{0}'", idnhanvien),ref success).ToString();
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc table nhanvien";
-            }
-            string namekhachhang = sqldata.Scalar(String.Format("Select tenkhachhang from khachhang where idkh ='{0}'", idcustomer),ref success).ToString();
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc table khachhang";
-            }
-            table = sqldata.getData(String.Format("Select idsp ,soluong,tongtien from cthd where idhd='{0}'", idhoadon),ref success);
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc table cthd";
-            }          
+           
+            string namenhanvien = DAO_Bill.Instance.getNameNVByID(idnhanvien).ToString();
+
+            string namekhachhang = DAO_Bill.Instance.getNameKHByID(idcustomer).ToString();
+
+            table = DAO_Bill.Instance.getCTHD(idhoadon);
             int n = table.Rows.Count;
-
             DataTable newtable = new DataTable();
-            newtable.Columns.Add("id sp");
-            newtable.Columns.Add("don gia");
+            newtable.Columns.Add("ID san pham");
+            newtable.Columns.Add("Don gia");
 
-            newtable.Columns.Add("so luong");
-            newtable.Columns.Add("tong tien");
+            newtable.Columns.Add("So luong");
+            newtable.Columns.Add("Tong tien");
            
 
             for (int i = 0; i < n; i++)

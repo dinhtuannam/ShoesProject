@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAO_Bill.cs" />
     <Compile Include="DAO\DAO_Customer.cs" />
     <Compile Include="DAO\DAO_Employee.cs" />
     <Compile Include="DAO\DAO_Genres.cs" />
@@ -109,7 +110,6 @@
     <Compile Include="UserControls\Bills\Edit.Designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Bills\SQLData.cs" />
     <Compile Include="UserControls\TKKD\TKKD.cs">
       <SubType>UserControl</SubType>
     </Compile>

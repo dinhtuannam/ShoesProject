@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShoesProject.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +24,7 @@ namespace ShoesProject.UserControls.Bills
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu null";
+                lbtrangthai.Text = "Bang du lieu trong rong";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
@@ -33,50 +34,39 @@ namespace ShoesProject.UserControls.Bills
             }
             int row = dataGridView1.CurrentRow.Index;
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
-            SQLData sqldata = new SQLData();
             DataTable table = new DataTable();
-            string query = String.Format("Select * from hoadon where idhd='{0}'",id);
-            Boolean success = false;
-            object test = sqldata.Scalar(query,ref success);
-            if (test == null && success)
-            {
-                lbtrangthai.Text = "Ko tim thay id hoa don="+id+" trong table hoadon";
-                return;
-            }
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc bang hoadon";
-                return;
-            }
-            table = sqldata.getData(query, ref success);
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc bang hoadon";
-                return;
-            }
+            table=DAO_Bill.Instance.getBillByID(id);
+         
+
             Edit edit = new Edit(table);
             edit.Show();
         }
-        private void loadData()
+        private void loadTable(string type,string id = null)
         {
-            SQLData sqlData = new SQLData();
-            string query = "Select * from hoadon";
-             Boolean success=false;
-             dataGridView1.DataSource =sqlData.getData(query,ref success);
-            if (!success)
+            DataTable dt=null;
+            if (type.Equals("search"))
             {
-                lbtrangthai.Text = "Ko ket noi duoc bang hoadon";
+
+                dt=DAO_Bill.Instance.getBillByID(id);
             }
+            else
+            {
+                if (type.Equals("loadalldata"))
+                {
+                    dt = DAO_Bill.Instance.getAllBill(); 
+                }
+            }
+            dataGridView1.DataSource = dt;
         }
         private void BillsManagement_Load(object sender, EventArgs e)
         {
-            loadData();
+            loadTable("loadalldata");
             lbtrangthai.Text = "";
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            loadData();
+            loadTable("loadalldata");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -89,7 +79,7 @@ namespace ShoesProject.UserControls.Bills
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu null";
+                lbtrangthai.Text = "Bang du lieu trong rong";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
@@ -99,23 +89,16 @@ namespace ShoesProject.UserControls.Bills
             }
             int row = dataGridView1.CurrentRow.Index;
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
-            SQLData sqldata = new SQLData();
-            Boolean success = false;
-            string query = String.Format("Delete from cthd where idhd='{0}';Delete from hoadon where idhd='{0}'", id);
-            
-            sqldata.Execute(query,ref success);
-            if (!success)
-            {
-                lbtrangthai.Text = "Cant connect to hoadon or cthd";
-            }
-            loadData();
+            DAO_Bill.Instance.deleteCTHDByID(id);
+            DAO_Bill.Instance.deleteBill(id);
+            loadTable("loadalldata");
         }
 
         private void btnDetail_Click(object sender, EventArgs e)
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu null";
+                lbtrangthai.Text = "Bang du lieu trong rong";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
@@ -125,29 +108,7 @@ namespace ShoesProject.UserControls.Bills
             }
             int row = dataGridView1.CurrentRow.Index;
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
-            SQLData sqldata = new SQLData();
-            DataTable table = new DataTable();
-            string query = String.Format("Select * from hoadon where idhd='{0}'", id);
-            Boolean success = false;
-            object test = sqldata.Scalar(query,ref success);
-            if(test==null && success)
-            {
-                lbtrangthai.Text = "Ko tim thay id hoa don=" +id+" trong table hoadon";
-                return;
-            }
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc bang hoadon";
-                return;
-            }
-
-            table = sqldata.getData(query,ref success);
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc bang hoadon";
-                return;
-            }
-            Detail detail = new Detail(table);
+            Detail detail = new Detail(DAO_Bill.Instance.getBillByID(id));
             detail.Show();
 
         }
@@ -157,17 +118,10 @@ namespace ShoesProject.UserControls.Bills
         {
             if (txtsearch.Text.Trim().Equals(""))
             {
-                loadData();
+                loadTable("loadalldata");
                 return;
             }
-            SQLData sqldata = new SQLData();
-            string query = String.Format("Select * from hoadon where idhd='{0}'",txtsearch.Text);
-            Boolean success = false;
-            dataGridView1.DataSource=sqldata.getData(query, ref success);
-            if (!success)
-            {
-                lbtrangthai.Text = "Ko ket noi duoc table hoadon";
-            }
+            dataGridView1.DataSource = DAO_Bill.Instance.getBillByID(txtsearch.Text);
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)
