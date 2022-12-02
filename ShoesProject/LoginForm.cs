@@ -51,9 +51,8 @@ namespace ShoesProject
         {
             if(validate() && login())
             {
-                MessageBox.Show("Login Success");
                 this.Hide();
-                Home home = new Home();
+                Home home = new Home(txtName.Text);
                 home.ShowDialog();
                 this.Close();
             }
@@ -82,6 +81,26 @@ namespace ShoesProject
                     return false;
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            RegisterForm rf = new RegisterForm();
+            rf.ShowDialog();
+            this.Close();
+        }
+
+        private void txtName_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtName.Text == "Username")
+                txtName.Text = "";
+        }
+
+        private void txtPass_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtPass.Text == "Password")
+                txtPass.Text = "";
         }
     }
 }

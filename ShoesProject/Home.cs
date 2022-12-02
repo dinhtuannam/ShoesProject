@@ -1,4 +1,6 @@
-﻿using ShoesProject.UserControls;
+﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
+using ShoesProject.UserControls;
 using ShoesProject.UserControls.Bills;
 
 using System;
@@ -15,9 +17,29 @@ namespace ShoesProject
 {
     public partial class Home : Form
     {
-        public Home()
+        DTO_Employee employee;
+        public Home(string username)
         {
             InitializeComponent();
+            employee = getEmployee(username);
+            labelName.Text = employee.Username;
+            
+
+        }
+
+        private DTO_Employee getEmployee(string name)
+        {
+            DataTable dt = DAO_Employee.Instance.getEmployeeByName(name);
+            DTO_Employee em = new DTO_Employee();
+            em.Id = dt.Rows[0][0].ToString();
+            em.Username = dt.Rows[0][1].ToString();
+            em.Password = dt.Rows[0][2].ToString();
+            em.Fullname = dt.Rows[0][3].ToString();
+            em.Phone = dt.Rows[0][4].ToString();
+            em.Address = dt.Rows[0][5].ToString();
+            em.Email = dt.Rows[0][6].ToString();
+            em.Status = dt.Rows[0][7].ToString();
+            return em;
         }
 
         private void addUserControl(UserControl uc)
@@ -88,6 +110,14 @@ namespace ShoesProject
         {
             UC_Genres uc = new UC_Genres();
             addUserControl(uc);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm rf = new LoginForm();
+            rf.ShowDialog();
+            this.Close();
         }
     }
 }

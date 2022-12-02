@@ -69,6 +69,7 @@
             this.txtName.TabIndex = 2;
             this.txtName.TabStop = false;
             this.txtName.Text = "Username";
+            this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
             // 
             // pictureBox2
             // 
@@ -103,6 +104,7 @@
             this.txtPass.TabIndex = 5;
             this.txtPass.TabStop = false;
             this.txtPass.Text = "Password";
+            this.txtPass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPass_MouseClick);
             // 
             // btnSignIn
             // 
@@ -132,6 +134,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "REGISTER";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 

@@ -153,5 +153,13 @@ namespace ShoesProject
             if (txtRePassword.Text == "Re-password")
                 txtRePassword.Text = "";
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm rf = new LoginForm();
+            rf.ShowDialog();
+            this.Close();
+        }
     }
 }

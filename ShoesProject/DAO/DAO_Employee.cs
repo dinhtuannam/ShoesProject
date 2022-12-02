@@ -105,5 +105,10 @@ namespace ShoesProject.DAO
                 query = selectRow + " where idUser like '%" + data + "%' and TAIKHOAN.idUser = NHANVIEN.idNV and " + condition;
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public DataTable getEmployeeByName(String data)
+        {
+            string query = selectRow + "where TAIKHOAN.idUser = NHANVIEN.idNV and TAIKHOAN.tenTK = '" + data + "' ";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }
