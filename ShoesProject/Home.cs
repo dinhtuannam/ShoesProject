@@ -92,7 +92,8 @@ namespace ShoesProject
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-
+            UC_TKSP tksp = new UC_TKSP();
+            addUserControl(tksp);
         }
 
         private void Home_Load(object sender, EventArgs e)

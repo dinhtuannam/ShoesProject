@@ -32,13 +32,13 @@ namespace ShoesProject.DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public DataTable searchProduct(String data,String action)
+        public DataTable searchProduct(String data, String action)
         {
             string query = "";
-            if(action == "Name")
-                query = "Select * from sanpham where tenSP like '%"+data+ "%' and trangthai = 'active'";
-            else if(action == "ID")
-                query = "Select * from sanpham where idSP like '%"+data+ "%' and trangthai = 'active'";
+            if (action == "Name")
+                query = "Select * from sanpham where tenSP like '%" + data + "%' and trangthai = 'active'";
+            else if (action == "ID")
+                query = "Select * from sanpham where idSP like '%" + data + "%' and trangthai = 'active'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -62,7 +62,7 @@ namespace ShoesProject.DAO
         {
             int result = 0;
             string query = "update Sanpham set tenSP = @tensp , hinhanh = @hinhand , gia = @gia , mota = @mota , idTL = @idTL , trangthai = @trangthai , soluong = @soluong where idSP = @idSP ";
-            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { data.Name, data.Img, data.Price, data.Des, data.Genres, data.Status, data.Quantity ,data.Id });
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { data.Name, data.Img, data.Price, data.Des, data.Genres, data.Status, data.Quantity, data.Id });
             return result > 0;
         }
 

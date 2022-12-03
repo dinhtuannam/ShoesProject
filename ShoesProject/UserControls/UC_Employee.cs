@@ -101,9 +101,9 @@ namespace ShoesProject.UserControls
         {
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(txtEmailE.Text);
-            if (txtFullnameE.Text == "")
+            if (txtUsernameE.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên khách hàng");
+                MessageBox.Show("Vui lòng nhập tên tài khoản");
                 return false;
             }
             if (txtPassE.Text == "")
@@ -111,14 +111,14 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("Vui lòng nhập mật khẩu");
                 return false;
             }
-            if (txtUsernameE.Text == "")
+            if (txtFullnameE.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên tài khoản");
+                MessageBox.Show("Vui lòng nhập tên nhân viên");
                 return false;
             }
             if (txtEmailE.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập email khách hàng");
+                MessageBox.Show("Vui lòng nhập email nhân viên");
                 return false;
             }
             if (!match.Success)

@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DAO_Bill.cs" />
+    <Compile Include="DAO\DAO_TKSP.cs" />
     <Compile Include="DAO\DAO_Customer.cs" />
     <Compile Include="DAO\DAO_Employee.cs" />
     <Compile Include="DAO\DAO_Genres.cs" />
@@ -146,6 +147,12 @@
     <Compile Include="UserControls\UC_TKKD.Designer.cs">
       <DependentUpon>UC_TKKD.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_TKSP.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_TKSP.Designer.cs">
+      <DependentUpon>UC_TKSP.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_TKKD.resx">
       <DependentUpon>UC_TKKD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_TKSP.resx">
+      <DependentUpon>UC_TKSP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

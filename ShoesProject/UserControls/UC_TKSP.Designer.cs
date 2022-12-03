@@ -1,6 +1,6 @@
 ﻿namespace ShoesProject.UserControls
 {
-    partial class UC_TKKD
+    partial class UC_TKSP
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,11 +44,11 @@
             this.txtYear1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.ChartTable = new System.Windows.Forms.DataGridView();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(22, 22);
+            this.panel1.Location = new System.Drawing.Point(34, 14);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 150);
@@ -205,28 +205,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Month";
             // 
-            // chart
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart.Legends.Add(legend1);
-            this.chart.Location = new System.Drawing.Point(430, 22);
-            this.chart.Margin = new System.Windows.Forms.Padding(2);
-            this.chart.Name = "chart";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "s1";
-            this.chart.Series.Add(series1);
-            this.chart.Size = new System.Drawing.Size(451, 374);
-            this.chart.TabIndex = 7;
-            this.chart.Text = "chart1";
-            // 
             // ChartTable
             // 
             this.ChartTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChartTable.Location = new System.Drawing.Point(22, 190);
+            this.ChartTable.Location = new System.Drawing.Point(34, 182);
             this.ChartTable.Margin = new System.Windows.Forms.Padding(2);
             this.ChartTable.Name = "ChartTable";
             this.ChartTable.RowHeadersWidth = 62;
@@ -234,22 +216,37 @@
             this.ChartTable.Size = new System.Drawing.Size(385, 205);
             this.ChartTable.TabIndex = 6;
             // 
-            // UC_TKKD
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
+            this.chart1.Location = new System.Drawing.Point(425, 14);
+            this.chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "TênSP";
+            this.chart1.Series.Add(series2);
+            this.chart1.Size = new System.Drawing.Size(498, 374);
+            this.chart1.TabIndex = 9;
+            this.chart1.Text = "chart1";
+            // 
+            // UC_TKSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chart);
             this.Controls.Add(this.ChartTable);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "UC_TKKD";
-            this.Size = new System.Drawing.Size(902, 419);
-            this.Load += new System.EventHandler(this.UC_TKKD_Load);
+            this.Name = "UC_TKSP";
+            this.Size = new System.Drawing.Size(926, 403);
+            this.Load += new System.EventHandler(this.UC_TKSP_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -269,7 +266,7 @@
         private System.Windows.Forms.TextBox txtYear1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart;
         private System.Windows.Forms.DataGridView ChartTable;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
