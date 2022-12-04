@@ -79,24 +79,24 @@ namespace ShoesProject.UserControls
             txtMonthTo.DataSource = Array2;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             loadTableChart(FilterDataAction);
         }
 
-        private void txtMonthTo_SelectedValueChanged(object sender, EventArgs e)
-        {
-            month2 = txtMonthTo.SelectedItem.ToString();
-        }
-
-        private void txtMonthFrom_SelectedValueChanged(object sender, EventArgs e)
-        {
-            month1 = txtMonthFrom.SelectedItem.ToString(); 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             loadTableChart(getDataAction);
+        }
+
+        private void txtMonthFrom_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            month1 = txtMonthFrom.SelectedItem.ToString();
+        }
+
+        private void txtMonthTo_SelectedValueChanged_1(object sender, EventArgs e)
+        {
+            month2 = txtMonthTo.SelectedItem.ToString();
         }
     }
 }
