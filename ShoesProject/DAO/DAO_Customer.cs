@@ -86,6 +86,8 @@ namespace ShoesProject.DAO
                 query = selectRow + " where tenTK like '%" + data + "%' and TAIKHOAN.idUser = KHACHHANG.idKH and " + condition;
             else if (action == "ID")
                 query = selectRow + " where idUser like '%" + data + "%' and TAIKHOAN.idUser = KHACHHANG.idKH and " + condition;
+            else if (action == "STATUS")
+                query = selectRow + " where trangthai like '%" + data + "%' and TAIKHOAN.idUser = KHACHHANG.idKH and " + condition;
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }

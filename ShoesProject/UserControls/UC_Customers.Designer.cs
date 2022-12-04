@@ -67,8 +67,8 @@
             this.cbSearch = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnFilterC = new System.Windows.Forms.Button();
+            this.cbFilterC = new System.Windows.Forms.ComboBox();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -419,7 +419,7 @@
             this.panel12.Controls.Add(this.cbSearch);
             this.panel12.Controls.Add(this.label4);
             this.panel12.Location = new System.Drawing.Point(657, 7);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(232, 116);
             this.panel12.TabIndex = 13;
@@ -485,36 +485,37 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.button4);
-            this.panel13.Controls.Add(this.comboBox1);
+            this.panel13.Controls.Add(this.btnFilterC);
+            this.panel13.Controls.Add(this.cbFilterC);
             this.panel13.Location = new System.Drawing.Point(657, 124);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(232, 49);
             this.panel13.TabIndex = 14;
             // 
-            // button4
+            // btnFilterC
             // 
-            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(120, 10);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 26);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "LỌC";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnFilterC.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnFilterC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFilterC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFilterC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilterC.ForeColor = System.Drawing.Color.White;
+            this.btnFilterC.Location = new System.Drawing.Point(120, 10);
+            this.btnFilterC.Name = "btnFilterC";
+            this.btnFilterC.Size = new System.Drawing.Size(98, 26);
+            this.btnFilterC.TabIndex = 17;
+            this.btnFilterC.Text = "LỌC";
+            this.btnFilterC.UseVisualStyleBackColor = false;
+            this.btnFilterC.Click += new System.EventHandler(this.btnFilterC_Click);
             // 
-            // comboBox1
+            // cbFilterC
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 11);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(93, 24);
-            this.comboBox1.TabIndex = 15;
+            this.cbFilterC.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbFilterC.FormattingEnabled = true;
+            this.cbFilterC.Location = new System.Drawing.Point(12, 11);
+            this.cbFilterC.Name = "cbFilterC";
+            this.cbFilterC.Size = new System.Drawing.Size(93, 24);
+            this.cbFilterC.TabIndex = 15;
             // 
             // UC_Customers
             // 
@@ -528,7 +529,7 @@
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_Customers";
             this.Size = new System.Drawing.Size(902, 430);
             this.Load += new System.EventHandler(this.UC_Customers_Load);
@@ -598,8 +599,8 @@
         private System.Windows.Forms.ComboBox cbSearch;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnFilterC;
+        private System.Windows.Forms.ComboBox cbFilterC;
         private System.Windows.Forms.TextBox txtPass;
     }
 }

@@ -17,6 +17,8 @@ namespace ShoesProject.UserControls
     {
         string LoadAllEmployeeAction = "LoadAllEmployeeAction";
         string SearchEmployeeAction = "SearchEmployeeAction";
+        string FilterEmployeeAction = "FilterEmployeeAction";
+        string filterSelected = "STATUS";
         string searchSelected = "Name";
         public UC_Employee()
         {
@@ -26,7 +28,7 @@ namespace ShoesProject.UserControls
 
         private void LoadAccountList()
         {
-           
+
         }
 
         private void UC_Employee_Load_1(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace ShoesProject.UserControls
             EmployeeTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             loadTable(LoadAllEmployeeAction);
             loadComboboxSearch();
+            loadComBoBoxFilter();
             resizeTable();
         }
 
@@ -45,11 +48,23 @@ namespace ShoesProject.UserControls
             cbSearchE.DataSource = searchList;
         }
 
+        private void loadComBoBoxFilter()
+        {
+            List<string> searchList = new List<string>();
+            searchList.Add("active");
+            searchList.Add("banned");
+            cbFilterE.DataSource = searchList;
+        }
+
         private void cbSearchE_SelectedValueChanged(object sender, EventArgs e)
         {
             searchSelected = cbSearchE.SelectedItem.ToString();
         }
 
+        private void cbFilterE_SelectedValueChanged(object sender, EventArgs e)
+        {
+            filterSelected = cbSearchE.SelectedItem.ToString();
+        }
 
         private void loadTable(string action)
         {
@@ -58,6 +73,8 @@ namespace ShoesProject.UserControls
                 dt = DAO_Employee.Instance.getAllEmployee();
             if (action == SearchEmployeeAction)
                 dt = DAO_Employee.Instance.searchAccount(txtSearchE.Text, searchSelected);
+            if (action == FilterEmployeeAction)
+                dt = DAO_Employee.Instance.searchAccount(cbFilterE.Text, filterSelected);
             EmployeeTable.DataSource = dt;
         }
 
@@ -175,7 +192,13 @@ namespace ShoesProject.UserControls
             loadTable(LoadAllEmployeeAction);
         }
 
-        
+        private void btnFilterE_Click(object sender, EventArgs e)
+        {
+            if (cbFilterE.Text == "")
+                MessageBox.Show("Vui lòng chọn dữ liệu cần lọc");
+            else
+                loadTable(FilterEmployeeAction);
+        }
 
         private void EmployeeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -197,16 +220,16 @@ namespace ShoesProject.UserControls
             {
                 if (DAO_Employee.Instance.insertAccount(getData()))
                 {
-                   MessageBox.Show("Thêm tài khoản thành công");
-                   loadTable(LoadAllEmployeeAction);
-                   setNull();
+                    MessageBox.Show("Thêm tài khoản thành công");
+                    loadTable(LoadAllEmployeeAction);
+                    setNull();
                 }
                 else
                 {
-                   MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
+                    MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
                 }
             }
-            
+
         }
 
         private void btnEditEmployee_Click_1(object sender, EventArgs e)
@@ -228,8 +251,23 @@ namespace ShoesProject.UserControls
 
         private void btnPrimaryEmployee_Click(object sender, EventArgs e)
         {
-
+            if (txtIDE.Text == "")
+                MessageBox.Show("Vui lòng chọn tài khoản muốn khóa");
+            else
+            {
+                DialogResult dr = MessageBox.Show("Bạn có chắc muốn khóa tài khoản này", "Khóa tài khoản", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                if (dr == DialogResult.Yes)
+                {
+                    if (DAO_Employee.Instance.banAccount(txtIDE.Text))
+                    {
+                        MessageBox.Show("Khóa tài khoản thành công");
+                        loadTable(LoadAllEmployeeAction);
+                        setNull();
+                    }
+                    else
+                        MessageBox.Show("Đã xảy ra lỗi vui lòng thử lại");
+                }
+            }
         }
-
     }
 }

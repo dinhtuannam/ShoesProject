@@ -17,6 +17,8 @@ namespace ShoesProject.UserControls
     {
         string LoadAllCustomerAction = "LoadAllCustomerAction";
         string SearchCustomerAction = "SearchCustomerAction";
+        string FilterCustomerAction = "FilterCustomerAction";
+        string filterSelected = "STATUS";
         string searchSelected = "Name";
         public UC_Customers()
         {
@@ -31,11 +33,30 @@ namespace ShoesProject.UserControls
             cbSearch.DataSource = searchList;
         }
 
+        private void loadComBoBoxFilter()
+        {
+            List<string> searchList = new List<string>();
+            searchList.Add("active");
+            searchList.Add("banned");
+            cbFilterC.DataSource = searchList;
+        }
+
+        private void cbSearch_SelectedValueChanged(object sender, EventArgs e)
+        {
+            searchSelected = cbSearch.SelectedItem.ToString();
+        }
+
+        private void cbFilterC_SelectedValueChanged(object sender, EventArgs e)
+        {
+            filterSelected = cbFilterC.SelectedItem.ToString();
+        }
+
         private void UC_Customers_Load(object sender, EventArgs e)
         {
             CustomerTable.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
             loadTable(LoadAllCustomerAction);
             loadComboboxSearch();
+            loadComBoBoxFilter();
             resizeTable();
         }
 
@@ -46,6 +67,8 @@ namespace ShoesProject.UserControls
                 dt = DAO_Customer.Instance.getAllCustomer();
             if (action == SearchCustomerAction)
                 dt = DAO_Customer.Instance.searchAccount(txtSearch.Text,searchSelected);
+            if (action == FilterCustomerAction)
+                dt = DAO_Customer.Instance.searchAccount(cbFilterC.Text, filterSelected);
             CustomerTable.DataSource = dt;
         }
 
@@ -176,11 +199,6 @@ namespace ShoesProject.UserControls
             }
         }
 
-        private void cbSearch_SelectedValueChanged(object sender, EventArgs e)
-        {
-            searchSelected = cbSearch.SelectedItem.ToString();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
@@ -239,6 +257,14 @@ namespace ShoesProject.UserControls
             }    
             return true;
 
+        }
+
+        private void btnFilterC_Click(object sender, EventArgs e)
+        {
+            if (cbFilterC.Text == "")
+                MessageBox.Show("Vui lòng chọn dữ liệu cần lọc");
+            else
+                loadTable(FilterCustomerAction);
         }
     }
 }

@@ -103,12 +103,22 @@ namespace ShoesProject.DAO
                 query = selectRow + " where tenTK like '%" + data + "%' and TAIKHOAN.idUser = NHANVIEN.idNV and " + condition;
             else if (action == "ID")
                 query = selectRow + " where idUser like '%" + data + "%' and TAIKHOAN.idUser = NHANVIEN.idNV and " + condition;
+            else if (action == "STATUS")
+                query = selectRow + " where trangthai like '%" + data + "%' and TAIKHOAN.idUser = NHANVIEN.idNV and " + condition;
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable getEmployeeByName(String data)
         {
             string query = selectRow + "where TAIKHOAN.idUser = NHANVIEN.idNV and TAIKHOAN.tenTK = '" + data + "' ";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public bool banAccount(string id)
+        {
+            int result = 0;
+            string query = "update TAIKHOAN set trangthai = 'banned' where idUser = @id";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            return result > 0;
         }
     }
 }
