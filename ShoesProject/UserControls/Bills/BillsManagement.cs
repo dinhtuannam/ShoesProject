@@ -1,4 +1,5 @@
 ﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,8 +7,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,11 +18,31 @@ namespace ShoesProject.UserControls.Bills
 {
     public partial class BillsManagement : UserControl
     {
+        public static DTO_Employee employee;
+        private static BillsManagement instance;
+        public static BillsManagement Instance
+        {
+            get
+            {
+                if(instance == null)
+                {
+                    instance = new BillsManagement();
+                }
+                return instance;
+            }
+            private set
+            {
+                instance = value;
+            }
+        }
         public BillsManagement()
         {
             InitializeComponent();
         }
-
+        public void AddEmplooyee(DTO_Employee employees)
+        {
+             employee = employees;
+        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dataGridView1 == null)
@@ -33,15 +56,22 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
-            string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
-            DataTable table = new DataTable();
-            table=DAO_Bill.Instance.getBillByID(id);
-         
-
-            Edit edit = new Edit(table);
+            
+            if (dataGridView1.Rows[row].Cells[5].Value.ToString().Trim().Equals("confirmed"))
+            {
+                lbtrangthai.Text = "Hoa don da confirmed,ko the thay doi hoac xoa";
+                return;
+            }
+            string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
+            Edit edit = new Edit(DAO_Bill.Instance.getBillByID(id),employee,this);
+            if (edit == null)
+            {
+                lbtrangthai.Text = "Cant create new Edit Form";
+                return;
+            }
             edit.Show();
         }
-        private void loadTable(string type,string id = null)
+        public  void loadTable(string type,string id = null)
         {
             DataTable dt=null;
             if (type.Equals("search"))
@@ -53,7 +83,12 @@ namespace ShoesProject.UserControls.Bills
             {
                 if (type.Equals("loadalldata"))
                 {
-                    dt = DAO_Bill.Instance.getAllBill(); 
+                    dt = DAO_Bill.Instance.getAllBill();
+                }
+                else
+                {
+                    lbtrangthai.Text = "ko co chuc nang " + type;
+                    return;
                 }
             }
             dataGridView1.DataSource = dt;
@@ -71,7 +106,13 @@ namespace ShoesProject.UserControls.Bills
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AddBill addbill = new AddBill();
+            
+            AddBill addbill = new AddBill(employee,this);
+            if (addbill == null)
+            {
+                lbtrangthai.Text = "Cant create new Add Form";
+                return;
+            }
             addbill.Show();
         }
 
@@ -88,7 +129,12 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
-            string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
+            if (dataGridView1.Rows[row].Cells[5].Value.ToString().Trim().Equals("confirmed"))
+            {
+                lbtrangthai.Text = "Hoa don da confirmed, ko the thay doi hoac xoa";
+                return;
+            }
+            string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
             DAO_Bill.Instance.deleteCTHDByID(id);
             DAO_Bill.Instance.deleteBill(id);
             loadTable("loadalldata");
@@ -107,8 +153,13 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
-            string id = dataGridView1.Rows[row].Cells[0].Value.ToString();
+            string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
             Detail detail = new Detail(DAO_Bill.Instance.getBillByID(id));
+            if (detail == null)
+            {
+                lbtrangthai.Text = "Cant create new Detail Form";
+                return;
+            }
             detail.Show();
 
         }
@@ -118,10 +169,10 @@ namespace ShoesProject.UserControls.Bills
         {
             if (txtsearch.Text.Trim().Equals(""))
             {
-                loadTable("loadalldata");
+               loadTable("loadalldata");
                 return;
             }
-            dataGridView1.DataSource = DAO_Bill.Instance.getBillByID(txtsearch.Text);
+            loadTable("search",txtsearch.Text.Trim());
         }
 
         private void txtsearch_TextChanged(object sender, EventArgs e)

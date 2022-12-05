@@ -1,4 +1,5 @@
 ﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,14 @@ namespace ShoesProject.UserControls.Bills
     public partial class Edit : Form
     {
         DataTable table;
-        public Edit(DataTable table)
+        DTO_Employee employee;
+        BillsManagement billmanage;
+        public Edit(DataTable table,DTO_Employee employee,BillsManagement billmanage)
         {
             InitializeComponent();
             this.table = table;
+            this.employee = employee;
+            this.billmanage = billmanage;
         }
 
         private void Edit_Load(object sender, EventArgs e)
@@ -28,11 +33,10 @@ namespace ShoesProject.UserControls.Bills
         }
         private void loadData()
         {
-            string idcustomer = table.Rows[0][2].ToString();
-            string idhoadon = table.Rows[0][0].ToString();
-            string idnhanvien = table.Rows[0][1].ToString();
-            string strdate = table.Rows[0][3].ToString();
-
+            string idcustomer = table.Rows[0][2].ToString().Trim();
+            string idhoadon = table.Rows[0][0].ToString().Trim();
+            string strdate = table.Rows[0][3].ToString().Trim();     
+            cbboxtrangthai.SelectedIndex = 1;
             string[] arr = strdate.Split('/');
             int date = int.Parse(arr[0]);
             int month = int.Parse(arr[1]);
@@ -54,9 +58,9 @@ namespace ShoesProject.UserControls.Bills
             int n = table.Rows.Count;
             for(int i =0;i < n; i++)
             {
-                string idsp = table.Rows[i][0].ToString();
-                string soluong = table.Rows[i][1].ToString();
-                string tongtien = table.Rows[i][2].ToString();
+                string idsp = table.Rows[i][0].ToString().Trim();
+                string soluong = table.Rows[i][1].ToString().Trim();
+                string tongtien = table.Rows[i][2].ToString().Trim();
                 string dongia = (float.Parse(tongtien) / float.Parse(soluong)).ToString() ;
                 newtable.Rows.Add(idsp,dongia,soluong,tongtien);
             }
@@ -64,7 +68,6 @@ namespace ShoesProject.UserControls.Bills
             dataGridView1.DataSource = table;
             txtid.Text = idhoadon;
             txtidcustomer.Text = idcustomer;
-            txtidnhanvien.Text = idnhanvien;
             txttotal.Text = total;
             dtpicker.Value = new DateTime(year,month,date,hour,minute,second);
         }
@@ -93,23 +96,38 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
 
-            object temp = DAO_Bill.Instance.getPriceByID(txtidsanpham.Text);
+            object temp = DAO_Bill.Instance.getPriceByID(txtidsanpham.Text.Trim());
+            if (temp == null)
+            {
+                lbtrangthai.Text = "Ko tim thay ID san pham";
+                return;
+            }
             float dongia = float.Parse(temp.ToString());
             float tongtien = 0; int amount = 0;
             int n = table.Rows.Count;
             for (int i = 0; i < n; i++)
             {
-                if (table.Rows[i][0].ToString().Trim().Equals(txtidsanpham.Text))
+                if (table.Rows[i][0].ToString().Equals(txtidsanpham.Text.Trim()))
                 {
                     amount = int.Parse(table.Rows[i][2].ToString()) + int.Parse(txtamount.Text);
+                    if (!DAO_Bill.Instance.IsEnough(txtidsanpham.Text.Trim(), txtid.Text, amount))
+                    {
+                        lbtrangthai.Text = "Ko du so luong";
+                        return;
+                    }
                     tongtien = dongia * amount;
                     table.Rows[i].SetField("So luong", amount);
                     table.Rows[i].SetField("Tong tien", tongtien);
                     goto A;
                 }
             }
+            if (!DAO_Bill.Instance.IsEnough(txtidsanpham.Text.Trim(), txtid.Text, int.Parse(txtamount.Text)))
+            {
+                lbtrangthai.Text = "Ko du so luong";
+                return;
+            }
             tongtien = dongia * float.Parse(txtamount.Text);
-            table.Rows.Add(txtidsanpham.Text, dongia, txtamount.Text, tongtien);
+            table.Rows.Add(txtidsanpham.Text.Trim(), dongia, txtamount.Text.Trim(), tongtien);
         A:
             txttotal.Text = CaculateTotal().ToString();
         }
@@ -149,42 +167,84 @@ namespace ShoesProject.UserControls.Bills
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            int row = dataGridView1.Rows.Count;
-            if (row == 0)
-            {
-                lbtrangthai.Text = "Vui long chon it nhat san pham";
-                return;
-            }
-            
-            DAO_Bill.Instance.updateBill(txtid.Text,txtidnhanvien.Text,txtidcustomer.Text, dtpicker.Value.ToString("yyyyMMdd hh:mm:ss tt"),txttotal.Text,null);
 
-            DAO_Bill.Instance.deleteCTHDByID(txtid.Text);
 
 
            
+
+            
+
+            int row = dataGridView1.Rows.Count;
+            if (row == 0)
+            {
+                lbtrangthai.Text = "Vui long chon it nhat 1 san pham";
+                return;
+            }
+            if (!DAO_Bill.Instance.isBillIDExist(txtid.Text.Trim()))
+            {
+                lbtrangthai.Text = "Ko ton tai ID hoa don";
+                return;
+            }
+            if (!DAO_Bill.Instance.isCustomerIDExist(txtidcustomer.Text.Trim()))
+            {
+                lbtrangthai.Text = "Ko ton tai ID khach hang";
+                return;
+            }
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu null";
+                lbtrangthai.Text = "Bang du lieu trong rong";
                 return;
             }
             string[] idsp = new string[row];
             string[] soluong = new string[row];
-            string[] totalsp = new string[row]; 
-            for(int i = 0; i < row; i++)
+            string[] totalsp = new string[row];
+            for (int i = 0; i < row; i++)
             {
+                idsp[i] = table.Rows[i][0].ToString().Trim();
+                if (!DAO_Bill.Instance.isProductIDExist(idsp[i]))
+                {
+                    lbtrangthai.Text = String.Format("ID san pham {0} ko con ton tai nua", idsp[i]);
+                    return;//kiem tra con so luong nua
+                }
                 
-                idsp[i] = table.Rows[i][0].ToString();
                 soluong[i] = table.Rows[i][2].ToString();
                 totalsp[i] = table.Rows[i][3].ToString();
-                
+                if (!DAO_Bill.Instance.IsEnough(idsp[i], txtid.Text, int.Parse(soluong[i])))
+                {
+                    lbtrangthai.Text = "Ko du so luong";
+                    return;
+                }
+
             }
-            DAO_Bill.Instance.addCTHD(txtid.Text,idsp,soluong,totalsp);
+            object idnhanvien = DBNull.Value;
+            if (cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].Equals("confirmed"))
+            {
+                idnhanvien = employee.Id.Trim();
+                for (int i = 0; i < idsp.Length; i++)
+                {
+                    DAO_Bill.Instance.decreaseProduct(idsp[i], int.Parse(soluong[i]));
+                }
+            }
+            DAO_Bill.Instance.updateBill(txtid.Text.Trim(),idnhanvien,txtidcustomer.Text.Trim(), dtpicker.Value.ToString("yyyyMMdd hh:mm:ss tt"), txttotal.Text, cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].ToString());
+           
+            DAO_Bill.Instance.deleteCTHDByID(txtid.Text.Trim());
+
+
+           
+            
+            DAO_Bill.Instance.addCTHD(txtid.Text.Trim(),idsp,soluong,totalsp);
             Close();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Edit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
+            billmanage.loadTable("loadalldata");
         }
     }
 }

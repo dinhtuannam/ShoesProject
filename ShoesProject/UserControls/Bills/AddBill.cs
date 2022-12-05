@@ -1,4 +1,5 @@
 ﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,14 @@ namespace ShoesProject.UserControls.Bills
     public partial class AddBill : Form
     {
         DataTable table;
-        public AddBill()
+        DTO_Employee employee;
+        BillsManagement billmanage;
+        public AddBill(DTO_Employee employee, BillsManagement billmanage)
         {
             InitializeComponent();
+            this.employee = employee;
+            this.billmanage = billmanage;
+
         }
 
         private void AddBill_Load(object sender, EventArgs e)
@@ -54,29 +60,60 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
 
-            object temp = DAO_Bill.Instance.getPriceByID(txtidsanpham.Text);
+            object temp = DAO_Bill.Instance.getPriceByID(txtidsanpham.Text.Trim());
+            if(temp == null)
+            {
+                lbtrangthai.Text = "Ko tim thay ID san pham";
+                return;
+            }
+            
             float dongia = float.Parse(temp.ToString());
             float tongtien=0;int amount=0;
             int n = table.Rows.Count;
             for(int i = 0;i < n; i++)
             {
-                if (table.Rows[i][0].ToString().Equals(txtidsanpham.Text))
+                if (table.Rows[i][0].ToString().Equals(txtidsanpham.Text.Trim()))
                 {
                     amount = int.Parse(table.Rows[i][2].ToString())+int.Parse(txtamount.Text);
+                    if (!DAO_Bill.Instance.IsEnough(txtidsanpham.Text.Trim(),"", amount))
+                    {
+                        lbtrangthai.Text = "Ko du so luong";
+                        return;
+                    }//phai kiem tra het so luong trong bang chu k op phai kiem tr aso luong o txtamount
                     tongtien = dongia * amount;
                     table.Rows[i].SetField("So luong", amount);
                     table.Rows[i].SetField("Tong tien",tongtien);
                     goto A;
                 }
             }
+            if (!DAO_Bill.Instance.IsEnough(txtidsanpham.Text.Trim(),"", int.Parse(txtamount.Text)))
+            {
+                lbtrangthai.Text = "Ko du so luong";
+                return;
+            }//phai kiem tra het so luong trong bang chu k op phai kiem tr aso luong o txtamount
             tongtien = dongia * float.Parse(txtamount.Text);
-            table.Rows.Add(txtidsanpham.Text, dongia,txtamount.Text,tongtien);
+            table.Rows.Add(txtidsanpham.Text.Trim(), dongia,txtamount.Text.Trim(),tongtien);
             A:
             txttotal.Text = CaculateTotal().ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (txtid.Text.Trim().Equals(""))
+            {
+                lbtrangthai.Text = "Vui long nhap ID hoa don";
+                return;
+            }
+            if (txtidcustomer.Text.Trim().Equals(""))
+            {
+                lbtrangthai.Text = "Vui long nhap ID khach hang";
+                return;
+            }
+            if (cbboxtrangthai.SelectedIndex == -1)
+            {
+                lbtrangthai.Text = "Vui long chon trang thai";
+                return;
+            }
             int n = table.Rows.Count;
             if (n == 0)
             {
@@ -88,20 +125,48 @@ namespace ShoesProject.UserControls.Bills
             string[] idsp = new string[n];
             for( int i=0; i < n; i++)
             {
-                idsp[i] = table.Rows[i][0].ToString();
+                idsp[i] = table.Rows[i][0].ToString().Trim();
+                if (!DAO_Bill.Instance.isProductIDExist(idsp[i]))
+                {
+                    lbtrangthai.Text = String.Format("ID san pham {0} ko con ton tai nua", idsp[i]);
+                    return;
+                }
+                
                 soluong[i] = table.Rows[i][2].ToString();
                 totalsp[i] = table.Rows[i][3].ToString();
+                if (!DAO_Bill.Instance.IsEnough(idsp[i],"" ,int.Parse(soluong[i])))
+                {
+                    lbtrangthai.Text = "Ko du so luong cho idsp =" + idsp[i];
+                    return;
+                }//phai kiem tra loai bỏ cai chinh minhko neuminh la edit va dang trong edit
             }
-            DAO_Bill.Instance.addBill(txtid.Text,txtidnhanvien.Text,txtidcustomer.Text, date.Value.ToString("yyyyMMdd hh:mm:ss tt"),txttotal.Text,null);
-            DAO_Bill.Instance.addCTHD(txtid.Text, idsp, soluong, totalsp);
-          
-           
+            if (DAO_Bill.Instance.isBillIDExist(txtid.Text.Trim()))
+            {
+                lbtrangthai.Text = "Da ton tai ID hoa don";
+                return;
+            }
+            if (!DAO_Bill.Instance.isCustomerIDExist(txtidcustomer.Text.Trim()))
+            {
+                lbtrangthai.Text = "Ko ton tai ID khach hang";
+                return;
+            }
+            object idnhanvien =DBNull.Value;
+            if (cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].ToString().Equals("confirmed"))
+            {
+                idnhanvien = employee.Id;
+                for(int i=0;i < idsp.Length; i++)
+                {
+                    DAO_Bill.Instance.decreaseProduct(idsp[i], int.Parse(soluong[i]));
+                }
+            }
+            DAO_Bill.Instance.addBill(txtid.Text.Trim(),idnhanvien,txtidcustomer.Text.Trim(), date.Value.ToString("yyyyMMdd hh:mm:ss tt"), txttotal.Text, cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].ToString());
+            DAO_Bill.Instance.addCTHD(txtid.Text.Trim(), idsp, soluong, totalsp);
             Close();
         }
 
         private void AddBill_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            billmanage.loadTable("loadalldata");
         }
 
         private void btnremovesp_Click(object sender, EventArgs e)
@@ -119,7 +184,7 @@ namespace ShoesProject.UserControls.Bills
             int row = dataGridView1.CurrentRow.Index;
             table.Rows[row].Delete();
             txttotal.Text = CaculateTotal().ToString();
-        }
+        }//lo nhu ben product giam so luong
         private float CaculateTotal()
         {
 
@@ -144,6 +209,11 @@ namespace ShoesProject.UserControls.Bills
         }
 
         private void txtidsanpham_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

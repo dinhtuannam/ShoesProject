@@ -69,8 +69,9 @@ namespace ShoesProject
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            BillsManagement bills = new BillsManagement();
-            addUserControl(bills);
+            BillsManagement.Instance.AddEmplooyee(employee);
+            addUserControl(BillsManagement.Instance);
+            BillsManagement.Instance.loadTable("loadalldata");
         }
 
 

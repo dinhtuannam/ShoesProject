@@ -30,10 +30,8 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtidcustomer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtidnhanvien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,6 +45,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txttotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.cbboxtrangthai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,6 +70,7 @@
             this.txtidcustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtidcustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtidcustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidcustomer.Enabled = false;
             this.txtidcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtidcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -82,25 +82,6 @@
             this.txtidcustomer.Size = new System.Drawing.Size(160, 26);
             this.txtidcustomer.TabIndex = 52;
             // 
-            // txtidnhanvien
-            // 
-            this.txtidnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtidnhanvien.DefaultText = "";
-            this.txtidnhanvien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtidnhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtidnhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtidnhanvien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtidnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtidnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidnhanvien.Location = new System.Drawing.Point(50, 86);
-            this.txtidnhanvien.Name = "txtidnhanvien";
-            this.txtidnhanvien.PasswordChar = '\0';
-            this.txtidnhanvien.PlaceholderText = "";
-            this.txtidnhanvien.SelectedText = "";
-            this.txtidnhanvien.Size = new System.Drawing.Size(160, 26);
-            this.txtidnhanvien.TabIndex = 51;
-            // 
             // txtid
             // 
             this.txtid.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -109,6 +90,7 @@
             this.txtid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtid.Enabled = false;
             this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -128,15 +110,6 @@
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 49;
             this.label3.Text = "ID Khach Hang";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "ID Nhan Vien";
             // 
             // label1
             // 
@@ -313,12 +286,31 @@
             this.btnAdd.Text = "Confirm";
             this.btnAdd.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
+            // cbboxtrangthai
+            // 
+            this.cbboxtrangthai.BackColor = System.Drawing.Color.Transparent;
+            this.cbboxtrangthai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbboxtrangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbboxtrangthai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbboxtrangthai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbboxtrangthai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbboxtrangthai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbboxtrangthai.ItemHeight = 30;
+            this.cbboxtrangthai.Items.AddRange(new object[] {
+            "confirmed",
+            "unconfirmed"});
+            this.cbboxtrangthai.Location = new System.Drawing.Point(438, 41);
+            this.cbboxtrangthai.Name = "cbboxtrangthai";
+            this.cbboxtrangthai.Size = new System.Drawing.Size(140, 36);
+            this.cbboxtrangthai.TabIndex = 65;
+            // 
             // Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(619, 394);
+            this.Controls.Add(this.cbboxtrangthai);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txttotal);
@@ -332,10 +324,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpicker);
             this.Controls.Add(this.txtidcustomer);
-            this.Controls.Add(this.txtidnhanvien);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -346,6 +336,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);
             this.Load += new System.EventHandler(this.Edit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -356,10 +347,8 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private Guna.UI2.WinForms.Guna2TextBox txtidcustomer;
-        private Guna.UI2.WinForms.Guna2TextBox txtidnhanvien;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpicker;
         private System.Windows.Forms.Label label4;
@@ -373,5 +362,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2TextBox txttotal;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2ComboBox cbboxtrangthai;
     }
 }

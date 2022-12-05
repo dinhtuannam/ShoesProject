@@ -30,11 +30,9 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtidnhanvien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtidcustomer = new Guna.UI2.WinForms.Guna2TextBox();
             this.date = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lbtrangthai = new System.Windows.Forms.Label();
@@ -47,6 +45,7 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.txttotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbboxtrangthai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,15 +66,6 @@
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 40;
             this.label1.Text = "ID Hoa Don";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "ID Nhan Vien";
             // 
             // label3
             // 
@@ -113,25 +103,6 @@
             this.txtid.SelectedText = "";
             this.txtid.Size = new System.Drawing.Size(160, 26);
             this.txtid.TabIndex = 44;
-            // 
-            // txtidnhanvien
-            // 
-            this.txtidnhanvien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtidnhanvien.DefaultText = "";
-            this.txtidnhanvien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtidnhanvien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtidnhanvien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtidnhanvien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtidnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtidnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidnhanvien.Location = new System.Drawing.Point(52, 74);
-            this.txtidnhanvien.Name = "txtidnhanvien";
-            this.txtidnhanvien.PasswordChar = '\0';
-            this.txtidnhanvien.PlaceholderText = "";
-            this.txtidnhanvien.SelectedText = "";
-            this.txtidnhanvien.Size = new System.Drawing.Size(160, 26);
-            this.txtidnhanvien.TabIndex = 45;
             // 
             // txtidcustomer
             // 
@@ -310,12 +281,32 @@
             this.label7.TabIndex = 56;
             this.label7.Text = "Tong so tien";
             // 
+            // cbboxtrangthai
+            // 
+            this.cbboxtrangthai.BackColor = System.Drawing.Color.Transparent;
+            this.cbboxtrangthai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbboxtrangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbboxtrangthai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbboxtrangthai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbboxtrangthai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbboxtrangthai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbboxtrangthai.ItemHeight = 30;
+            this.cbboxtrangthai.Items.AddRange(new object[] {
+            "confirmed",
+            "unconfirmed"});
+            this.cbboxtrangthai.Location = new System.Drawing.Point(472, 35);
+            this.cbboxtrangthai.Name = "cbboxtrangthai";
+            this.cbboxtrangthai.Size = new System.Drawing.Size(140, 36);
+            this.cbboxtrangthai.TabIndex = 58;
+            this.cbboxtrangthai.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
+            // 
             // AddBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(648, 396);
+            this.Controls.Add(this.cbboxtrangthai);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnremovesp);
@@ -328,11 +319,9 @@
             this.Controls.Add(this.lbtrangthai);
             this.Controls.Add(this.date);
             this.Controls.Add(this.txtidcustomer);
-            this.Controls.Add(this.txtidnhanvien);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -354,11 +343,9 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
-        private Guna.UI2.WinForms.Guna2TextBox txtidnhanvien;
         private Guna.UI2.WinForms.Guna2TextBox txtidcustomer;
         private Guna.UI2.WinForms.Guna2DateTimePicker date;
         private System.Windows.Forms.Label lbtrangthai;
@@ -371,5 +358,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txttotal;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2ComboBox cbboxtrangthai;
     }
 }

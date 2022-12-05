@@ -90,7 +90,7 @@
     <Compile Include="UserControls\Bills\AddBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\Bills\AddBill.Designer.cs">
+    <Compile Include="UserControls\Bills\AddBill.designer.cs">
       <DependentUpon>AddBill.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Bills\BillsManagement.cs">
@@ -102,13 +102,13 @@
     <Compile Include="UserControls\Bills\Detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\Bills\Detail.Designer.cs">
+    <Compile Include="UserControls\Bills\Detail.designer.cs">
       <DependentUpon>Detail.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Bills\Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\Bills\Edit.Designer.cs">
+    <Compile Include="UserControls\Bills\Edit.designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Account.cs">

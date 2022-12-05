@@ -33,17 +33,18 @@
             this.txtidnhanvien = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtid = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbidnhanvien = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtdate = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbtrangthai = new System.Windows.Forms.Label();
             this.txtcustomer = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtnhanvien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbnamenhanvien = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txttotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbboxtrangthai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,14 +128,14 @@
             this.label3.TabIndex = 49;
             this.label3.Text = "ID Khach Hang";
             // 
-            // label2
+            // lbidnhanvien
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "ID Nhan Vien";
+            this.lbidnhanvien.AutoSize = true;
+            this.lbidnhanvien.Location = new System.Drawing.Point(130, 57);
+            this.lbidnhanvien.Name = "lbidnhanvien";
+            this.lbidnhanvien.Size = new System.Drawing.Size(71, 13);
+            this.lbidnhanvien.TabIndex = 48;
+            this.lbidnhanvien.Text = "ID Nhan Vien";
             // 
             // label1
             // 
@@ -216,14 +217,14 @@
             this.txtnhanvien.Size = new System.Drawing.Size(160, 26);
             this.txtnhanvien.TabIndex = 56;
             // 
-            // label4
+            // lbnamenhanvien
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(310, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
-            this.label4.TabIndex = 57;
-            this.label4.Text = "Ten Nhan Vien";
+            this.lbnamenhanvien.AutoSize = true;
+            this.lbnamenhanvien.Location = new System.Drawing.Point(310, 57);
+            this.lbnamenhanvien.Name = "lbnamenhanvien";
+            this.lbnamenhanvien.Size = new System.Drawing.Size(79, 13);
+            this.lbnamenhanvien.TabIndex = 57;
+            this.lbnamenhanvien.Text = "Ten Nhan Vien";
             // 
             // label5
             // 
@@ -272,17 +273,37 @@
             this.label7.TabIndex = 61;
             this.label7.Text = "Tong so tien";
             // 
+            // cbboxtrangthai
+            // 
+            this.cbboxtrangthai.BackColor = System.Drawing.Color.Transparent;
+            this.cbboxtrangthai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbboxtrangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbboxtrangthai.Enabled = false;
+            this.cbboxtrangthai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbboxtrangthai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbboxtrangthai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbboxtrangthai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbboxtrangthai.ItemHeight = 30;
+            this.cbboxtrangthai.Items.AddRange(new object[] {
+            "confirmed",
+            "unconfirmed"});
+            this.cbboxtrangthai.Location = new System.Drawing.Point(435, 12);
+            this.cbboxtrangthai.Name = "cbboxtrangthai";
+            this.cbboxtrangthai.Size = new System.Drawing.Size(140, 36);
+            this.cbboxtrangthai.TabIndex = 62;
+            // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(599, 349);
+            this.Controls.Add(this.cbboxtrangthai);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txttotal);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lbnamenhanvien);
             this.Controls.Add(this.txtnhanvien);
             this.Controls.Add(this.txtcustomer);
             this.Controls.Add(this.lbtrangthai);
@@ -291,7 +312,7 @@
             this.Controls.Add(this.txtidnhanvien);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbidnhanvien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -315,16 +336,17 @@
         private Guna.UI2.WinForms.Guna2TextBox txtidnhanvien;
         private Guna.UI2.WinForms.Guna2TextBox txtid;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbidnhanvien;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtdate;
         private System.Windows.Forms.Label lbtrangthai;
         private Guna.UI2.WinForms.Guna2TextBox txtcustomer;
         private Guna.UI2.WinForms.Guna2TextBox txtnhanvien;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbnamenhanvien;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txttotal;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2ComboBox cbboxtrangthai;
     }
 }
