@@ -33,8 +33,9 @@ namespace ShoesProject.DAO
         }
         public bool IsEnough(string id,string id2,int amount)
         {
-            string query = "select sanpham.soluong-sl.soluongchokhach from sanpham,(select sum(soluong)  as soluongchokhach from hoadon hd ,cthd where hd.idhd = cthd.idhd and hd.trangthai = 'unconfirmed' and cthd.idsp = @id and hd.idhd <> @id2 ) as sl where sanpham.idsp = @id3 ";
-            int valid =int.Parse(DataProvider.Instance.ExecuteScalar(query,new object[] {id,id2,id}).ToString());
+            string query = "select sanpham.soluong -sl.soluongchokhach from sanpham,(select coalesce(sum(soluong),0)  as soluongchokhach from hoadon hd ,cthd where hd.idhd = cthd.idhd and hd.trangthai = 'unconfirmed' and cthd.idsp = @id and hd.idhd <> @id2 ) as sl where sanpham.idsp = @id3 ";
+            object temp = DataProvider.Instance.ExecuteScalar(query, new object[] { id, id2, id });
+            int valid =int.Parse(temp.ToString());
             if (amount <= valid)
             {
                 return true;
@@ -43,7 +44,7 @@ namespace ShoesProject.DAO
         }
         public int decreaseProduct(string id ,int amount)
         {
-            string query = "Update sanpham set gia = gia - @soluong where idsp= @id ";
+            string query = "Update sanpham set soluong = soluong - @soluong where idsp= @id ";
             return DataProvider.Instance.ExecuteNonQuery(query,new object[] {amount,id});
         }
         public bool isBillIDExist(string id)
@@ -66,6 +67,7 @@ namespace ShoesProject.DAO
             }
             return true;
         }
+    
         public bool isEmployeeIDExist(string id)
         {
             string query = "Select idnv from nhanvien where idnv = @id ";

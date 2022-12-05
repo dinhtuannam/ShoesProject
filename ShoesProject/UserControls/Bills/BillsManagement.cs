@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ShoesProject.UserControls.Bills
 {
@@ -180,9 +181,9 @@ namespace ShoesProject.UserControls.Bills
 
         }
 
-        private void lbtrangthai_Click(object sender, EventArgs e)
+        private void lbtrangthai_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

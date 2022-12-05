@@ -209,7 +209,7 @@ namespace ShoesProject.UserControls.Bills
                 
                 soluong[i] = table.Rows[i][2].ToString();
                 totalsp[i] = table.Rows[i][3].ToString();
-                if (!DAO_Bill.Instance.IsEnough(idsp[i], txtid.Text, int.Parse(soluong[i])))
+                if (!DAO_Bill.Instance.IsEnough(idsp[i], txtid.Text.Trim(), int.Parse(soluong[i])))
                 {
                     lbtrangthai.Text = "Ko du so luong";
                     return;
@@ -245,6 +245,11 @@ namespace ShoesProject.UserControls.Bills
         {
            
             billmanage.loadTable("loadalldata");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

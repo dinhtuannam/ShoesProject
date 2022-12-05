@@ -39,10 +39,7 @@ namespace ShoesProject.UserControls.Bills
             else
             {
                 cbboxtrangthai.SelectedIndex = 1;
-                txtidnhanvien.Visible = false;
-                lbidnhanvien.Visible = false;
-                txtnhanvien.Visible = false;
-                lbnamenhanvien.Visible = false;
+               
             }
             string date = table.Rows[0][3].ToString().Trim();
             string total = table.Rows[0][4].ToString().Trim();

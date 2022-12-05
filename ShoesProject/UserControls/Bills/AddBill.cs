@@ -150,12 +150,13 @@ namespace ShoesProject.UserControls.Bills
                 lbtrangthai.Text = "Ko ton tai ID khach hang";
                 return;
             }
+            
             object idnhanvien =DBNull.Value;
             if (cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].ToString().Equals("confirmed"))
             {
                 idnhanvien = employee.Id;
                 for(int i=0;i < idsp.Length; i++)
-                {
+                {                  
                     DAO_Bill.Instance.decreaseProduct(idsp[i], int.Parse(soluong[i]));
                 }
             }
@@ -214,6 +215,13 @@ namespace ShoesProject.UserControls.Bills
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+    
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
