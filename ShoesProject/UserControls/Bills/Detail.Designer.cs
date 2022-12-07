@@ -45,6 +45,7 @@
             this.txttotal = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbboxtrangthai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(433, 106);
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(541, 106);
             this.dataGridView1.TabIndex = 100;
             // 
             // txtidcustomer
@@ -71,7 +74,7 @@
             this.txtidcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtidcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidcustomer.Location = new System.Drawing.Point(62, 116);
+            this.txtidcustomer.Location = new System.Drawing.Point(114, 119);
             this.txtidcustomer.Name = "txtidcustomer";
             this.txtidcustomer.PasswordChar = '\0';
             this.txtidcustomer.PlaceholderText = "";
@@ -91,7 +94,7 @@
             this.txtidnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtidnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidnhanvien.Location = new System.Drawing.Point(62, 71);
+            this.txtidnhanvien.Location = new System.Drawing.Point(114, 74);
             this.txtidnhanvien.Name = "txtidnhanvien";
             this.txtidnhanvien.PasswordChar = '\0';
             this.txtidnhanvien.PlaceholderText = "";
@@ -111,7 +114,7 @@
             this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtid.Location = new System.Drawing.Point(62, 26);
+            this.txtid.Location = new System.Drawing.Point(114, 29);
             this.txtid.Name = "txtid";
             this.txtid.PasswordChar = '\0';
             this.txtid.PlaceholderText = "";
@@ -123,31 +126,31 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(59, 100);
+            this.label3.Location = new System.Drawing.Point(111, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 100;
-            this.label3.Text = "ID Khach Hang";
+            this.label3.Text = "ID Khách Hàng";
             // 
             // lbidnhanvien
             // 
             this.lbidnhanvien.AutoSize = true;
             this.lbidnhanvien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbidnhanvien.Location = new System.Drawing.Point(59, 55);
+            this.lbidnhanvien.Location = new System.Drawing.Point(111, 58);
             this.lbidnhanvien.Name = "lbidnhanvien";
             this.lbidnhanvien.Size = new System.Drawing.Size(71, 13);
             this.lbidnhanvien.TabIndex = 100;
-            this.lbidnhanvien.Text = "ID Nhan Vien";
+            this.lbidnhanvien.Text = "ID Nhân Viên";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(59, 10);
+            this.label1.Location = new System.Drawing.Point(111, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 100;
-            this.label1.Text = "ID Hoa Don";
+            this.label1.Text = "ID Hóa Đơn";
             // 
             // txtdate
             // 
@@ -161,7 +164,7 @@
             this.txtdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdate.Location = new System.Drawing.Point(62, 161);
+            this.txtdate.Location = new System.Drawing.Point(114, 164);
             this.txtdate.Name = "txtdate";
             this.txtdate.PasswordChar = '\0';
             this.txtdate.PlaceholderText = "";
@@ -178,7 +181,7 @@
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(78, 18);
             this.lbtrangthai.TabIndex = 100;
-            this.lbtrangthai.Text = "trang thai";
+            this.lbtrangthai.Text = "trạng thái";
             // 
             // txtcustomer
             // 
@@ -192,7 +195,7 @@
             this.txtcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcustomer.Location = new System.Drawing.Point(242, 116);
+            this.txtcustomer.Location = new System.Drawing.Point(294, 119);
             this.txtcustomer.Name = "txtcustomer";
             this.txtcustomer.PasswordChar = '\0';
             this.txtcustomer.PlaceholderText = "";
@@ -212,7 +215,7 @@
             this.txtnhanvien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtnhanvien.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtnhanvien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtnhanvien.Location = new System.Drawing.Point(242, 71);
+            this.txtnhanvien.Location = new System.Drawing.Point(294, 74);
             this.txtnhanvien.Name = "txtnhanvien";
             this.txtnhanvien.PasswordChar = '\0';
             this.txtnhanvien.PlaceholderText = "";
@@ -224,31 +227,31 @@
             // 
             this.lbnamenhanvien.AutoSize = true;
             this.lbnamenhanvien.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbnamenhanvien.Location = new System.Drawing.Point(239, 55);
+            this.lbnamenhanvien.Location = new System.Drawing.Point(291, 58);
             this.lbnamenhanvien.Name = "lbnamenhanvien";
             this.lbnamenhanvien.Size = new System.Drawing.Size(79, 13);
             this.lbnamenhanvien.TabIndex = 100;
-            this.lbnamenhanvien.Text = "Ten Nhan Vien";
+            this.lbnamenhanvien.Text = "Tên Nhân Viên";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(59, 145);
+            this.label5.Location = new System.Drawing.Point(111, 148);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 100;
-            this.label5.Text = "Ngay Mua";
+            this.label5.Text = "Ngày Đặt Hàng";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(239, 100);
+            this.label6.Location = new System.Drawing.Point(291, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 13);
             this.label6.TabIndex = 100;
-            this.label6.Text = "Ten Khach Hang";
+            this.label6.Text = "Tên Khách Hàng";
             // 
             // txttotal
             // 
@@ -262,24 +265,25 @@
             this.txttotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttotal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txttotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttotal.Location = new System.Drawing.Point(285, 316);
+            this.txttotal.Location = new System.Drawing.Point(393, 316);
             this.txttotal.Name = "txttotal";
             this.txttotal.PasswordChar = '\0';
             this.txttotal.PlaceholderText = "";
             this.txttotal.SelectedText = "";
             this.txttotal.Size = new System.Drawing.Size(160, 26);
             this.txttotal.TabIndex = 100;
+            this.txttotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(198, 326);
+            this.label7.Location = new System.Drawing.Point(306, 326);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 100;
-            this.label7.Text = "Tong so tien";
+            this.label7.Text = "Tổng số tiền";
             // 
             // cbboxtrangthai
             // 
@@ -295,17 +299,28 @@
             this.cbboxtrangthai.Items.AddRange(new object[] {
             "confirmed",
             "unconfirmed"});
-            this.cbboxtrangthai.Location = new System.Drawing.Point(242, 160);
+            this.cbboxtrangthai.Location = new System.Drawing.Point(294, 163);
             this.cbboxtrangthai.Name = "cbboxtrangthai";
             this.cbboxtrangthai.Size = new System.Drawing.Size(160, 36);
             this.cbboxtrangthai.TabIndex = 62;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(291, 148);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 101;
+            this.label2.Text = "Trạng Thái";
             // 
             // Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(459, 377);
+            this.ClientSize = new System.Drawing.Size(561, 377);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cbboxtrangthai);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txttotal);
@@ -355,5 +370,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txttotal;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox cbboxtrangthai;
+        private System.Windows.Forms.Label label2;
     }
 }

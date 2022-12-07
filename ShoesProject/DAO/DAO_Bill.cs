@@ -85,12 +85,12 @@ namespace ShoesProject.DAO
         }
         public DataTable getAllBill()
         {
-            string query = "select * from hoadon";
+            string query = "select idhd as [ID Hoá Đơn],idnv as [ID Nhân Viên],idkh as [ID Khách Hàng],ngaydat as [Ngày Đặt Hàng],cast(tongtien as float) as [Tổng tiền],trangthai as [Trạng Thái] from hoadon";
             return DataProvider.Instance.ExecuteQuery(query);
         }
         public DataTable getBillByID(string id)
         {
-            string query = "Select * from hoadon where idhd = @id ";
+            string query = "Select idhd as [ID Hoá Đơn],idnv as [ID Nhân Viên],idkh as [ID Khách Hàng],ngaydat as [Ngày Đặt Hàng],cast(tongtien as float) as [Tổng tiền],trangthai as [Trạng Thái] from hoadon where idhd = @id ";
             return DataProvider.Instance.ExecuteQuery(query, new object[] {id});
         }
         public int deleteBill(string id)
@@ -157,7 +157,7 @@ namespace ShoesProject.DAO
         }
         public DataTable getCTHD(string id)
         {
-            string query = "select * from cthd where idhd = @id ";
+            string query = "select idhd as [ID Hoá Đơn],idsp as [ID Sản Phẩm],soluong as [Số lượng],tongtien as [Tổng tiền]  from cthd where idhd = @id ";
             return DataProvider.Instance.ExecuteQuery(query,new object[] {id}); 
         }
         public int updateBill(string idhd,object idnv ,string idkh,string date,string total,string trangthai)

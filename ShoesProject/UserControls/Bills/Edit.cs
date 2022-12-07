@@ -52,24 +52,26 @@ namespace ShoesProject.UserControls.Bills
 
            
             DataTable newtable = new DataTable();
-            newtable.Columns.Add("id sp");
-            newtable.Columns.Add("don gia");
-            newtable.Columns.Add("so luong");
-            newtable.Columns.Add("Tong tien");
+            newtable.Columns.Add("ID Sản Phẩm");
+            newtable.Columns.Add("Tên Sản Phẩm");
+            newtable.Columns.Add("Đơn Giá");
+            newtable.Columns.Add("Số Lượng");
+            newtable.Columns.Add("Tổng Tiền");
             int n = dtobill.CTHD.IDSP.Length;
             for(int i =0;i < n; i++)
             {
                 string idsp = dtobill.CTHD.IDSP[i];
+                string namesp = dtobill.CTHD.NAMESP[i];
                 string soluong = dtobill.CTHD.SOLUONG[i];
                 string tongtien = dtobill.CTHD.TOTAL[i];
                 string dongia = (float.Parse(tongtien) / float.Parse(soluong)).ToString() ;
-                newtable.Rows.Add(idsp,dongia,soluong,tongtien);
+                newtable.Rows.Add(idsp,namesp,dongia,soluong,float.Parse(tongtien));
             }
             table = newtable;
             dataGridView1.DataSource = table;
             txtid.Text = idhoadon;
             txtidcustomer.Text = idcustomer;
-            txttotal.Text = total;
+            txttotal.Text = float.Parse(total).ToString();
             dtpicker.Value = new DateTime(year,month,date,hour,minute,second);
         }
 
@@ -77,58 +79,60 @@ namespace ShoesProject.UserControls.Bills
         {
             if (txtidsanpham.Text.Trim().Equals(""))
             {
-                lbtrangthai.Text = "Vui long nhap id san pham";
+                lbtrangthai.Text = "Vui lòng nhập ID sản phẩm";
                 return;
             }
             if (txtamount.Text.Trim().Equals(""))
             {
-                lbtrangthai.Text = "Vui long chon so luong";
+                lbtrangthai.Text = "Vui lòng chọn số lượng";
                 return;
             }
             int result;
             if (!int.TryParse(txtamount.Text, out result))
             {
-                lbtrangthai.Text = "Vui long nhap so luong hop le";
+                lbtrangthai.Text = "Vui lòng nhập số lượng hợp lệ";
                 return;
             }
             if (int.Parse(txtamount.Text) <= 0)
             {
-                lbtrangthai.Text = "Ko nhap so luong duoi 1";
+                lbtrangthai.Text = "Không nhập số lượng dưới 1";
                 return;
             }
 
             object temp = DAO_Bill.Instance.getPriceByID(txtidsanpham.Text.Trim());
             if (temp == null)
             {
-                lbtrangthai.Text = "Ko tim thay ID san pham";
+                lbtrangthai.Text = "Không tìm thấy ID sản phẩm";
                 return;
             }
             float dongia = float.Parse(temp.ToString());
             float tongtien = 0; int amount = 0;
+            
             int n = table.Rows.Count;
             for (int i = 0; i < n; i++)
             {
-                if (table.Rows[i][0].ToString().Equals(txtidsanpham.Text.Trim()))
+                if (table.Rows[i][0].ToString().Equals(txtidsanpham.Text.Trim().ToUpper()))
                 {
-                    amount = int.Parse(table.Rows[i][2].ToString()) + int.Parse(txtamount.Text);
+                    amount = int.Parse(table.Rows[i][3].ToString()) + int.Parse(txtamount.Text);
                     if (!DAO_Bill.Instance.IsEnough(txtidsanpham.Text.Trim(), txtid.Text, amount))
                     {
-                        lbtrangthai.Text = "Ko du so luong";
+                        lbtrangthai.Text = "Không đủ số lượng";
                         return;
                     }
                     tongtien = dongia * amount;
-                    table.Rows[i].SetField("So luong", amount);
-                    table.Rows[i].SetField("Tong tien", tongtien);
+                    table.Rows[i].SetField("Số Lượng", amount);
+                    table.Rows[i].SetField("Tổng Tiền", tongtien);
                     goto A;
                 }
             }
             if (!DAO_Bill.Instance.IsEnough(txtidsanpham.Text.Trim(), txtid.Text, int.Parse(txtamount.Text)))
             {
-                lbtrangthai.Text = "Ko du so luong";
+                lbtrangthai.Text = "Không đủ số lượng";
                 return;
             }
+            string namesp = (DAO_Bill.Instance.getNameProduct(txtidsanpham.Text.Trim())).ToString().Trim();
             tongtien = dongia * float.Parse(txtamount.Text);
-            table.Rows.Add(txtidsanpham.Text.Trim(), dongia, txtamount.Text.Trim(), tongtien);
+            table.Rows.Add(txtidsanpham.Text.Trim(),namesp, dongia, txtamount.Text.Trim(), tongtien);
         A:
             txttotal.Text = CaculateTotal().ToString();
         }
@@ -137,12 +141,12 @@ namespace ShoesProject.UserControls.Bills
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu trong rong";
+                lbtrangthai.Text = "Bảng dữ liệu trống rỗng";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
             {
-                lbtrangthai.Text = "Vui long chon 1 san pham de xoa";
+                lbtrangthai.Text = "Vui lòng chọn 1 sản phẩm để xóa";
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
@@ -153,14 +157,14 @@ namespace ShoesProject.UserControls.Bills
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu trong rong";
+                lbtrangthai.Text = "Bảng dữ liệu trống rỗng";
                 return 0;
             }
             int n = table.Rows.Count;
             float sum = 0;
             for (int i = 0; i < n; i++)
             {
-                sum += float.Parse(table.Rows[i][3].ToString());
+                sum += float.Parse(table.Rows[i][4].ToString());
 
             }
             return sum;
@@ -178,22 +182,22 @@ namespace ShoesProject.UserControls.Bills
             int row = dataGridView1.Rows.Count;
             if (row == 0)
             {
-                lbtrangthai.Text = "Vui long chon it nhat 1 san pham";
+                lbtrangthai.Text = "Vui lòng chọn ít nhất 1 sản phẩm";
                 return;
             }
             if (!DAO_Bill.Instance.isBillIDExist(txtid.Text.Trim()))
             {
-                lbtrangthai.Text = "Ko ton tai ID hoa don";
+                lbtrangthai.Text = "Không tồn tại ID hóa đơn";
                 return;
             }
             if (!DAO_Bill.Instance.isCustomerIDExist(txtidcustomer.Text.Trim()))
             {
-                lbtrangthai.Text = "Ko ton tai ID khach hang";
+                lbtrangthai.Text = "Không tồn tại ID khách hàng";
                 return;
             }
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu trong rong";
+                lbtrangthai.Text = "Bảng dữ liệu trống rỗng";
                 return;
             }
             string[] idsp = new string[row];
@@ -204,15 +208,15 @@ namespace ShoesProject.UserControls.Bills
                 idsp[i] = table.Rows[i][0].ToString().Trim();
                 if (!DAO_Bill.Instance.isProductIDExist(idsp[i]))
                 {
-                    lbtrangthai.Text = String.Format("ID san pham {0} ko con ton tai nua", idsp[i]);
+                    lbtrangthai.Text = String.Format("ID sản phẩm {0} không còn tồn tại nữa", idsp[i]);
                     return;//kiem tra con so luong nua
                 }
                 
-                soluong[i] = table.Rows[i][2].ToString();
-                totalsp[i] = table.Rows[i][3].ToString();
+                soluong[i] = table.Rows[i][3].ToString();
+                totalsp[i] = table.Rows[i][4].ToString();
                 if (!DAO_Bill.Instance.IsEnough(idsp[i], txtid.Text.Trim(), int.Parse(soluong[i])))
                 {
-                    lbtrangthai.Text = "Ko du so luong";
+                    lbtrangthai.Text = "Không đủ số lượng";
                     return;
                 }
 

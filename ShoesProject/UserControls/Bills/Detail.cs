@@ -15,14 +15,12 @@ namespace ShoesProject.UserControls.Bills
 {
     public partial class Detail : Form
     {
-  
         DTO_Bill dtobill;
         public Detail(DTO_Bill dtobill)
         {
             InitializeComponent();
             this.dtobill = dtobill;
         }
-
         private void Detail_Load(object sender, EventArgs e)
         {
             lbtrangthai.Text = "";
@@ -41,50 +39,32 @@ namespace ShoesProject.UserControls.Bills
             else
             {
                 cbboxtrangthai.SelectedIndex = 1;
-               
             }
             string date = dtobill.Date;
             string total = dtobill.Total;
-           
-           
-
             string namekhachhang = DAO_Bill.Instance.getNameKHByID(idcustomer).ToString().Trim();
-
             int n = dtobill.CTHD.IDSP.Length;
             DataTable newtable = new DataTable();
-            newtable.Columns.Add("ID san pham");
-            newtable.Columns.Add("Don gia");
-
-            newtable.Columns.Add("So luong");
-            newtable.Columns.Add("Tong tien");
-           
-
+            newtable.Columns.Add("ID sản phẩm");
+            newtable.Columns.Add("Tên sản phẩm");
+            newtable.Columns.Add("Đơn giá");
+            newtable.Columns.Add("Số lượng");
+            newtable.Columns.Add("Tổng tiền");
             for (int i = 0; i < n; i++)
             {
                 string idsp = dtobill.CTHD.IDSP[i];
+                string name = dtobill.CTHD.NAMESP[i];
                 string soluong = dtobill.CTHD.SOLUONG[i];
                 string tongtien = dtobill.CTHD.TOTAL[i];
                 float dongia = float.Parse(tongtien) / float.Parse(soluong);
-                newtable.Rows.Add(idsp,dongia.ToString(),soluong,tongtien);
+                newtable.Rows.Add(idsp,name,dongia.ToString(),soluong,float.Parse(tongtien));
             }
             dataGridView1.DataSource = newtable;
             txtid.Text = idhoadon;
             txtidcustomer.Text = idcustomer;
-            
-           
             txtcustomer.Text = namekhachhang;
-            txttotal.Text = total;
+            txttotal.Text = float.Parse(total).ToString();
             txtdate.Text = date;
-        }
-
-        private void gunaLabel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaLabel6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

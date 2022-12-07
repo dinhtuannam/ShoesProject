@@ -48,26 +48,26 @@ namespace ShoesProject.UserControls.Bills
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu trong rong";
+                lbtrangthai.Text = "Bảng dữ liệu trống rỗng";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
             {
-                lbtrangthai.Text = "Vui long chon 1 hoa don de chinh sua";
+                lbtrangthai.Text = "Vui lòng chọn 1 hóa đơn để chỉnh sửa";
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
             
             if (dataGridView1.Rows[row].Cells[5].Value.ToString().Trim().Equals("confirmed"))
             {
-                lbtrangthai.Text = "Hoa don da confirmed,ko the thay doi hoac xoa";
+                lbtrangthai.Text = "Hóa đơn đã confirmed,không thể thay đổi hoặc xóa";
                 return;
             }
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
             Edit edit = new Edit(getBillDTO(id),employee,this);
             if (edit == null)
             {
-                lbtrangthai.Text = "Cant create new Edit Form";
+                lbtrangthai.Text = "Không thể tạo form Edit";
                 return;
             }
             edit.Show();
@@ -94,7 +94,6 @@ namespace ShoesProject.UserControls.Bills
             }
             dtobill.CTHD = dtocthd;
             return dtobill;
-
         }
         public  void loadTable(string type,string id = null)
         {
@@ -112,7 +111,7 @@ namespace ShoesProject.UserControls.Bills
                 }
                 else
                 {
-                    lbtrangthai.Text = "ko co chuc nang " + type;
+                    lbtrangthai.Text = "Không có chức năng " + type;
                     return;
                 }
             }
@@ -123,40 +122,36 @@ namespace ShoesProject.UserControls.Bills
             loadTable("loadalldata");
             lbtrangthai.Text = "";
         }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             loadTable("loadalldata");
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
-        {
-            
+        {          
             AddBill addbill = new AddBill(employee,this);
             if (addbill == null)
             {
-                lbtrangthai.Text = "Cant create new Add Form";
+                lbtrangthai.Text = "Không thể tạo form Add";
                 return;
             }
             addbill.Show();
         }
-
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu trong rong";
+                lbtrangthai.Text = "Bảng dữ liệu trống rỗng";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
             {
-                lbtrangthai.Text = "Vui long chon 1 hoa don de xoa";
+                lbtrangthai.Text = "Vui lòng chọn 1 hóa đơn để xóa";
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
             if (dataGridView1.Rows[row].Cells[5].Value.ToString().Trim().Equals("confirmed"))
             {
-                lbtrangthai.Text = "Hoa don da confirmed, ko the thay doi hoac xoa";
+                lbtrangthai.Text = "Hóa đơn đã confirmed, không thể thay đổi hoặc xóa";
                 return;
             }
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
@@ -164,17 +159,16 @@ namespace ShoesProject.UserControls.Bills
             DAO_Bill.Instance.deleteBill(id);
             loadTable("loadalldata");
         }
-
         private void btnDetail_Click(object sender, EventArgs e)
         {
             if (dataGridView1 == null)
             {
-                lbtrangthai.Text = "Bang du lieu trong rong";
+                lbtrangthai.Text = "Bảng dữ liệu trống rỗng";
                 return;
             }
             if (dataGridView1.CurrentRow == null)
             {
-                lbtrangthai.Text = "Vui long chon 1 hoa don de xem chi tiet";
+                lbtrangthai.Text = "Vui lòng chọn 1 hóa đơn để xem chi tiết";
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
@@ -182,14 +176,11 @@ namespace ShoesProject.UserControls.Bills
             Detail detail = new Detail(getBillDTO(id));
             if (detail == null)
             {
-                lbtrangthai.Text = "Cant create new Detail Form";
+                lbtrangthai.Text = "Không thể tạo form Detail";
                 return;
             }
             detail.Show();
-
         }
-
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtsearch.Text.Trim().Equals(""))
@@ -198,16 +189,6 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
             loadTable("search",txtsearch.Text.Trim());
-        }
-
-        private void txtsearch_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbtrangthai_TextChanged(object sender, EventArgs e)
-        {
-           
         }
     }
 }

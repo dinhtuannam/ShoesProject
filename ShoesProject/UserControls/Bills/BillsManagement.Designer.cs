@@ -59,12 +59,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(17, 101);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 280);
+            this.dataGridView1.Size = new System.Drawing.Size(697, 280);
             this.dataGridView1.TabIndex = 1;
             // 
             // lbtrangthai
@@ -76,18 +77,17 @@
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(86, 24);
             this.lbtrangthai.TabIndex = 14;
-            this.lbtrangthai.Text = "trang thai";
-            this.lbtrangthai.TextChanged += new System.EventHandler(this.lbtrangthai_TextChanged);
+            this.lbtrangthai.Text = "trạng thái";
             // 
             // btnRefresh
             // 
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
             this.btnRefresh.BorderColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnRefresh.BorderRadius = 20;
+            this.btnRefresh.BorderRadius = 18;
             this.btnRefresh.BorderThickness = 1;
             this.btnRefresh.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnRefresh.CustomBorderColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRefresh.CustomBorderThickness = new System.Windows.Forms.Padding(1);
+            this.btnRefresh.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
             this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -96,7 +96,7 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(547, 71);
+            this.btnRefresh.Location = new System.Drawing.Point(600, 71);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(114, 29);
             this.btnRefresh.TabIndex = 15;
@@ -118,11 +118,11 @@
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(667, 101);
+            this.btnAdd.Location = new System.Drawing.Point(720, 101);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(232, 45);
+            this.btnAdd.Size = new System.Drawing.Size(179, 45);
             this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "Add";
+            this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
@@ -141,11 +141,11 @@
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(667, 152);
+            this.btnEdit.Location = new System.Drawing.Point(720, 152);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(232, 45);
+            this.btnEdit.Size = new System.Drawing.Size(179, 45);
             this.btnEdit.TabIndex = 17;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDetail
@@ -164,11 +164,11 @@
             this.btnDetail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
-            this.btnDetail.Location = new System.Drawing.Point(667, 203);
+            this.btnDetail.Location = new System.Drawing.Point(720, 203);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(232, 45);
+            this.btnDetail.Size = new System.Drawing.Size(179, 45);
             this.btnDetail.TabIndex = 18;
-            this.btnDetail.Text = "Detail";
+            this.btnDetail.Text = "Chi tiết";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // btnRemove
@@ -187,11 +187,11 @@
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
-            this.btnRemove.Location = new System.Drawing.Point(667, 254);
+            this.btnRemove.Location = new System.Drawing.Point(720, 254);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(232, 45);
+            this.btnRemove.Size = new System.Drawing.Size(179, 45);
             this.btnRemove.TabIndex = 19;
-            this.btnRemove.Text = "Remove";
+            this.btnRemove.Text = "Xoá";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // txtsearch
@@ -218,7 +218,6 @@
             this.txtsearch.SelectedText = "";
             this.txtsearch.Size = new System.Drawing.Size(160, 29);
             this.txtsearch.TabIndex = 20;
-            this.txtsearch.TextChanged += new System.EventHandler(this.txtsearch_TextChanged);
             // 
             // btnSearch
             // 
