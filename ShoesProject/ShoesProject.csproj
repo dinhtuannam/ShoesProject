@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DAO_Bill.cs" />
+    <Compile Include="DAO\DAO_ChucNang.cs" />
     <Compile Include="DAO\DAO_PhanQuyen.cs" />
+    <Compile Include="DAO\DAO_Quyen.cs" />
     <Compile Include="DAO\DAO_TKSP.cs" />
     <Compile Include="DAO\DAO_Customer.cs" />
     <Compile Include="DAO\DAO_Employee.cs" />

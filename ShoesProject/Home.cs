@@ -190,7 +190,15 @@ namespace ShoesProject
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-
+            if (quyen.QLPQ1 == "Accept")
+            {
+                UC_PhanQuyen uc = new UC_PhanQuyen();
+                addUserControl(uc);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
     }
 }
