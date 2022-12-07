@@ -61,7 +61,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(433, 157);
-            this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.TabIndex = 100;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtidcustomer
@@ -82,7 +82,7 @@
             this.txtidcustomer.PlaceholderText = "";
             this.txtidcustomer.SelectedText = "";
             this.txtidcustomer.Size = new System.Drawing.Size(160, 26);
-            this.txtidcustomer.TabIndex = 52;
+            this.txtidcustomer.TabIndex = 100;
             // 
             // txtid
             // 
@@ -102,7 +102,7 @@
             this.txtid.PlaceholderText = "";
             this.txtid.SelectedText = "";
             this.txtid.Size = new System.Drawing.Size(160, 26);
-            this.txtid.TabIndex = 50;
+            this.txtid.TabIndex = 100;
             // 
             // label3
             // 
@@ -111,7 +111,7 @@
             this.label3.Location = new System.Drawing.Point(47, 54);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 49;
+            this.label3.TabIndex = 100;
             this.label3.Text = "ID Khach Hang";
             // 
             // label1
@@ -121,7 +121,7 @@
             this.label1.Location = new System.Drawing.Point(47, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 47;
+            this.label1.TabIndex = 100;
             this.label1.Text = "ID Hoa Don";
             // 
             // dtpicker
@@ -135,7 +135,7 @@
             this.dtpicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpicker.Name = "dtpicker";
             this.dtpicker.Size = new System.Drawing.Size(220, 36);
-            this.dtpicker.TabIndex = 53;
+            this.dtpicker.TabIndex = 1;
             this.dtpicker.Value = new System.DateTime(2022, 11, 18, 20, 38, 14, 470);
             // 
             // label4
@@ -145,8 +145,9 @@
             this.label4.Location = new System.Drawing.Point(278, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 54;
+            this.label4.TabIndex = 100;
             this.label4.Text = "Ngay Mua";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbtrangthai
             // 
@@ -156,7 +157,7 @@
             this.lbtrangthai.Location = new System.Drawing.Point(12, 356);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(78, 18);
-            this.lbtrangthai.TabIndex = 55;
+            this.lbtrangthai.TabIndex = 100;
             this.lbtrangthai.Text = "trang thai";
             // 
             // btnremovesp
@@ -177,7 +178,7 @@
             this.btnremovesp.Location = new System.Drawing.Point(451, 215);
             this.btnremovesp.Name = "btnremovesp";
             this.btnremovesp.Size = new System.Drawing.Size(59, 42);
-            this.btnremovesp.TabIndex = 61;
+            this.btnremovesp.TabIndex = 100;
             this.btnremovesp.Text = "=>";
             this.btnremovesp.Click += new System.EventHandler(this.btnremovesp_Click);
             // 
@@ -189,8 +190,9 @@
             this.label7.Location = new System.Drawing.Point(263, 282);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 16);
-            this.label7.TabIndex = 63;
+            this.label7.TabIndex = 100;
             this.label7.Text = "Tong so tien";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txttotal
             // 
@@ -210,7 +212,7 @@
             this.txttotal.PlaceholderText = "";
             this.txttotal.SelectedText = "";
             this.txttotal.Size = new System.Drawing.Size(95, 26);
-            this.txttotal.TabIndex = 62;
+            this.txttotal.TabIndex = 100;
             // 
             // btnAdd
             // 
@@ -230,7 +232,7 @@
             this.btnAdd.Location = new System.Drawing.Point(228, 304);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(180, 45);
-            this.btnAdd.TabIndex = 64;
+            this.btnAdd.TabIndex = 100;
             this.btnAdd.Text = "Confirm";
             this.btnAdd.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
@@ -250,7 +252,7 @@
             this.cbboxtrangthai.Location = new System.Drawing.Point(281, 67);
             this.cbboxtrangthai.Name = "cbboxtrangthai";
             this.cbboxtrangthai.Size = new System.Drawing.Size(143, 36);
-            this.cbboxtrangthai.TabIndex = 65;
+            this.cbboxtrangthai.TabIndex = 2;
             // 
             // guna2Panel1
             // 
@@ -264,7 +266,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(451, 109);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(158, 100);
-            this.guna2Panel1.TabIndex = 66;
+            this.guna2Panel1.TabIndex = 100;
             // 
             // btnaddsanpham
             // 
@@ -284,7 +286,7 @@
             this.btnaddsanpham.Location = new System.Drawing.Point(0, 23);
             this.btnaddsanpham.Name = "btnaddsanpham";
             this.btnaddsanpham.Size = new System.Drawing.Size(59, 42);
-            this.btnaddsanpham.TabIndex = 65;
+            this.btnaddsanpham.TabIndex = 100;
             this.btnaddsanpham.Text = "<=";
             this.btnaddsanpham.Click += new System.EventHandler(this.btnaddsanpham_Click);
             // 
@@ -305,7 +307,7 @@
             this.txtamount.PlaceholderText = "";
             this.txtamount.SelectedText = "";
             this.txtamount.Size = new System.Drawing.Size(83, 26);
-            this.txtamount.TabIndex = 64;
+            this.txtamount.TabIndex = 4;
             // 
             // txtidsanpham
             // 
@@ -324,7 +326,7 @@
             this.txtidsanpham.PlaceholderText = "";
             this.txtidsanpham.SelectedText = "";
             this.txtidsanpham.Size = new System.Drawing.Size(83, 26);
-            this.txtidsanpham.TabIndex = 63;
+            this.txtidsanpham.TabIndex = 3;
             // 
             // label6
             // 
@@ -333,7 +335,7 @@
             this.label6.Location = new System.Drawing.Point(62, 52);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 62;
+            this.label6.TabIndex = 100;
             this.label6.Text = "So luong";
             // 
             // label5
@@ -343,7 +345,7 @@
             this.label5.Location = new System.Drawing.Point(62, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
-            this.label5.TabIndex = 61;
+            this.label5.TabIndex = 100;
             this.label5.Text = "ID san pham";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -372,7 +374,6 @@
             this.MinimizeBox = false;
             this.Name = "Edit";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Edit_FormClosing);

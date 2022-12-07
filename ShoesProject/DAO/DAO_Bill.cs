@@ -31,6 +31,11 @@ namespace ShoesProject.DAO
             }
 
         }
+        public object getNameProduct(string id)
+        {
+            string query = "Select tensp from sanpham where idsp = @id ";
+            return DataProvider.Instance.ExecuteScalar(query,new object[] {id});
+        }
         public bool IsEnough(string id,string id2,int amount)
         {
             string query = "select sanpham.soluong -sl.soluongchokhach from sanpham,(select coalesce(sum(soluong),0)  as soluongchokhach from hoadon hd ,cthd where hd.idhd = cthd.idhd and hd.trangthai = 'unconfirmed' and cthd.idsp = @id and hd.idhd <> @id2 ) as sl where sanpham.idsp = @id3 ";
@@ -152,7 +157,7 @@ namespace ShoesProject.DAO
         }
         public DataTable getCTHD(string id)
         {
-            string query = "select idsp ,soluong,tongtien from cthd where idhd = @id ";
+            string query = "select * from cthd where idhd = @id ";
             return DataProvider.Instance.ExecuteQuery(query,new object[] {id}); 
         }
         public int updateBill(string idhd,object idnv ,string idkh,string date,string total,string trangthai)

@@ -16,12 +16,13 @@ namespace ShoesProject.UserControls.Bills
     public partial class Edit : Form
     {
         DataTable table;
+        DTO_Bill dtobill;
         DTO_Employee employee;
         BillsManagement billmanage;
-        public Edit(DataTable table,DTO_Employee employee,BillsManagement billmanage)
+        public Edit(DTO_Bill dtobill,DTO_Employee employee,BillsManagement billmanage)
         {
             InitializeComponent();
-            this.table = table;
+            this.dtobill= dtobill;
             this.employee = employee;
             this.billmanage = billmanage;
         }
@@ -33,9 +34,9 @@ namespace ShoesProject.UserControls.Bills
         }
         private void loadData()
         {
-            string idcustomer = table.Rows[0][2].ToString().Trim();
-            string idhoadon = table.Rows[0][0].ToString().Trim();
-            string strdate = table.Rows[0][3].ToString().Trim();     
+            string idcustomer = dtobill.ID_Cus;
+            string idhoadon = dtobill.ID ;
+            string strdate = dtobill.Date;
             cbboxtrangthai.SelectedIndex = 1;
             string[] arr = strdate.Split('/');
             int date = int.Parse(arr[0]);
@@ -46,21 +47,21 @@ namespace ShoesProject.UserControls.Bills
             int hour = int.Parse(arr1[0]);
             int minute = int.Parse(arr1[1]);
             int second = int.Parse(arr1[2].Substring(0, 2));
-           
-            string total = table.Rows[0][4].ToString();
 
-            table = DAO_Bill.Instance.getCTHD(idhoadon);
+            string total = dtobill.Total ;
+
+           
             DataTable newtable = new DataTable();
             newtable.Columns.Add("id sp");
             newtable.Columns.Add("don gia");
             newtable.Columns.Add("so luong");
             newtable.Columns.Add("Tong tien");
-            int n = table.Rows.Count;
+            int n = dtobill.CTHD.IDSP.Length;
             for(int i =0;i < n; i++)
             {
-                string idsp = table.Rows[i][0].ToString().Trim();
-                string soluong = table.Rows[i][1].ToString().Trim();
-                string tongtien = table.Rows[i][2].ToString().Trim();
+                string idsp = dtobill.CTHD.IDSP[i];
+                string soluong = dtobill.CTHD.SOLUONG[i];
+                string tongtien = dtobill.CTHD.TOTAL[i];
                 string dongia = (float.Parse(tongtien) / float.Parse(soluong)).ToString() ;
                 newtable.Rows.Add(idsp,dongia,soluong,tongtien);
             }
@@ -248,6 +249,16 @@ namespace ShoesProject.UserControls.Bills
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

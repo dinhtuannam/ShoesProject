@@ -42,11 +42,13 @@
             this.cbboxtrangthai = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btnremovesp = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnaddsanpham = new Guna.UI2.WinForms.Guna2Button();
             this.txtamount = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtidsanpham = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnaddsanpham = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.lbthongbaoid = new System.Windows.Forms.Label();
+            this.lbthongbaoidkh = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +59,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 113);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(440, 154);
-            this.dataGridView1.TabIndex = 36;
+            this.dataGridView1.TabIndex = 100;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
@@ -67,7 +69,7 @@
             this.label1.Location = new System.Drawing.Point(49, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 40;
+            this.label1.TabIndex = 100;
             this.label1.Text = "ID Hoa Don";
             // 
             // label3
@@ -77,7 +79,7 @@
             this.label3.Location = new System.Drawing.Point(49, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 42;
+            this.label3.TabIndex = 100;
             this.label3.Text = "ID Khach Hang";
             // 
             // label4
@@ -87,7 +89,7 @@
             this.label4.Location = new System.Drawing.Point(277, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
-            this.label4.TabIndex = 43;
+            this.label4.TabIndex = 100;
             this.label4.Text = "Ngay Mua";
             // 
             // txtid
@@ -108,6 +110,7 @@
             this.txtid.SelectedText = "";
             this.txtid.Size = new System.Drawing.Size(160, 26);
             this.txtid.TabIndex = 44;
+            this.txtid.TextChanged += new System.EventHandler(this.txtid_TextChanged);
             // 
             // txtidcustomer
             // 
@@ -126,7 +129,8 @@
             this.txtidcustomer.PlaceholderText = "";
             this.txtidcustomer.SelectedText = "";
             this.txtidcustomer.Size = new System.Drawing.Size(160, 26);
-            this.txtidcustomer.TabIndex = 46;
+            this.txtidcustomer.TabIndex = 45;
+            this.txtidcustomer.TextChanged += new System.EventHandler(this.txtidcustomer_TextChanged);
             // 
             // date
             // 
@@ -139,7 +143,7 @@
             this.date.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date.Name = "date";
             this.date.Size = new System.Drawing.Size(223, 36);
-            this.date.TabIndex = 47;
+            this.date.TabIndex = 100;
             this.date.Value = new System.DateTime(2022, 11, 18, 20, 20, 58, 393);
             // 
             // lbtrangthai
@@ -150,7 +154,7 @@
             this.lbtrangthai.Location = new System.Drawing.Point(9, 359);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(78, 18);
-            this.lbtrangthai.TabIndex = 48;
+            this.lbtrangthai.TabIndex = 100;
             this.lbtrangthai.Text = "trang thai";
             // 
             // btnAdd
@@ -171,7 +175,7 @@
             this.btnAdd.Location = new System.Drawing.Point(233, 305);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(180, 45);
-            this.btnAdd.TabIndex = 57;
+            this.btnAdd.TabIndex = 100;
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -183,6 +187,7 @@
             this.txttotal.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txttotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txttotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txttotal.Enabled = false;
             this.txttotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttotal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txttotal.HideSelection = false;
@@ -193,7 +198,7 @@
             this.txttotal.PlaceholderText = "";
             this.txttotal.SelectedText = "";
             this.txttotal.Size = new System.Drawing.Size(115, 26);
-            this.txttotal.TabIndex = 53;
+            this.txttotal.TabIndex = 110;
             // 
             // label7
             // 
@@ -203,7 +208,7 @@
             this.label7.Location = new System.Drawing.Point(252, 283);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 16);
-            this.label7.TabIndex = 56;
+            this.label7.TabIndex = 100;
             this.label7.Text = "Tong so tien";
             // 
             // cbboxtrangthai
@@ -222,7 +227,7 @@
             this.cbboxtrangthai.Location = new System.Drawing.Point(280, 71);
             this.cbboxtrangthai.Name = "cbboxtrangthai";
             this.cbboxtrangthai.Size = new System.Drawing.Size(133, 36);
-            this.cbboxtrangthai.TabIndex = 58;
+            this.cbboxtrangthai.TabIndex = 47;
             this.cbboxtrangthai.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // btnremovesp
@@ -243,7 +248,7 @@
             this.btnremovesp.Location = new System.Drawing.Point(458, 218);
             this.btnremovesp.Name = "btnremovesp";
             this.btnremovesp.Size = new System.Drawing.Size(59, 42);
-            this.btnremovesp.TabIndex = 61;
+            this.btnremovesp.TabIndex = 100;
             this.btnremovesp.Text = "=>";
             this.btnremovesp.Click += new System.EventHandler(this.btnremovesp_Click);
             // 
@@ -259,8 +264,56 @@
             this.guna2Panel1.Location = new System.Drawing.Point(458, 113);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(165, 99);
-            this.guna2Panel1.TabIndex = 62;
+            this.guna2Panel1.TabIndex = 100;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // txtamount
+            // 
+            this.txtamount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtamount.DefaultText = "";
+            this.txtamount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtamount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtamount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtamount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtamount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtamount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtamount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtamount.Location = new System.Drawing.Point(65, 63);
+            this.txtamount.Name = "txtamount";
+            this.txtamount.PasswordChar = '\0';
+            this.txtamount.PlaceholderText = "";
+            this.txtamount.SelectedText = "";
+            this.txtamount.Size = new System.Drawing.Size(95, 26);
+            this.txtamount.TabIndex = 49;
+            // 
+            // txtidsanpham
+            // 
+            this.txtidsanpham.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtidsanpham.DefaultText = "";
+            this.txtidsanpham.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtidsanpham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtidsanpham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidsanpham.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtidsanpham.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtidsanpham.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtidsanpham.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtidsanpham.Location = new System.Drawing.Point(65, 18);
+            this.txtidsanpham.Name = "txtidsanpham";
+            this.txtidsanpham.PasswordChar = '\0';
+            this.txtidsanpham.PlaceholderText = "";
+            this.txtidsanpham.SelectedText = "";
+            this.txtidsanpham.Size = new System.Drawing.Size(95, 26);
+            this.txtidsanpham.TabIndex = 48;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(65, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.TabIndex = 64;
+            this.label6.Text = "So luong";
             // 
             // btnaddsanpham
             // 
@@ -280,57 +333,9 @@
             this.btnaddsanpham.Location = new System.Drawing.Point(0, 28);
             this.btnaddsanpham.Name = "btnaddsanpham";
             this.btnaddsanpham.Size = new System.Drawing.Size(59, 42);
-            this.btnaddsanpham.TabIndex = 63;
+            this.btnaddsanpham.TabIndex = 100;
             this.btnaddsanpham.Text = "<=";
             this.btnaddsanpham.Click += new System.EventHandler(this.btnaddsanpham_Click);
-            // 
-            // txtamount
-            // 
-            this.txtamount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtamount.DefaultText = "";
-            this.txtamount.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtamount.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtamount.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtamount.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtamount.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtamount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtamount.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtamount.Location = new System.Drawing.Point(65, 63);
-            this.txtamount.Name = "txtamount";
-            this.txtamount.PasswordChar = '\0';
-            this.txtamount.PlaceholderText = "";
-            this.txtamount.SelectedText = "";
-            this.txtamount.Size = new System.Drawing.Size(95, 26);
-            this.txtamount.TabIndex = 66;
-            // 
-            // txtidsanpham
-            // 
-            this.txtidsanpham.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtidsanpham.DefaultText = "";
-            this.txtidsanpham.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtidsanpham.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtidsanpham.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtidsanpham.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtidsanpham.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidsanpham.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtidsanpham.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidsanpham.Location = new System.Drawing.Point(65, 18);
-            this.txtidsanpham.Name = "txtidsanpham";
-            this.txtidsanpham.PasswordChar = '\0';
-            this.txtidsanpham.PlaceholderText = "";
-            this.txtidsanpham.SelectedText = "";
-            this.txtidsanpham.Size = new System.Drawing.Size(95, 26);
-            this.txtidsanpham.TabIndex = 65;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(65, 47);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
-            this.label6.TabIndex = 64;
-            this.label6.Text = "So luong";
             // 
             // label5
             // 
@@ -342,12 +347,36 @@
             this.label5.TabIndex = 63;
             this.label5.Text = "ID san pham";
             // 
+            // lbthongbaoid
+            // 
+            this.lbthongbaoid.AutoSize = true;
+            this.lbthongbaoid.ForeColor = System.Drawing.Color.Yellow;
+            this.lbthongbaoid.Location = new System.Drawing.Point(119, 13);
+            this.lbthongbaoid.Name = "lbthongbaoid";
+            this.lbthongbaoid.Size = new System.Drawing.Size(60, 13);
+            this.lbthongbaoid.TabIndex = 100;
+            this.lbthongbaoid.Text = "thongbaoid";
+            this.lbthongbaoid.Visible = false;
+            // 
+            // lbthongbaoidkh
+            // 
+            this.lbthongbaoidkh.AutoSize = true;
+            this.lbthongbaoidkh.ForeColor = System.Drawing.Color.Yellow;
+            this.lbthongbaoidkh.Location = new System.Drawing.Point(136, 58);
+            this.lbthongbaoidkh.Name = "lbthongbaoidkh";
+            this.lbthongbaoidkh.Size = new System.Drawing.Size(72, 13);
+            this.lbthongbaoidkh.TabIndex = 100;
+            this.lbthongbaoidkh.Text = "thongbaoidkh";
+            this.lbthongbaoidkh.Visible = false;
+            // 
             // AddBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(625, 386);
+            this.Controls.Add(this.lbthongbaoidkh);
+            this.Controls.Add(this.lbthongbaoid);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnremovesp);
             this.Controls.Add(this.cbboxtrangthai);
@@ -367,7 +396,6 @@
             this.MinimizeBox = false;
             this.Name = "AddBill";
             this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBill";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddBill_FormClosing);
@@ -400,5 +428,7 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button btnaddsanpham;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbthongbaoid;
+        private System.Windows.Forms.Label lbthongbaoidkh;
     }
 }

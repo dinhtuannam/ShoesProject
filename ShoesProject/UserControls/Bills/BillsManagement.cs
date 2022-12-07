@@ -64,13 +64,37 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
-            Edit edit = new Edit(DAO_Bill.Instance.getBillByID(id),employee,this);
+            Edit edit = new Edit(getBillDTO(id),employee,this);
             if (edit == null)
             {
                 lbtrangthai.Text = "Cant create new Edit Form";
                 return;
             }
             edit.Show();
+        }
+        public DTO_Bill getBillDTO(string id)
+        {
+            DataTable tb = DAO_Bill.Instance.getBillByID(id);
+            DTO_Bill dtobill = new DTO_Bill();
+            dtobill.ID = tb.Rows[0][0].ToString().Trim();
+            dtobill.ID_Cus = tb.Rows[0][2].ToString().Trim();
+            dtobill.ID_Emp = tb.Rows[0][1].ToString().Trim();
+            dtobill.Date = tb.Rows[0][3].ToString().Trim();
+            dtobill.Total = tb.Rows[0][4].ToString().Trim();
+            dtobill.TrangThai = tb.Rows[0][5].ToString().Trim();
+            tb = DAO_Bill.Instance.getCTHD(dtobill.ID);
+            int n = tb.Rows.Count;
+            DTO_CTHD dtocthd = new DTO_CTHD(n);
+            for(int i =0;i < n; i++)
+            {
+                dtocthd.IDSP[i] = tb.Rows[i][1].ToString().Trim();
+                dtocthd.SOLUONG[i] = tb.Rows[i][2].ToString().Trim();
+                dtocthd.TOTAL[i] = tb.Rows[i][3].ToString().Trim();
+                dtocthd.NAMESP[i] = DAO_Bill.Instance.getNameProduct(dtocthd.IDSP[i]).ToString().Trim();
+            }
+            dtobill.CTHD = dtocthd;
+            return dtobill;
+
         }
         public  void loadTable(string type,string id = null)
         {
@@ -155,7 +179,7 @@ namespace ShoesProject.UserControls.Bills
             }
             int row = dataGridView1.CurrentRow.Index;
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
-            Detail detail = new Detail(DAO_Bill.Instance.getBillByID(id));
+            Detail detail = new Detail(getBillDTO(id));
             if (detail == null)
             {
                 lbtrangthai.Text = "Cant create new Detail Form";

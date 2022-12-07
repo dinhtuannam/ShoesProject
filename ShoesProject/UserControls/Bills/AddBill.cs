@@ -225,5 +225,32 @@ namespace ShoesProject.UserControls.Bills
         {
 
         }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+            
+            if (DAO_Bill.Instance.isBillIDExist(txtid.Text.Trim()))
+            {
+                lbthongbaoid.Text ="Da ton tai ID hoa don";
+                lbthongbaoid.Visible = true;
+            }
+            else
+            {
+                lbthongbaoid.Visible = false;
+            }
+        }
+
+        private void txtidcustomer_TextChanged(object sender, EventArgs e)
+        {
+            if (!DAO_Bill.Instance.isCustomerIDExist(txtidcustomer.Text.Trim()))
+            {
+                lbthongbaoidkh.Text = "Ko ton tai ID khach hang";
+                lbthongbaoidkh.Visible = true;
+            }
+            else
+            {
+                lbthongbaoidkh.Visible = false;
+            }
+        }
     }
 }

@@ -57,7 +57,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(433, 106);
-            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.TabIndex = 100;
             // 
             // txtidcustomer
             // 
@@ -71,13 +71,13 @@
             this.txtidcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtidcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidcustomer.Location = new System.Drawing.Point(62, 122);
+            this.txtidcustomer.Location = new System.Drawing.Point(62, 116);
             this.txtidcustomer.Name = "txtidcustomer";
             this.txtidcustomer.PasswordChar = '\0';
             this.txtidcustomer.PlaceholderText = "";
             this.txtidcustomer.SelectedText = "";
             this.txtidcustomer.Size = new System.Drawing.Size(160, 26);
-            this.txtidcustomer.TabIndex = 52;
+            this.txtidcustomer.TabIndex = 3;
             // 
             // txtidnhanvien
             // 
@@ -97,7 +97,7 @@
             this.txtidnhanvien.PlaceholderText = "";
             this.txtidnhanvien.SelectedText = "";
             this.txtidnhanvien.Size = new System.Drawing.Size(160, 26);
-            this.txtidnhanvien.TabIndex = 51;
+            this.txtidnhanvien.TabIndex = 2;
             // 
             // txtid
             // 
@@ -117,7 +117,7 @@
             this.txtid.PlaceholderText = "";
             this.txtid.SelectedText = "";
             this.txtid.Size = new System.Drawing.Size(160, 26);
-            this.txtid.TabIndex = 50;
+            this.txtid.TabIndex = 1;
             // 
             // label3
             // 
@@ -126,7 +126,7 @@
             this.label3.Location = new System.Drawing.Point(59, 100);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
-            this.label3.TabIndex = 49;
+            this.label3.TabIndex = 100;
             this.label3.Text = "ID Khach Hang";
             // 
             // lbidnhanvien
@@ -136,7 +136,7 @@
             this.lbidnhanvien.Location = new System.Drawing.Point(59, 55);
             this.lbidnhanvien.Name = "lbidnhanvien";
             this.lbidnhanvien.Size = new System.Drawing.Size(71, 13);
-            this.lbidnhanvien.TabIndex = 48;
+            this.lbidnhanvien.TabIndex = 100;
             this.lbidnhanvien.Text = "ID Nhan Vien";
             // 
             // label1
@@ -146,7 +146,7 @@
             this.label1.Location = new System.Drawing.Point(59, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 47;
+            this.label1.TabIndex = 100;
             this.label1.Text = "ID Hoa Don";
             // 
             // txtdate
@@ -161,7 +161,7 @@
             this.txtdate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtdate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtdate.Location = new System.Drawing.Point(62, 170);
+            this.txtdate.Location = new System.Drawing.Point(62, 161);
             this.txtdate.Name = "txtdate";
             this.txtdate.PasswordChar = '\0';
             this.txtdate.PlaceholderText = "";
@@ -177,7 +177,7 @@
             this.lbtrangthai.Location = new System.Drawing.Point(12, 350);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(78, 18);
-            this.lbtrangthai.TabIndex = 54;
+            this.lbtrangthai.TabIndex = 100;
             this.lbtrangthai.Text = "trang thai";
             // 
             // txtcustomer
@@ -192,7 +192,7 @@
             this.txtcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtcustomer.Location = new System.Drawing.Point(242, 122);
+            this.txtcustomer.Location = new System.Drawing.Point(242, 116);
             this.txtcustomer.Name = "txtcustomer";
             this.txtcustomer.PasswordChar = '\0';
             this.txtcustomer.PlaceholderText = "";
@@ -227,17 +227,17 @@
             this.lbnamenhanvien.Location = new System.Drawing.Point(239, 55);
             this.lbnamenhanvien.Name = "lbnamenhanvien";
             this.lbnamenhanvien.Size = new System.Drawing.Size(79, 13);
-            this.lbnamenhanvien.TabIndex = 57;
+            this.lbnamenhanvien.TabIndex = 100;
             this.lbnamenhanvien.Text = "Ten Nhan Vien";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(59, 154);
+            this.label5.Location = new System.Drawing.Point(59, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 58;
+            this.label5.TabIndex = 100;
             this.label5.Text = "Ngay Mua";
             // 
             // label6
@@ -247,7 +247,7 @@
             this.label6.Location = new System.Drawing.Point(239, 100);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 13);
-            this.label6.TabIndex = 59;
+            this.label6.TabIndex = 100;
             this.label6.Text = "Ten Khach Hang";
             // 
             // txttotal
@@ -268,7 +268,7 @@
             this.txttotal.PlaceholderText = "";
             this.txttotal.SelectedText = "";
             this.txttotal.Size = new System.Drawing.Size(160, 26);
-            this.txttotal.TabIndex = 60;
+            this.txttotal.TabIndex = 100;
             // 
             // label7
             // 
@@ -278,7 +278,7 @@
             this.label7.Location = new System.Drawing.Point(198, 326);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 16);
-            this.label7.TabIndex = 61;
+            this.label7.TabIndex = 100;
             this.label7.Text = "Tong so tien";
             // 
             // cbboxtrangthai
