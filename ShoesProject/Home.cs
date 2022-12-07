@@ -18,13 +18,14 @@ namespace ShoesProject
     public partial class Home : Form
     {
         DTO_Employee employee;
+        DTO_PhanQuyen quyen;
         public Home(string username)
         {
             InitializeComponent();
             employee = getEmployee(username);
             labelName.Text = employee.Username;
-            
-
+            quyen = GetPhanQuyen();
+           
         }
 
         private DTO_Employee getEmployee(string name)
@@ -39,11 +40,42 @@ namespace ShoesProject
             em.Address = dt.Rows[0][5].ToString();
             em.Email = dt.Rows[0][6].ToString();
             em.Status = dt.Rows[0][7].ToString();
+            em.Permission = dt.Rows[0][8].ToString();
             return em;
         }
 
-        private void addUserControl(UserControl uc)
+        private DTO_PhanQuyen GetPhanQuyen()
         {
+            DTO_PhanQuyen tmp = new DTO_PhanQuyen();
+            DataTable dt = DAO_PhanQuyen.Instance.getPhanQuyen(employee.Permission);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                string[] words = dt.Rows[i][1].ToString().Split(' ');
+                if (words[0] == "CN1")
+                    tmp.QLSP1 = "Accept";
+                if (words[0] == "CN2")
+                    tmp.QLKH1 = "Accept";
+                if (words[0] == "CN3")
+                    tmp.QLNV1 = "Accept";
+                if (words[0] == "CN4")
+                    tmp.QLTL1 = "Accept";
+                if (words[0] == "CN5")
+                    tmp.QLHD1 = "Accept";
+                if (words[0] == "CN6")
+                    tmp.TKKD1 = "Accept";
+                if (words[0] == "CN7")
+                    tmp.TKSP1 = "Accept";
+                if (words[0] == "CN8")
+                    tmp.QLPQ1 = "Accept";
+                if (words[0] == "CN9")
+                    tmp.BanHang1 = "Accept";
+               
+            }
+            return tmp;
+        }
+
+        private void addUserControl(UserControl uc)
+        {   
             uc.Dock = DockStyle.Fill;
             panelContainer.Controls.Clear();
             panelContainer.Controls.Add(uc);
@@ -51,50 +83,70 @@ namespace ShoesProject
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            UC_Products products = new UC_Products();
-            addUserControl(products);
+            if(quyen.QLSP1 == "Accept")
+            {
+                UC_Products products = new UC_Products();
+                addUserControl(products);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            UC_Employee employee = new UC_Employee(); 
-            addUserControl(employee); 
+            if (quyen.QLNV1 == "Accept")
+            {
+                UC_Employee employee = new UC_Employee();
+                addUserControl(employee);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            UC_Customers customers = new UC_Customers();
-            addUserControl(customers);
+            if (quyen.QLKH1 == "Accept")
+            {
+                UC_Customers customers = new UC_Customers();
+                addUserControl(customers);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            BillsManagement.Instance.AddEmplooyee(employee);
-            addUserControl(BillsManagement.Instance);
-            BillsManagement.Instance.loadTable("loadalldata");
-        }
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelContainer_Paint(object sender, PaintEventArgs e)
-        {
-
+            if (quyen.QLHD1 == "Accept")
+            {
+                BillsManagement.Instance.AddEmplooyee(employee);
+                addUserControl(BillsManagement.Instance);
+                BillsManagement.Instance.loadTable("loadalldata");
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            UC_TKSP tksp = new UC_TKSP();
-            addUserControl(tksp);
+            if (quyen.TKSP1 == "Accept")
+            {
+                UC_TKSP tksp = new UC_TKSP();
+                addUserControl(tksp);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -104,14 +156,28 @@ namespace ShoesProject
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            UC_TKKD tkkd = new UC_TKKD();
-            addUserControl(tkkd);
+            if (quyen.TKKD1 == "Accept")
+            {
+                UC_TKKD tkkd = new UC_TKKD();
+                addUserControl(tkkd);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            UC_Genres uc = new UC_Genres();
-            addUserControl(uc);
+            if (quyen.TKKD1 == "Accept")
+            {
+                UC_Genres uc = new UC_Genres();
+                addUserControl(uc);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -120,6 +186,11 @@ namespace ShoesProject
             LoginForm rf = new LoginForm();
             rf.ShowDialog();
             this.Close();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

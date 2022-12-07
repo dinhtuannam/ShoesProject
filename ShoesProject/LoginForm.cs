@@ -73,7 +73,7 @@ namespace ShoesProject
                 string text = Convert.ToString( dt.Rows[0][4] );
                 string[] subs = text.Split(' ');
                 string permission = subs[0];
-                if (String.Equals(permission, "AD"))
+                if (String.Equals(permission, "AD") || String.Equals(permission, "NV"))
                     return true;
                 else
                 {

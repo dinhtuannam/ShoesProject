@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DAO_Bill.cs" />
+    <Compile Include="DAO\DAO_PhanQuyen.cs" />
     <Compile Include="DAO\DAO_TKSP.cs" />
     <Compile Include="DAO\DAO_Customer.cs" />
     <Compile Include="DAO\DAO_Employee.cs" />
@@ -68,6 +69,7 @@
     <Compile Include="DTO\DTO_Customer.cs" />
     <Compile Include="DTO\DTO_Employee.cs" />
     <Compile Include="DTO\DTO_Genres.cs" />
+    <Compile Include="DTO\DTO_PhanQuyen.cs" />
     <Compile Include="DTO\DTO_Product.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -137,6 +139,12 @@
     <Compile Include="UserControls\UC_Genres.Designer.cs">
       <DependentUpon>UC_Genres.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_PhanQuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_PhanQuyen.Designer.cs">
+      <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_Products.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Genres.resx">
       <DependentUpon>UC_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_PhanQuyen.resx">
+      <DependentUpon>UC_PhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Products.resx">
       <DependentUpon>UC_Products.cs</DependentUpon>

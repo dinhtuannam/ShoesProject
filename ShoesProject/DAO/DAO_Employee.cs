@@ -109,6 +109,7 @@ namespace ShoesProject.DAO
         }
         public DataTable getEmployeeByName(String data)
         {
+            string selectRow = "Select idNV , tenTK , matkhau , tenNV , soDT , diachi , email , trangthai, idQuyen from TAIKHOAN , NHANVIEN ";
             string query = selectRow + "where TAIKHOAN.idUser = NHANVIEN.idNV and TAIKHOAN.tenTK = '" + data + "' ";
             return DataProvider.Instance.ExecuteQuery(query);
         }
