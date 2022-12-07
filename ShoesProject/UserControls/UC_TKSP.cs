@@ -35,21 +35,21 @@ namespace ShoesProject.UserControls
         {
             DataTable data = new DataTable();
             if (action == getDataAction)
-                data = DAO_TKKD.Instance.getChart();
+                data = DAO_TKSP.Instance.getChart();
             if (action == FilterDataAction)
-                data = DAO_TKKD.Instance.filterDate(month1, month2, txtYear1.Text, txtYear2.Text);
+                data = DAO_TKSP.Instance.filterDate(month1, month2, txtYear1.Text, txtYear2.Text);
 
             ChartTable.DataSource = data;
-            //loadChart(data);
+            loadChart(data);
         }
 
         private void loadChart(DataTable data)
         {
-            chart1.ChartAreas["ChartArea1"].AxisX.Title = "Tên Thể Loại";
-            chart1.ChartAreas["ChartArea1"].AxisX.Title = "Số lượng";
+            //chart1.ChartAreas["ChartArea1"].AxisX.Title = "Tên Sản Phẩm";
+            chart1.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
             for( int i = 0; i < data.Rows.Count; i++)
             {
-                chart1.Series["CTHD.soluong"].Points.AddXY(data.Rows[i]["THELOAI.tenTL"], data.Rows[i]["CTHD.soluong"]);
+                chart1.Series["TKSP"].Points.AddXY(data.Rows[i][2], data.Rows[i][0]);
             }
         }
 

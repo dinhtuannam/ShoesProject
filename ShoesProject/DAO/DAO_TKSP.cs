@@ -28,14 +28,14 @@ namespace ShoesProject.DAO
 
         public DataTable getChart()
         {
-            string query = "SELECT  sum(CTHD.soluong)as TongSoLuong , sum(CTHD.tongtien)as TongTien  , THELOAI.tenTL as TenTheLoai FROM CTHD,HOADON,SANPHAM,THELOAI WHERE sanpham.idTL=theloai.idTL and CTHD.idSP=sanpham.idSP and CTHD.idHD=HOADON.idHD GROUP by theloai.tenTL";
+            string query = "SELECT sum(CTHD.soluong)as TongSoLuong , sum(CTHD.tongtien)as TongTien  , SANPHAM.tenSP as TenSanPham FROM CTHD,HOADON,SANPHAM,THELOAI WHERE sanpham.idTL=theloai.idTL and CTHD.idSP=sanpham.idSP and CTHD.idHD=HOADON.idHD GROUP by sanpham.tenSP";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
         public DataTable filterDate(string month1, string month2, string year1, string year2)
         {
             string date = string.Format(" and HOADON.ngaydat between '{0}-{1}-1 00:00:00' and '{2}-{3}-30 23:59:59' ", year1, month1, year2, month2);
-            string query = "SELECT  sum(CTHD.soluong)as TongSoLuong , sum(CTHD.tongtien)as TongTien  , THELOAI.tenTL as TenTheLoai FROM CTHD,HOADON,SANPHAM,THELOAI WHERE sanpham.idTL=theloai.idTL and CTHD.idSP=sanpham.idSP and CTHD.idHD=HOADON.idHD " + date + " GROUP by theloai.tenTL";
+            string query = "SELECT  sum(CTHD.soluong)as TongSoLuong , sum(CTHD.tongtien)as TongTien  , SANPHAM.tenSP as TenSanPham FROM CTHD,HOADON,SANPHAM,THELOAI WHERE sanpham.idTL=theloai.idTL and CTHD.idSP=sanpham.idSP and CTHD.idHD=HOADON.idHD " + date + " GROUP by sanpham.tenSP";
             return DataProvider.Instance.ExecuteQuery(query);
         }
     }
