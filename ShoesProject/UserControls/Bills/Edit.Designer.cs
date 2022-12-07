@@ -55,12 +55,13 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 109);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(433, 157);
+            this.dataGridView1.Size = new System.Drawing.Size(541, 157);
             this.dataGridView1.TabIndex = 100;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -76,7 +77,7 @@
             this.txtidcustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtidcustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtidcustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtidcustomer.Location = new System.Drawing.Point(50, 70);
+            this.txtidcustomer.Location = new System.Drawing.Point(163, 69);
             this.txtidcustomer.Name = "txtidcustomer";
             this.txtidcustomer.PasswordChar = '\0';
             this.txtidcustomer.PlaceholderText = "";
@@ -96,7 +97,7 @@
             this.txtid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtid.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtid.Location = new System.Drawing.Point(50, 25);
+            this.txtid.Location = new System.Drawing.Point(163, 24);
             this.txtid.Name = "txtid";
             this.txtid.PasswordChar = '\0';
             this.txtid.PlaceholderText = "";
@@ -108,21 +109,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(47, 54);
+            this.label3.Location = new System.Drawing.Point(160, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 13);
             this.label3.TabIndex = 100;
-            this.label3.Text = "ID Khach Hang";
+            this.label3.Text = "ID Khách Hàng";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(47, 9);
+            this.label1.Location = new System.Drawing.Point(160, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 100;
-            this.label1.Text = "ID Hoa Don";
+            this.label1.Text = "ID Hóa Đơn";
             // 
             // dtpicker
             // 
@@ -130,7 +131,7 @@
             this.dtpicker.FillColor = System.Drawing.Color.White;
             this.dtpicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpicker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpicker.Location = new System.Drawing.Point(281, 25);
+            this.dtpicker.Location = new System.Drawing.Point(394, 24);
             this.dtpicker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpicker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpicker.Name = "dtpicker";
@@ -142,11 +143,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(278, 9);
+            this.label4.Location = new System.Drawing.Point(391, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(81, 13);
             this.label4.TabIndex = 100;
-            this.label4.Text = "Ngay Mua";
+            this.label4.Text = "Ngày Đặt Hàng";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // lbtrangthai
@@ -154,11 +155,11 @@
             this.lbtrangthai.AutoSize = true;
             this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtrangthai.ForeColor = System.Drawing.Color.Yellow;
-            this.lbtrangthai.Location = new System.Drawing.Point(12, 356);
+            this.lbtrangthai.Location = new System.Drawing.Point(9, 356);
             this.lbtrangthai.Name = "lbtrangthai";
             this.lbtrangthai.Size = new System.Drawing.Size(78, 18);
             this.lbtrangthai.TabIndex = 100;
-            this.lbtrangthai.Text = "trang thai";
+            this.lbtrangthai.Text = "trạng thái";
             // 
             // btnremovesp
             // 
@@ -175,7 +176,7 @@
             this.btnremovesp.FillColor = System.Drawing.Color.Transparent;
             this.btnremovesp.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnremovesp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnremovesp.Location = new System.Drawing.Point(451, 215);
+            this.btnremovesp.Location = new System.Drawing.Point(559, 215);
             this.btnremovesp.Name = "btnremovesp";
             this.btnremovesp.Size = new System.Drawing.Size(59, 42);
             this.btnremovesp.TabIndex = 100;
@@ -187,11 +188,11 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(263, 282);
+            this.label7.Location = new System.Drawing.Point(358, 285);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(81, 16);
             this.label7.TabIndex = 100;
-            this.label7.Text = "Tong so tien";
+            this.label7.Text = "Tổng số tiền";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // txttotal
@@ -206,13 +207,14 @@
             this.txttotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txttotal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txttotal.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txttotal.Location = new System.Drawing.Point(350, 272);
+            this.txttotal.Location = new System.Drawing.Point(445, 272);
             this.txttotal.Name = "txttotal";
             this.txttotal.PasswordChar = '\0';
             this.txttotal.PlaceholderText = "";
             this.txttotal.SelectedText = "";
-            this.txttotal.Size = new System.Drawing.Size(95, 26);
+            this.txttotal.Size = new System.Drawing.Size(108, 26);
             this.txttotal.TabIndex = 100;
+            this.txttotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAdd
             // 
@@ -229,11 +231,11 @@
             this.btnAdd.FillColor = System.Drawing.Color.Transparent;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnAdd.Location = new System.Drawing.Point(228, 304);
+            this.btnAdd.Location = new System.Drawing.Point(295, 304);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(180, 45);
             this.btnAdd.TabIndex = 100;
-            this.btnAdd.Text = "Confirm";
+            this.btnAdd.Text = "Chỉnh sửa";
             this.btnAdd.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // cbboxtrangthai
@@ -249,9 +251,9 @@
             this.cbboxtrangthai.Items.AddRange(new object[] {
             "confirmed",
             "unconfirmed"});
-            this.cbboxtrangthai.Location = new System.Drawing.Point(281, 67);
+            this.cbboxtrangthai.Location = new System.Drawing.Point(394, 66);
             this.cbboxtrangthai.Name = "cbboxtrangthai";
-            this.cbboxtrangthai.Size = new System.Drawing.Size(143, 36);
+            this.cbboxtrangthai.Size = new System.Drawing.Size(159, 36);
             this.cbboxtrangthai.TabIndex = 2;
             // 
             // guna2Panel1
@@ -263,7 +265,7 @@
             this.guna2Panel1.Controls.Add(this.txtidsanpham);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Location = new System.Drawing.Point(451, 109);
+            this.guna2Panel1.Location = new System.Drawing.Point(559, 109);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(158, 100);
             this.guna2Panel1.TabIndex = 100;
@@ -283,7 +285,7 @@
             this.btnaddsanpham.FillColor = System.Drawing.Color.Transparent;
             this.btnaddsanpham.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnaddsanpham.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnaddsanpham.Location = new System.Drawing.Point(0, 23);
+            this.btnaddsanpham.Location = new System.Drawing.Point(0, 32);
             this.btnaddsanpham.Name = "btnaddsanpham";
             this.btnaddsanpham.Size = new System.Drawing.Size(59, 42);
             this.btnaddsanpham.TabIndex = 100;
@@ -334,9 +336,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label6.Location = new System.Drawing.Point(62, 52);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 100;
-            this.label6.Text = "So luong";
+            this.label6.Text = "Số Lượng";
             // 
             // label5
             // 
@@ -344,9 +346,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(62, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 13);
+            this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 100;
-            this.label5.Text = "ID san pham";
+            this.label5.Text = "ID Sản Phẩm";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // Edit
@@ -354,7 +356,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(615, 383);
+            this.ClientSize = new System.Drawing.Size(723, 379);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.cbboxtrangthai);
             this.Controls.Add(this.btnAdd);
