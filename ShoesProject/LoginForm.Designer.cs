@@ -70,6 +70,7 @@
             this.txtName.TabStop = false;
             this.txtName.Text = "Username";
             this.txtName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtName_MouseClick);
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // pictureBox2
             // 

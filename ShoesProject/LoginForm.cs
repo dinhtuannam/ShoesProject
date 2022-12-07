@@ -102,5 +102,10 @@ namespace ShoesProject
             if (txtPass.Text == "Password")
                 txtPass.Text = "";
         }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
