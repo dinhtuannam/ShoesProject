@@ -95,12 +95,13 @@
             // 
             // txtTenCN
             // 
-            this.txtTenCN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.txtTenCN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.txtTenCN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenCN.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenCN.ForeColor = System.Drawing.Color.White;
             this.txtTenCN.Location = new System.Drawing.Point(630, 117);
             this.txtTenCN.Name = "txtTenCN";
+            this.txtTenCN.ReadOnly = true;
             this.txtTenCN.Size = new System.Drawing.Size(308, 33);
             this.txtTenCN.TabIndex = 35;
             // 
@@ -122,12 +123,13 @@
             // 
             // txtIDCN
             // 
-            this.txtIDCN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.txtIDCN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.txtIDCN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDCN.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDCN.ForeColor = System.Drawing.Color.White;
             this.txtIDCN.Location = new System.Drawing.Point(658, 33);
             this.txtIDCN.Name = "txtIDCN";
+            this.txtIDCN.ReadOnly = true;
             this.txtIDCN.Size = new System.Drawing.Size(280, 33);
             this.txtIDCN.TabIndex = 32;
             // 
@@ -155,13 +157,14 @@
             // 
             // txtTenQuyen
             // 
-            this.txtTenQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.txtTenQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.txtTenQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenQuyen.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenQuyen.ForeColor = System.Drawing.Color.White;
-            this.txtTenQuyen.Location = new System.Drawing.Point(176, 117);
+            this.txtTenQuyen.Location = new System.Drawing.Point(140, 117);
             this.txtTenQuyen.Name = "txtTenQuyen";
-            this.txtTenQuyen.Size = new System.Drawing.Size(202, 33);
+            this.txtTenQuyen.ReadOnly = true;
+            this.txtTenQuyen.Size = new System.Drawing.Size(238, 33);
             this.txtTenQuyen.TabIndex = 29;
             // 
             // panel2
@@ -182,12 +185,13 @@
             // 
             // txtIDQuyen
             // 
-            this.txtIDQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.txtIDQuyen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.txtIDQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDQuyen.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDQuyen.ForeColor = System.Drawing.Color.White;
             this.txtIDQuyen.Location = new System.Drawing.Point(176, 33);
             this.txtIDQuyen.Name = "txtIDQuyen";
+            this.txtIDQuyen.ReadOnly = true;
             this.txtIDQuyen.Size = new System.Drawing.Size(202, 33);
             this.txtIDQuyen.TabIndex = 26;
             // 
@@ -393,7 +397,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(51)))), ((int)(((byte)(82)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);

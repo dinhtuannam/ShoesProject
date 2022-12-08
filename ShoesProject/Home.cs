@@ -23,7 +23,7 @@ namespace ShoesProject
         {
             InitializeComponent();
             employee = getEmployee(username);
-            labelName.Text = employee.Username;
+            //labelName.Text = employee.Username;
             quyen = GetPhanQuyen();
            
         }
@@ -199,6 +199,11 @@ namespace ShoesProject
             {
                 MessageBox.Show("Ban không được phép truy cập vào đây");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
