@@ -42,6 +42,8 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panelContainer = new System.Windows.Forms.Panel();
+            this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -98,10 +100,12 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Controls.Add(this.guna2Button5);
+            this.panel3.Controls.Add(this.guna2Button10);
+            this.panel3.Controls.Add(this.guna2Button9);
             this.panel3.Controls.Add(this.guna2Button8);
             this.panel3.Controls.Add(this.guna2Button7);
             this.panel3.Controls.Add(this.guna2Button6);
-            this.panel3.Controls.Add(this.guna2Button5);
             this.panel3.Controls.Add(this.guna2Button4);
             this.panel3.Controls.Add(this.guna2Button3);
             this.panel3.Controls.Add(this.guna2Button2);
@@ -127,11 +131,11 @@
             this.guna2Button8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button8.ForeColor = System.Drawing.Color.Black;
             this.guna2Button8.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button8.Location = new System.Drawing.Point(-3, 521);
+            this.guna2Button8.Location = new System.Drawing.Point(0, 283);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(185, 68);
+            this.guna2Button8.Size = new System.Drawing.Size(188, 50);
             this.guna2Button8.TabIndex = 7;
-            this.guna2Button8.Text = "Quyen";
+            this.guna2Button8.Text = "Phân Quyền";
             this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
@@ -150,11 +154,11 @@
             this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.Black;
             this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button7.Location = new System.Drawing.Point(1, 151);
+            this.guna2Button7.Location = new System.Drawing.Point(0, 115);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(182, 68);
+            this.guna2Button7.Size = new System.Drawing.Size(188, 50);
             this.guna2Button7.TabIndex = 6;
-            this.guna2Button7.Text = "Customer";
+            this.guna2Button7.Text = "Khách hàng";
             this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
@@ -173,9 +177,9 @@
             this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.Black;
             this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button6.Location = new System.Drawing.Point(0, 447);
+            this.guna2Button6.Location = new System.Drawing.Point(3, 451);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(185, 68);
+            this.guna2Button6.Size = new System.Drawing.Size(182, 50);
             this.guna2Button6.TabIndex = 5;
             this.guna2Button6.Text = "Top Seller";
             this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -196,11 +200,11 @@
             this.guna2Button5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.Black;
             this.guna2Button5.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button5.Location = new System.Drawing.Point(0, 373);
+            this.guna2Button5.Location = new System.Drawing.Point(3, 507);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(185, 68);
             this.guna2Button5.TabIndex = 4;
-            this.guna2Button5.Text = "Business Statistics";
+            this.guna2Button5.Text = "Thống kê kinh doanh";
             this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
@@ -219,11 +223,11 @@
             this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.Black;
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button4.Location = new System.Drawing.Point(2, 299);
+            this.guna2Button4.Location = new System.Drawing.Point(3, 227);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(186, 68);
+            this.guna2Button4.Size = new System.Drawing.Size(182, 50);
             this.guna2Button4.TabIndex = 3;
-            this.guna2Button4.Text = "Categories";
+            this.guna2Button4.Text = "Thể loại";
             this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
@@ -242,11 +246,11 @@
             this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.Black;
             this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button3.Location = new System.Drawing.Point(-3, 225);
+            this.guna2Button3.Location = new System.Drawing.Point(3, 171);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(188, 68);
+            this.guna2Button3.Size = new System.Drawing.Size(182, 50);
             this.guna2Button3.TabIndex = 2;
-            this.guna2Button3.Text = "Receipts";
+            this.guna2Button3.Text = "Hóa đơn";
             this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
@@ -265,11 +269,11 @@
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button2.Location = new System.Drawing.Point(0, 77);
+            this.guna2Button2.Location = new System.Drawing.Point(3, 59);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(183, 68);
+            this.guna2Button2.Size = new System.Drawing.Size(182, 50);
             this.guna2Button2.TabIndex = 1;
-            this.guna2Button2.Text = "Employee";
+            this.guna2Button2.Text = "Nhân viên";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
@@ -290,9 +294,9 @@
             this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button1.Location = new System.Drawing.Point(3, 3);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(185, 68);
+            this.guna2Button1.Size = new System.Drawing.Size(182, 50);
             this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Products";
+            this.guna2Button1.Text = "Sản phẩm";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
@@ -302,6 +306,50 @@
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1353, 638);
             this.panelContainer.TabIndex = 3;
+            // 
+            // guna2Button9
+            // 
+            this.guna2Button9.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button9.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button9.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button9.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.guna2Button9.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button9.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button9.FillColor = System.Drawing.Color.White;
+            this.guna2Button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button9.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button9.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button9.Location = new System.Drawing.Point(0, 339);
+            this.guna2Button9.Name = "guna2Button9";
+            this.guna2Button9.Size = new System.Drawing.Size(185, 50);
+            this.guna2Button9.TabIndex = 8;
+            this.guna2Button9.Text = "QL Quyền";
+            this.guna2Button9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // guna2Button10
+            // 
+            this.guna2Button10.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.guna2Button10.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button10.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button10.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.guna2Button10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button10.FillColor = System.Drawing.Color.White;
+            this.guna2Button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button10.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button10.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button10.Location = new System.Drawing.Point(0, 395);
+            this.guna2Button10.Name = "guna2Button10";
+            this.guna2Button10.Size = new System.Drawing.Size(185, 50);
+            this.guna2Button10.TabIndex = 9;
+            this.guna2Button10.Text = "Bán hàng";
+            this.guna2Button10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // Home
             // 
@@ -340,5 +388,7 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private Guna.UI2.WinForms.Guna2Button guna2Button9;
     }
 }
