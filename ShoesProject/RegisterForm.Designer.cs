@@ -69,9 +69,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(272, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(181, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 101);
+            this.pictureBox1.Size = new System.Drawing.Size(87, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -80,9 +81,10 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(635, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(423, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 27);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -91,9 +93,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(123, 123);
+            this.pictureBox3.Location = new System.Drawing.Point(82, 80);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.Size = new System.Drawing.Size(33, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -101,9 +104,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(120, 192);
+            this.pictureBox4.Location = new System.Drawing.Point(80, 125);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox4.Size = new System.Drawing.Size(35, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
@@ -111,9 +115,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(123, 265);
+            this.pictureBox5.Location = new System.Drawing.Point(82, 172);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.Size = new System.Drawing.Size(33, 32);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
@@ -121,9 +126,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(123, 339);
+            this.pictureBox6.Location = new System.Drawing.Point(82, 220);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox6.Size = new System.Drawing.Size(33, 32);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
@@ -131,9 +137,10 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(123, 409);
+            this.pictureBox7.Location = new System.Drawing.Point(82, 266);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.Size = new System.Drawing.Size(33, 32);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
@@ -141,9 +148,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(123, 485);
+            this.pictureBox8.Location = new System.Drawing.Point(82, 315);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.Size = new System.Drawing.Size(33, 32);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
@@ -151,9 +159,10 @@
             // pictureBox9
             // 
             this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(123, 558);
+            this.pictureBox9.Location = new System.Drawing.Point(82, 363);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox9.Size = new System.Drawing.Size(33, 32);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
@@ -164,13 +173,14 @@
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(202, 136);
+            this.txtName.Location = new System.Drawing.Point(135, 88);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(368, 37);
+            this.txtName.Size = new System.Drawing.Size(245, 25);
             this.txtName.TabIndex = 9;
             this.txtName.Text = "Username";
-            this.txtName.Click += new System.EventHandler(this.txtName_Click);
-            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // txtPassword
             // 
@@ -178,12 +188,15 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.White;
-            this.txtPassword.Location = new System.Drawing.Point(202, 205);
+            this.txtPassword.Location = new System.Drawing.Point(135, 133);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(368, 37);
+            this.txtPassword.Size = new System.Drawing.Size(245, 25);
             this.txtPassword.TabIndex = 10;
             this.txtPassword.Text = "Password";
-            this.txtPassword.Click += new System.EventHandler(this.txtPass_Click);
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
+            this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
             // 
             // txtRePassword
             // 
@@ -191,12 +204,15 @@
             this.txtRePassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRePassword.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRePassword.ForeColor = System.Drawing.Color.White;
-            this.txtRePassword.Location = new System.Drawing.Point(202, 278);
+            this.txtRePassword.Location = new System.Drawing.Point(135, 181);
+            this.txtRePassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtRePassword.Name = "txtRePassword";
-            this.txtRePassword.Size = new System.Drawing.Size(368, 37);
+            this.txtRePassword.Size = new System.Drawing.Size(245, 25);
             this.txtRePassword.TabIndex = 11;
             this.txtRePassword.Text = "Re-password";
-            this.txtRePassword.Click += new System.EventHandler(this.txtRePassword_Click);
+            this.txtRePassword.TextChanged += new System.EventHandler(this.txtRePassword_TextChanged);
+            this.txtRePassword.Enter += new System.EventHandler(this.txtRePassword_Enter);
+            this.txtRePassword.Leave += new System.EventHandler(this.txtRePassword_Leave);
             // 
             // txtFullname
             // 
@@ -204,12 +220,14 @@
             this.txtFullname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtFullname.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullname.ForeColor = System.Drawing.Color.White;
-            this.txtFullname.Location = new System.Drawing.Point(202, 352);
+            this.txtFullname.Location = new System.Drawing.Point(135, 229);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Size = new System.Drawing.Size(368, 37);
+            this.txtFullname.Size = new System.Drawing.Size(245, 25);
             this.txtFullname.TabIndex = 12;
             this.txtFullname.Text = "Fullname";
-            this.txtFullname.Click += new System.EventHandler(this.txtFullname_Click);
+            this.txtFullname.Enter += new System.EventHandler(this.txtFullname_Enter);
+            this.txtFullname.Leave += new System.EventHandler(this.txtFullname_Leave);
             // 
             // txtPhone
             // 
@@ -217,12 +235,14 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.Color.White;
-            this.txtPhone.Location = new System.Drawing.Point(202, 422);
+            this.txtPhone.Location = new System.Drawing.Point(135, 274);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(368, 37);
+            this.txtPhone.Size = new System.Drawing.Size(245, 25);
             this.txtPhone.TabIndex = 13;
             this.txtPhone.Text = "Phone number";
-            this.txtPhone.Click += new System.EventHandler(this.txtPhone_Click);
+            this.txtPhone.Enter += new System.EventHandler(this.txtPhone_Enter);
+            this.txtPhone.Leave += new System.EventHandler(this.txtPhone_Leave);
             // 
             // txtEmail
             // 
@@ -230,12 +250,14 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(202, 498);
+            this.txtEmail.Location = new System.Drawing.Point(135, 324);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(368, 37);
+            this.txtEmail.Size = new System.Drawing.Size(245, 25);
             this.txtEmail.TabIndex = 14;
             this.txtEmail.Text = "Email";
-            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtEmail.Enter += new System.EventHandler(this.txtEmail_Enter);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // txtAddress
             // 
@@ -243,74 +265,83 @@
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtAddress.Font = new System.Drawing.Font("Arial Narrow", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.ForeColor = System.Drawing.Color.White;
-            this.txtAddress.Location = new System.Drawing.Point(202, 571);
+            this.txtAddress.Location = new System.Drawing.Point(135, 371);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(368, 37);
+            this.txtAddress.Size = new System.Drawing.Size(245, 25);
             this.txtAddress.TabIndex = 15;
             this.txtAddress.Text = "Address";
-            this.txtAddress.Click += new System.EventHandler(this.txtAddress_Click);
+            this.txtAddress.Enter += new System.EventHandler(this.txtAddress_Enter);
+            this.txtAddress.Leave += new System.EventHandler(this.txtAddress_Leave);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(123, 179);
+            this.panel1.Location = new System.Drawing.Point(82, 116);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(447, 1);
+            this.panel1.Size = new System.Drawing.Size(298, 1);
             this.panel1.TabIndex = 16;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(123, 248);
+            this.panel2.Location = new System.Drawing.Point(82, 161);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(447, 1);
+            this.panel2.Size = new System.Drawing.Size(298, 1);
             this.panel2.TabIndex = 17;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(123, 321);
+            this.panel3.Location = new System.Drawing.Point(82, 209);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(447, 1);
+            this.panel3.Size = new System.Drawing.Size(298, 1);
             this.panel3.TabIndex = 18;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(123, 395);
+            this.panel4.Location = new System.Drawing.Point(82, 257);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(447, 1);
+            this.panel4.Size = new System.Drawing.Size(298, 1);
             this.panel4.TabIndex = 17;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.ForeColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(123, 465);
+            this.panel5.Location = new System.Drawing.Point(82, 302);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(447, 1);
+            this.panel5.Size = new System.Drawing.Size(298, 1);
             this.panel5.TabIndex = 17;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(123, 541);
+            this.panel6.Location = new System.Drawing.Point(82, 352);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(447, 1);
+            this.panel6.Size = new System.Drawing.Size(298, 1);
             this.panel6.TabIndex = 17;
             // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.ForeColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(123, 614);
+            this.panel7.Location = new System.Drawing.Point(82, 399);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(447, 1);
+            this.panel7.Size = new System.Drawing.Size(298, 1);
             this.panel7.TabIndex = 17;
             // 
             // button1
@@ -320,9 +351,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.button1.Location = new System.Drawing.Point(120, 673);
+            this.button1.Location = new System.Drawing.Point(80, 437);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(450, 47);
+            this.button1.Size = new System.Drawing.Size(300, 31);
             this.button1.TabIndex = 19;
             this.button1.Text = "SIGN UP";
             this.button1.UseVisualStyleBackColor = false;
@@ -333,9 +365,10 @@
             this.txtError.AutoSize = true;
             this.txtError.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtError.ForeColor = System.Drawing.Color.Red;
-            this.txtError.Location = new System.Drawing.Point(122, 633);
+            this.txtError.Location = new System.Drawing.Point(81, 411);
+            this.txtError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtError.Name = "txtError";
-            this.txtError.Size = new System.Drawing.Size(0, 23);
+            this.txtError.Size = new System.Drawing.Size(0, 16);
             this.txtError.TabIndex = 20;
             // 
             // button2
@@ -345,9 +378,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
-            this.button2.Location = new System.Drawing.Point(120, 726);
+            this.button2.Location = new System.Drawing.Point(80, 472);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(450, 47);
+            this.button2.Size = new System.Drawing.Size(300, 31);
             this.button2.TabIndex = 21;
             this.button2.Text = "REGISTER";
             this.button2.UseVisualStyleBackColor = false;
@@ -355,11 +389,11 @@
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(685, 805);
+            this.ClientSize = new System.Drawing.Size(457, 512);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtError);
             this.Controls.Add(this.button1);
@@ -387,6 +421,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";

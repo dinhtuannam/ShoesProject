@@ -16,8 +16,8 @@ namespace ShoesProject.UserControls.Bills
     {
         DataTable table;
         DTO_Employee employee;
-        BillsManagement billmanage;
-        public AddBill(DTO_Employee employee, BillsManagement billmanage)
+        UC_Bills billmanage;
+        public AddBill(DTO_Employee employee, UC_Bills billmanage)
         {
             InitializeComponent();
             this.employee = employee;
@@ -62,7 +62,11 @@ namespace ShoesProject.UserControls.Bills
             {
                 lbtrangthai.Text = "Không tìm thấy ID sản phẩm";
                 return;
-            } 
+            }
+            if (!DAO_Bill.Instance.isProductActive(txtidsanpham.Text.Trim())) {
+                lbtrangthai.Text = "Sản phẩm unactive";
+                return;
+            }
             float dongia = float.Parse(temp.ToString());
             float tongtien=0;int amount=0;
             int n = table.Rows.Count;
@@ -128,7 +132,12 @@ namespace ShoesProject.UserControls.Bills
                 {
                     lbtrangthai.Text = String.Format("ID sản phẩm {0} không còn tồn tại nữa", idsp[i]);
                     return;
-                }    
+                }
+                if (!DAO_Bill.Instance.isProductActive(idsp[i]))
+                {
+                    lbtrangthai.Text = String.Format("ID sản phẩm {0} unactive", idsp[i]);
+                    return;
+                }
                 soluong[i] = table.Rows[i][3].ToString();
                 totalsp[i] = table.Rows[i][4].ToString();
                 if (!DAO_Bill.Instance.IsEnough(idsp[i],"" ,int.Parse(soluong[i])))

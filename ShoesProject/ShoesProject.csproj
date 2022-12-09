@@ -103,12 +103,6 @@
     <Compile Include="UserControls\Bills\AddBill.designer.cs">
       <DependentUpon>AddBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\Bills\BillsManagement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Bills\BillsManagement.designer.cs">
-      <DependentUpon>BillsManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Bills\Detail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +114,12 @@
     </Compile>
     <Compile Include="UserControls\Bills\Edit.designer.cs">
       <DependentUpon>Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Bills\UC_Bills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Bills\UC_Bills.designer.cs">
+      <DependentUpon>UC_Bills.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_Account.cs">
       <SubType>UserControl</SubType>
@@ -163,6 +163,12 @@
     <Compile Include="UserControls\UC_Products.Designer.cs">
       <DependentUpon>UC_Products.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC_QLQuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC_QLQuyen.Designer.cs">
+      <DependentUpon>UC_QLQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UC_TKKD.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,14 +203,14 @@
     <EmbeddedResource Include="UserControls\Bills\AddBill.resx">
       <DependentUpon>AddBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Bills\BillsManagement.resx">
-      <DependentUpon>BillsManagement.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Bills\Detail.resx">
       <DependentUpon>Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Bills\Edit.resx">
       <DependentUpon>Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Bills\UC_Bills.resx">
+      <DependentUpon>UC_Bills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Account.resx">
       <DependentUpon>UC_Account.cs</DependentUpon>
@@ -226,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_Products.resx">
       <DependentUpon>UC_Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC_QLQuyen.resx">
+      <DependentUpon>UC_QLQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC_TKKD.resx">
       <DependentUpon>UC_TKKD.cs</DependentUpon>
