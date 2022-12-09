@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ShoesProject.DAO
 {
@@ -28,7 +29,7 @@ namespace ShoesProject.DAO
 
         public DataTable getPhanQuyen(string data)
         {
-            string query = "select idQuyen , CTQ.idCN , tenCN from CTQ,CHUCNANG where idQuyen= '"+data+"' and CTQ.idCN = CHUCNANG.idCN";
+            string query = "select idQuyen , CTQ.idCN , tenCN from CTQ,CHUCNANG where idQuyen= '"+data+"' and CTQ.idCN = CHUCNANG.idCN";        
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

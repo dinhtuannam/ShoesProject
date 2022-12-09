@@ -25,7 +25,7 @@ namespace ShoesProject
             employee = getEmployee(username);
             //labelName.Text = employee.Username;
             quyen = GetPhanQuyen();
-           
+            
         }
 
         private DTO_Employee getEmployee(string name)
@@ -46,11 +46,15 @@ namespace ShoesProject
 
         private DTO_PhanQuyen GetPhanQuyen()
         {
+           
             DTO_PhanQuyen tmp = new DTO_PhanQuyen();
             DataTable dt = DAO_PhanQuyen.Instance.getPhanQuyen(employee.Permission);
+            
             for (int i = 0; i < dt.Rows.Count; i++)
             {
+                
                 string[] words = dt.Rows[i][1].ToString().Split(' ');
+               
                 if (words[0] == "CN1")
                     tmp.QLSP1 = "Accept";
                 if (words[0] == "CN2")
