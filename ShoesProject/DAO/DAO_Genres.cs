@@ -29,5 +29,39 @@ namespace ShoesProject.DAO
             string query = "Select * from theloai";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public bool isGenresIDExist(string id)
+        {
+            string query = "select * from theloai where idtl = @idtl ";
+            object temp = DataProvider.Instance.ExecuteScalar(query, new object[] { id });
+            if (temp == null)
+            {
+                return false;
+            }
+            return true;
+        }
+        public int addQLTL(string id, string name, string trangthai)
+        {
+            string query = "insert into theloai values( @idtheloai , @tentheloai , @trangthai )";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { id, name, trangthai });
+        }
+
+        public int updateQLTL(string id, string name, string trangthai)
+        {
+            string query = "update theloai set tentl= @name , trangthai = @trangthai where idtl = @idtl ";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, trangthai, id });
+
+        }
+        public int removeQLTL(string id)
+        {
+            string query = "delete from theloai where idtl= @id";
+            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+        }
+        public DataTable GetQLTLById(string id)
+        {
+            string query = "Select * from theloai where idTL = @id ";
+            return DataProvider.Instance.ExecuteQuery(query, new object[] { id });
+
+        }
     }
 }

@@ -138,7 +138,7 @@
     <Compile Include="UserControls\UC_Genres.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UC_Genres.Designer.cs">
+    <Compile Include="UserControls\UC_Genres.designer.cs">
       <DependentUpon>UC_Genres.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UC_PhanQuyen.cs">
