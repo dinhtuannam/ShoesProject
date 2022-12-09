@@ -17,7 +17,7 @@ namespace ShoesProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run( new Home("tuannam"));
+            Application.Run( new LoginForm());
         }
     }
 }
