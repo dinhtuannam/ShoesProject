@@ -18,8 +18,8 @@ namespace ShoesProject.UserControls.Bills
         DataTable table;
         DTO_Bill dtobill;
         DTO_Employee employee;
-        BillsManagement billmanage;
-        public Edit(DTO_Bill dtobill,DTO_Employee employee,BillsManagement billmanage)
+        UC_Bills billmanage;
+        public Edit(DTO_Bill dtobill,DTO_Employee employee,UC_Bills billmanage)
         {
             InitializeComponent();
             this.dtobill= dtobill;
@@ -103,6 +103,11 @@ namespace ShoesProject.UserControls.Bills
             if (temp == null)
             {
                 lbtrangthai.Text = "Không tìm thấy ID sản phẩm";
+                return;
+            }
+            if (!DAO_Bill.Instance.isProductActive(txtidsanpham.Text.Trim()))
+            {
+                lbtrangthai.Text = "Sản phẩm unactive";
                 return;
             }
             float dongia = float.Parse(temp.ToString());
@@ -211,7 +216,11 @@ namespace ShoesProject.UserControls.Bills
                     lbtrangthai.Text = String.Format("ID sản phẩm {0} không còn tồn tại nữa", idsp[i]);
                     return;//kiem tra con so luong nua
                 }
-                
+                if (!DAO_Bill.Instance.isProductActive(idsp[i]))
+                {
+                    lbtrangthai.Text = String.Format("ID sản phẩm {0} unactive", idsp[i]);
+                    return;
+                }
                 soluong[i] = table.Rows[i][3].ToString();
                 totalsp[i] = table.Rows[i][4].ToString();
                 if (!DAO_Bill.Instance.IsEnough(idsp[i], txtid.Text.Trim(), int.Parse(soluong[i])))

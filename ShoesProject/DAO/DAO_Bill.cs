@@ -186,6 +186,17 @@ namespace ShoesProject.DAO
             }
             return true;
         }
+        public bool isProductActive(string id)
+        {
+            string query = "select * from sanpham where idsp= @id and trangthai = 'active' ";
+            object temp = DataProvider.Instance.ExecuteScalar(query,new object[] {id});
+            if (temp == null)
+            {
+                return false;
+            }
+            return true;
+
+        }
     }
 
 }

@@ -91,21 +91,45 @@ namespace ShoesProject
             this.Close();
         }
 
-        private void txtName_MouseClick(object sender, MouseEventArgs e)
+  
+
+       
+
+        private void txtName_Enter(object sender, EventArgs e)
         {
             if (txtName.Text == "Username")
                 txtName.Text = "";
         }
 
-        private void txtPass_MouseClick(object sender, MouseEventArgs e)
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if(txtName.Text == "")
+                txtName.Text = "Username";
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
         {
             if (txtPass.Text == "Password")
                 txtPass.Text = "";
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
+        private void txtPass_Leave(object sender, EventArgs e)
         {
+            if (txtPass.Text == "")
+                txtPass.Text = "Password";
+        }
 
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPass.Text != "Password")
+            {
+                txtPass.PasswordChar = '*';
+            }
+            else
+            {
+                txtPass.PasswordChar = '\0';
+            }
+            
         }
     }
 }

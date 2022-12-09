@@ -128,9 +128,9 @@ namespace ShoesProject
         {
             if (quyen.QLHD1 == "Accept")
             {
-                BillsManagement.Instance.AddEmplooyee(employee);
-                addUserControl(BillsManagement.Instance);
-                BillsManagement.Instance.loadTable("loadalldata");
+                UC_Bills.Instance.AddEmplooyee(employee);
+                addUserControl(UC_Bills.Instance);
+                UC_Bills.Instance.loadTable("loadalldata");
             }
             else
             {

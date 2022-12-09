@@ -17,17 +17,17 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ShoesProject.UserControls.Bills
 {
-    public partial class BillsManagement : UserControl
+    public partial class UC_Bills : UserControl
     {
         public static DTO_Employee employee;
-        private static BillsManagement instance;
-        public static BillsManagement Instance
+        private static UC_Bills instance;
+        public static UC_Bills Instance
         {
             get
             {
                 if(instance == null)
                 {
-                    instance = new BillsManagement();
+                    instance = new UC_Bills();
                 }
                 return instance;
             }
@@ -36,7 +36,7 @@ namespace ShoesProject.UserControls.Bills
                 instance = value;
             }
         }
-        public BillsManagement()
+        public UC_Bills()
         {
             InitializeComponent();
         }
@@ -60,7 +60,7 @@ namespace ShoesProject.UserControls.Bills
             
             if (dataGridView1.Rows[row].Cells[5].Value.ToString().Trim().Equals("confirmed"))
             {
-                lbtrangthai.Text = "Hóa đơn đã confirmed,không thể thay đổi hoặc xóa";
+                lbtrangthai.Text = "Hóa đơn đã confirmed,không thể thay đổi";
                 return;
             }
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
@@ -149,11 +149,7 @@ namespace ShoesProject.UserControls.Bills
                 return;
             }
             int row = dataGridView1.CurrentRow.Index;
-            if (dataGridView1.Rows[row].Cells[5].Value.ToString().Trim().Equals("confirmed"))
-            {
-                lbtrangthai.Text = "Hóa đơn đã confirmed, không thể thay đổi hoặc xóa";
-                return;
-            }
+            
             string id = dataGridView1.Rows[row].Cells[0].Value.ToString().Trim();
             DAO_Bill.Instance.deleteCTHDByID(id);
             DAO_Bill.Instance.deleteBill(id);

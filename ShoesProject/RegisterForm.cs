@@ -109,7 +109,7 @@ namespace ShoesProject
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void txtName_Click(object sender, EventArgs e)
@@ -160,6 +160,141 @@ namespace ShoesProject
             LoginForm rf = new LoginForm();
             rf.ShowDialog();
             this.Close();
+        }
+
+        private void txtName_Enter(object sender, EventArgs e)
+        {
+            if(txtName.Text == "Username")
+            {
+                txtName.Text = "";
+            }
+        }
+
+        private void txtName_Leave(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                txtName.Text = "Username";
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if(txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "";
+            }
+        }
+
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if(txtPassword.Text == "")
+            {
+                txtPassword.Text = "Password";
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            if(txtPassword.Text != "Password")
+            {
+                txtPassword.PasswordChar = '*';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+        }
+
+        private void txtRePassword_Enter(object sender, EventArgs e)
+        {
+            if(txtRePassword.Text == "Re-password")
+            {
+                txtRePassword.Text = "";
+            }
+        }
+
+        private void txtRePassword_Leave(object sender, EventArgs e)
+        {
+            if(txtRePassword.Text == "")
+            {
+                txtRePassword.Text = "Re-password";
+            }
+        }
+
+        private void txtRePassword_TextChanged(object sender, EventArgs e)
+        {
+            if(txtRePassword.Text != "Re-password")
+            {
+                txtRePassword.PasswordChar = '*';
+            }
+            else
+            {
+                txtRePassword.PasswordChar = '\0';
+            }
+        }
+
+        private void txtFullname_Enter(object sender, EventArgs e)
+        {
+            if(txtFullname.Text == "Fullname")
+            {
+                txtFullname.Text = "";
+            }
+        }
+
+        private void txtFullname_Leave(object sender, EventArgs e)
+        {
+            if(txtFullname.Text == "")
+            {
+                txtFullname.Text = "Fullname";
+            }
+        }
+
+        private void txtPhone_Enter(object sender, EventArgs e)
+        {
+            if(txtPhone.Text == "Phone number")
+            {
+                txtPhone.Text = "";
+            }
+        }
+
+        private void txtPhone_Leave(object sender, EventArgs e)
+        {
+            if(txtPhone.Text == "")
+            {
+                txtPhone.Text = "Phone number";
+            }
+        }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            if(txtEmail.Text == "Email")
+            {
+                txtEmail.Text = "";
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if(txtEmail.Text == "")
+            {
+                txtEmail.Text = "Email";
+            }
+        }
+
+        private void txtAddress_Enter(object sender, EventArgs e)
+        {
+            if(txtAddress.Text == "Address")
+            {
+                txtAddress.Text = "";
+            }
+        }
+
+        private void txtAddress_Leave(object sender, EventArgs e)
+        {
+            if(txtAddress.Text == "") {
+                txtAddress.Text = "Address";
+            }
         }
     }
 }

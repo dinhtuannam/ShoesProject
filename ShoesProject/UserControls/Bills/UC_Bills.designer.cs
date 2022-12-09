@@ -1,6 +1,6 @@
 ﻿namespace ShoesProject.UserControls.Bills
 {
-    partial class BillsManagement
+    partial class UC_Bills
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BillsManagement));
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Bills));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lbtrangthai = new System.Windows.Forms.Label();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
@@ -44,31 +43,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(458, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 55);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bills Management";
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 155);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(17, 69);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1046, 431);
+            this.dataGridView1.Size = new System.Drawing.Size(697, 312);
             this.dataGridView1.TabIndex = 1;
             // 
             // lbtrangthai
@@ -76,10 +62,9 @@
             this.lbtrangthai.AutoSize = true;
             this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbtrangthai.ForeColor = System.Drawing.Color.Yellow;
-            this.lbtrangthai.Location = new System.Drawing.Point(20, 591);
-            this.lbtrangthai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbtrangthai.Location = new System.Drawing.Point(13, 384);
             this.lbtrangthai.Name = "lbtrangthai";
-            this.lbtrangthai.Size = new System.Drawing.Size(136, 33);
+            this.lbtrangthai.Size = new System.Drawing.Size(86, 24);
             this.lbtrangthai.TabIndex = 14;
             this.lbtrangthai.Text = "trạng thái";
             // 
@@ -100,10 +85,9 @@
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.Location = new System.Drawing.Point(900, 109);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRefresh.Location = new System.Drawing.Point(600, 34);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(171, 45);
+            this.btnRefresh.Size = new System.Drawing.Size(114, 29);
             this.btnRefresh.TabIndex = 15;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
@@ -123,10 +107,9 @@
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(1080, 155);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAdd.Location = new System.Drawing.Point(720, 112);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(268, 69);
+            this.btnAdd.Size = new System.Drawing.Size(179, 45);
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -147,10 +130,9 @@
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
-            this.btnEdit.Location = new System.Drawing.Point(1080, 234);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEdit.Location = new System.Drawing.Point(720, 163);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(268, 69);
+            this.btnEdit.Size = new System.Drawing.Size(179, 45);
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
@@ -171,10 +153,9 @@
             this.btnDetail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnDetail.Image")));
-            this.btnDetail.Location = new System.Drawing.Point(1080, 312);
-            this.btnDetail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDetail.Location = new System.Drawing.Point(720, 214);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(268, 69);
+            this.btnDetail.Size = new System.Drawing.Size(179, 45);
             this.btnDetail.TabIndex = 18;
             this.btnDetail.Text = "Chi tiết";
             this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
@@ -195,10 +176,9 @@
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
-            this.btnRemove.Location = new System.Drawing.Point(1080, 391);
-            this.btnRemove.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRemove.Location = new System.Drawing.Point(720, 265);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(268, 69);
+            this.btnRemove.Size = new System.Drawing.Size(179, 45);
             this.btnRemove.TabIndex = 19;
             this.btnRemove.Text = "Xoá";
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
@@ -219,14 +199,13 @@
             this.txtsearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtsearch.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtsearch.Location = new System.Drawing.Point(75, 102);
-            this.txtsearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtsearch.Location = new System.Drawing.Point(50, 29);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.PasswordChar = '\0';
             this.txtsearch.PlaceholderForeColor = System.Drawing.Color.White;
             this.txtsearch.PlaceholderText = "";
             this.txtsearch.SelectedText = "";
-            this.txtsearch.Size = new System.Drawing.Size(240, 45);
+            this.txtsearch.Size = new System.Drawing.Size(160, 29);
             this.txtsearch.TabIndex = 20;
             // 
             // btnSearch
@@ -246,10 +225,9 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(324, 100);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSearch.Location = new System.Drawing.Point(216, 28);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(104, 46);
+            this.btnSearch.Size = new System.Drawing.Size(69, 30);
             this.btnSearch.TabIndex = 21;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
@@ -258,24 +236,24 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(27, 109);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(18, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 29);
+            this.label2.Size = new System.Drawing.Size(26, 18);
             this.label2.TabIndex = 22;
             this.label2.Text = "ID:";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(27, 140);
+            this.panel1.Location = new System.Drawing.Point(18, 54);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 2);
+            this.panel1.Size = new System.Drawing.Size(200, 1);
             this.panel1.TabIndex = 23;
             // 
             // BillsManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.Controls.Add(this.panel1);
@@ -289,10 +267,8 @@
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.lbtrangthai);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "BillsManagement";
-            this.Size = new System.Drawing.Size(1353, 646);
+            this.Size = new System.Drawing.Size(902, 420);
             this.Load += new System.EventHandler(this.BillsManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -301,8 +277,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lbtrangthai;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
