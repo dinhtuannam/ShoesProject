@@ -149,6 +149,7 @@
             this.guna2Button9.Size = new System.Drawing.Size(123, 33);
             this.guna2Button9.TabIndex = 8;
             this.guna2Button9.Text = "QL Quyền";
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // guna2Button8
             // 

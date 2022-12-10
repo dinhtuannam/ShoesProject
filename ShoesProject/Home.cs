@@ -207,7 +207,14 @@ namespace ShoesProject
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+           
 
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            addUserControl(UC_QLQuyen.Instance);
+            UC_QLQuyen.Instance.loadTable();
         }
     }
 }

@@ -35,16 +35,73 @@ namespace ShoesProject.UserControls
         {
             InitializeComponent();
         }
-        public DataTable getAllQuyen()
-        {
-            string query = "Select * from quyen";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
-        public DataTable getQuyenById(string id)
-        {
-            string query = "Select * from quyen where idquyen= @id ";
-            return DataProvider.Instance.ExecuteQuery(query,new object[] { id});
-        }
        
+       public void loadTable()
+        {
+            dataGridView1.DataSource = DAO_Quyen.Instance.getAllQuyen();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            loadTable();
+        }
+
+        private void UC_QLQuyen_Load(object sender, EventArgs e)
+        {
+            loadTable();
+            lbtrangthai.Text = "";
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtsearch.Text.Trim() == "")
+            {
+                loadTable();
+            }
+            else
+            {
+                DAO_Quyen.Instance.getQuyenByID(txtsearch.Text.Trim());
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int row = dataGridView1.CurrentRow.Index;
+            txtid.Text = dataGridView1.Rows[row].Cells[0].Value.ToString();
+            txtname.Text = dataGridView1.Rows[row].Cells[1].Value.ToString();
+          
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txtid.Text.Trim() == "" || txtname.Text.Trim() == "")
+            {
+                lbtrangthai.Text = "vui lòng nhập đày đủ thông tin";
+                return;
+            }
+            if (DAO_Quyen.Instance.isQuyenIDExist(txtid.Text.Trim()))
+            {
+                lbtrangthai.Text = "ID trùng lặp";
+                return;
+            }
+            DAO_Quyen.Instance.addQuyen(txtid.Text.Trim(), txtname.Text.Trim());
+
+            loadTable();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (txtid.Text.Trim() == "" || txtname.Text.Trim() == "")
+            {
+                lbtrangthai.Text = "vui lòng nhập đày đủ thông tin";
+                return;
+            }
+            if (!DAO_Quyen.Instance.isQuyenIDExist(txtid.Text.Trim()))
+            {
+                lbtrangthai.Text = "ID ko tồn tại";
+                return;
+            }
+            DAO_Quyen.Instance.updateQuyen(txtid.Text.Trim(), txtname.Text.Trim());
+        }
     }
 }
