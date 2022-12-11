@@ -11,7 +11,7 @@ namespace ShoesProject.DAO
 {
     public class DataProvider
     {
-       string strCnn = "Data source= DESKTOP-DJN773H\\SQLEXPRESS ;database= QLShopGiay ;Integrated Security = True";
+       string strCnn = "Data source= ADMIN\\SQLEXPRESS ;database= QLShopGiay ;Integrated Security = True";
        private static DataProvider instance;
 
        public static DataProvider Instance
