@@ -127,6 +127,7 @@
             this.guna2Button10.Size = new System.Drawing.Size(123, 33);
             this.guna2Button10.TabIndex = 9;
             this.guna2Button10.Text = "Bán hàng";
+            this.guna2Button10.Click += new System.EventHandler(this.guna2Button10_Click);
             // 
             // guna2Button9
             // 

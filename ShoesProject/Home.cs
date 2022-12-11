@@ -216,5 +216,18 @@ namespace ShoesProject
             addUserControl(UC_QLQuyen.Instance);
             UC_QLQuyen.Instance.loadTable();
         }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            if (quyen.QLPQ1 == "Accept")
+            {
+                UC_BanHang ucbh = new UC_BanHang();
+                addUserControl(ucbh);
+            }
+            else
+            {
+                MessageBox.Show("Ban không được phép truy cập vào đây");
+            }
+        }
     }
 }

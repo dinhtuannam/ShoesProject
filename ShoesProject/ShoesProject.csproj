@@ -59,6 +59,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DAO_BanHang.cs" />
     <Compile Include="DAO\DAO_Bill.cs" />
     <Compile Include="DAO\DAO_ChucNang.cs" />
     <Compile Include="DAO\DAO_PhanQuyen.cs" />

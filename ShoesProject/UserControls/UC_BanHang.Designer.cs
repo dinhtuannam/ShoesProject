@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnAddBH = new System.Windows.Forms.Button();
             this.btnEditBH = new System.Windows.Forms.Button();
             this.btnMuaHang = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearchBH = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +53,15 @@
             this.panel1.Size = new System.Drawing.Size(414, 342);
             this.panel1.TabIndex = 0;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(408, 336);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView2);
@@ -60,6 +69,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(439, 342);
             this.panel2.TabIndex = 1;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(433, 336);
+            this.dataGridView2.TabIndex = 0;
             // 
             // btnAddBH
             // 
@@ -111,20 +128,20 @@
             this.textBox1.Size = new System.Drawing.Size(206, 26);
             this.textBox1.TabIndex = 8;
             // 
-            // button1
+            // btnSearchBH
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(227, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 43);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Tim kiem";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearchBH.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnSearchBH.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearchBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchBH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchBH.ForeColor = System.Drawing.Color.White;
+            this.btnSearchBH.Location = new System.Drawing.Point(227, 370);
+            this.btnSearchBH.Name = "btnSearchBH";
+            this.btnSearchBH.Size = new System.Drawing.Size(98, 43);
+            this.btnSearchBH.TabIndex = 9;
+            this.btnSearchBH.Text = "Tim kiem";
+            this.btnSearchBH.UseVisualStyleBackColor = false;
+            this.btnSearchBH.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
@@ -145,22 +162,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Total : ";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(408, 336);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(433, 336);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // UC_BanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,7 +169,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearchBH);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnMuaHang);
             this.Controls.Add(this.btnEditBH);
@@ -177,9 +178,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "UC_BanHang";
             this.Size = new System.Drawing.Size(902, 430);
+            this.Load += new System.EventHandler(this.UC_BanHang_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,7 +196,7 @@
         private System.Windows.Forms.Button btnEditBH;
         private System.Windows.Forms.Button btnMuaHang;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearchBH;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
