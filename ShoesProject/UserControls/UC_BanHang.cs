@@ -21,12 +21,6 @@ namespace ShoesProject.UserControls
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             loadTableChart(LoadAllSanPhamAction);
@@ -37,12 +31,20 @@ namespace ShoesProject.UserControls
             DataTable data = new DataTable();
             if (action == LoadAllSanPhamAction)
                 data = DAO_BanHang.Instance.getAllSanPham();
+            if (action == SearchSanPhamAction)
+                data = DAO_BanHang.Instance.searchSanPham(txtSearchBH.Text, SearchAction);
             dataGridView1.DataSource = data;
         }
+
 
         private void UC_BanHang_Load(object sender, EventArgs e)
         {
             loadTableChart(LoadAllSanPhamAction);
+        }
+
+        private void btnSearchBH_Click(object sender, EventArgs e)
+        {
+            loadTableChart(SearchSanPhamAction);
         }
     }
 }

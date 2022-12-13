@@ -35,7 +35,7 @@
             this.btnAddBH = new System.Windows.Forms.Button();
             this.btnEditBH = new System.Windows.Forms.Button();
             this.btnMuaHang = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSearchBH = new System.Windows.Forms.TextBox();
             this.btnSearchBH = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,13 +120,13 @@
             this.btnMuaHang.Text = "Mua Hàng";
             this.btnMuaHang.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // txtSearchBH
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(15, 378);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 26);
-            this.textBox1.TabIndex = 8;
+            this.txtSearchBH.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBH.Location = new System.Drawing.Point(15, 378);
+            this.txtSearchBH.Name = "txtSearchBH";
+            this.txtSearchBH.Size = new System.Drawing.Size(206, 26);
+            this.txtSearchBH.TabIndex = 8;
             // 
             // btnSearchBH
             // 
@@ -141,7 +141,7 @@
             this.btnSearchBH.TabIndex = 9;
             this.btnSearchBH.Text = "Tim kiem";
             this.btnSearchBH.UseVisualStyleBackColor = false;
-            this.btnSearchBH.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearchBH.Click += new System.EventHandler(this.btnSearchBH_Click);
             // 
             // textBox2
             // 
@@ -170,7 +170,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnSearchBH);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtSearchBH);
             this.Controls.Add(this.btnMuaHang);
             this.Controls.Add(this.btnEditBH);
             this.Controls.Add(this.btnAddBH);
@@ -195,7 +195,7 @@
         private System.Windows.Forms.Button btnAddBH;
         private System.Windows.Forms.Button btnEditBH;
         private System.Windows.Forms.Button btnMuaHang;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSearchBH;
         private System.Windows.Forms.Button btnSearchBH;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
