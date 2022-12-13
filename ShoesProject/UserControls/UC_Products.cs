@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,7 +74,9 @@ namespace ShoesProject.UserControls
             txtDes.Text = ProductTable.Rows[i].Cells[4].Value.ToString();
             txtGenres.SelectedIndex = txtGenres.FindString(ProductTable.Rows[i].Cells[5].Value.ToString());
             txtQuantity.Text = ProductTable.Rows[i].Cells[7].Value.ToString();
-            
+
+            string path = Path.Combine(ProductTable.Rows[i].Cells[2].Value.ToString());
+            ProductPic.Image = Image.FromFile(path);
         }
 
         private void GenresSearch_SelectedValueChanged(object sender, EventArgs e)
@@ -106,6 +109,8 @@ namespace ShoesProject.UserControls
 
         private DTO_Product getData()
         {
+            string path = "C:\\Users\\Administrator\\Desktop\\ShoesProject\\Shoes-img\\product-img";
+            bool check = txtImg.Text.Contains(path);
             DTO_Product product = new DTO_Product();
             product.Id = txtID.Text;
             product.Name = txtName.Text;
@@ -115,6 +120,12 @@ namespace ShoesProject.UserControls
             product.Genres = GenresSelected;
             product.Status = "active";
             product.Quantity = int.Parse( txtQuantity.Text );
+
+            if(check)
+                product.Img = txtImg.Text;
+            else
+                product.Img = path+"\\"+txtImg.Text+".png";
+            
             return product;
         }
 
@@ -129,6 +140,10 @@ namespace ShoesProject.UserControls
             if (DAO_Product.Instance.insertProduct(getData()))
             {
                 MessageBox.Show("Thêm sản phẩm thành công ");
+                string location = "C:\\Users\\Administrator\\Desktop\\ShoesProject\\Shoes-img\\product-img";
+                string path = Path.Combine(location, txtImg.Text + ".png");
+                Image a = ProductPic.Image;
+                a.Save(path);
                 setNull();
                 loadProductTable(LoadAllProductAction);
             }
@@ -136,7 +151,7 @@ namespace ShoesProject.UserControls
             {
                 MessageBox.Show("Thêm sản phẩm thất bại . Vui lòng thử lại ");
             }
-                
+
         }
 
 
@@ -183,14 +198,28 @@ namespace ShoesProject.UserControls
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
+            MessageBox.Show(txtDes.Text);
+        }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            PictureBox p = sender as PictureBox;
+            if(p != null)
+            {
+                open.Filter = "(*.jpg;*.jpeg;*.png) | *.jpg;*.jpeg;*.png ";
+                if(open.ShowDialog()== DialogResult.OK)
+                {
+                    p.Image = Image.FromFile(open.FileName);
+                }
+            }
         }
     }
 }
