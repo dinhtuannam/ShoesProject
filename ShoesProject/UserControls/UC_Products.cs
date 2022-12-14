@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,9 +17,11 @@ namespace ShoesProject.UserControls
     public partial class UC_Products : UserControl
     {
         String GenresSelected;
+        String GenresFilterSelected = "";
         String SearchAction = "Name";
         String LoadAllProductAction = "LoadAllProductAction";
         String SearchProductAction = "SearchProductAction";
+        String FilterProductAction = "FilterProductAction";
         public UC_Products()
         {
             InitializeComponent();
@@ -32,6 +35,7 @@ namespace ShoesProject.UserControls
             loadProductTable(LoadAllProductAction);
             loadGenresCombobox();
             loadSearchCombobox();
+            loadGenresFilter();
         }
 
         private void loadProductTable(String action)
@@ -41,6 +45,8 @@ namespace ShoesProject.UserControls
                 data = DAO_Product.Instance.getAllProduct();
             if (action == SearchProductAction)
                 data = DAO_Product.Instance.searchProduct(txtSearch.Text,SearchAction);
+            if (action == FilterProductAction)
+                data = DAO_Product.Instance.filterProduct(GenresFilterSelected, filterPrice1.Text, filterPrice2.Text);
             ProductTable.DataSource = data;
         }
 
@@ -55,6 +61,19 @@ namespace ShoesProject.UserControls
             }
             txtGenres.DataSource = genresArray;
         }
+
+        private void loadGenresFilter()
+        {
+            List<string> genresArray = new List<string>();
+            DataTable listGenres = DAO_Genres.Instance.getAllGenres();
+            genresArray.Add("");
+            for (int i = 0; i < listGenres.Rows.Count; i++)
+            {
+                genresArray.Add(listGenres.Rows[i][0].ToString());
+            }
+            genresFilterCb.DataSource = genresArray;
+        }
+
         private void loadSearchCombobox()
         {
             List<string> searchList = new List<string>();
@@ -220,6 +239,41 @@ namespace ShoesProject.UserControls
                     p.Image = Image.FromFile(open.FileName);
                 }
             }
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            GenresFilterSelected = genresFilterCb.SelectedItem.ToString();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(validateFiler())
+            loadProductTable(FilterProductAction);
+        }
+
+        private bool validateFiler()
+        {
+            Regex regex = new Regex(@"^-?[0-9][0-9,\.]+$");
+            if (filterPrice1.Text != "" && filterPrice2.Text == "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ giá tiền");
+                return false;
+            }
+            if (filterPrice1.Text == "" && filterPrice2.Text != "")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ giá tiền");
+                return false;
+            }
+            if (filterPrice1.Text == "" && filterPrice2.Text == "")
+                return true;
+            if (!regex.IsMatch(filterPrice1.Text) || !regex.IsMatch(filterPrice2.Text))
+            {
+                MessageBox.Show("Giá tiền ko hợp lệ");
+                return false;
+            }
+
+            return true;
         }
     }
 }
