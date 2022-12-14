@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Xml.Linq;
 
 namespace ShoesProject.DAO
@@ -72,6 +74,29 @@ namespace ShoesProject.DAO
             string query = "update Sanpham set trangthai = 'unactive' where idSP = @idSP ";
             result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
             return result > 0;
+        }
+
+        public DataTable filterProduct(string genres , string price1, string price2)
+        {
+            string query = "Select* from sanpham where trangthai = 'active' ";
+            query = query + generateQuery1(genres) + generateQuery2(price1, price2);
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        private string generateQuery1(string genres)
+        {
+            string query = "";
+            if (genres != "")
+                query = " and idTL = '" + genres+"' ";
+            return query;
+        }
+
+        private string generateQuery2(string price1, string price2)
+        {
+            string query = "";
+            if (price1 != "" && price2 != "")
+                query = " and gia between " + price1 + " and " + price2 + " ";
+            return query;
         }
     }
 }
