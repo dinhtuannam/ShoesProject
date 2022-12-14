@@ -117,6 +117,7 @@ namespace ShoesProject.UserControls
         private bool validate()
         {
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Regex regexNumber = new Regex(@"^-?[0-9][0-9,\.]+$");
             Match match = regex.Match(txtEmailE.Text);
             if (txtUsernameE.Text == "")
             {
@@ -146,6 +147,11 @@ namespace ShoesProject.UserControls
             if (txtPhoneE.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập số điện thoại khách hàng");
+                return false;
+            }
+            if (!regexNumber.IsMatch(txtPhoneE.Text))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ");
                 return false;
             }
             if (txtAddressE.Text == "")
