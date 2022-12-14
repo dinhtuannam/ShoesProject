@@ -71,6 +71,7 @@
     <Compile Include="DAO\DAO_Product.cs" />
     <Compile Include="DAO\DAO_TKKD.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DTO\DTO_BanHang.cs" />
     <Compile Include="DTO\DTO_Bill.cs" />
     <Compile Include="DTO\DTO_CTHD.cs" />
     <Compile Include="DTO\DTO_Customer.cs" />

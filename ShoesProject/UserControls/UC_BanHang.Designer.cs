@@ -37,8 +37,8 @@
             this.btnMuaHang = new System.Windows.Forms.Button();
             this.txtSearchBH = new System.Windows.Forms.TextBox();
             this.btnSearchBH = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.Label();
+            this.txtItemSelected = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,35 +48,42 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(15, 22);
+            this.panel1.Location = new System.Drawing.Point(22, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 342);
+            this.panel1.Size = new System.Drawing.Size(621, 526);
             this.panel1.TabIndex = 0;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 5);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(408, 336);
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(612, 517);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Location = new System.Drawing.Point(449, 22);
+            this.panel2.Location = new System.Drawing.Point(674, 34);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(439, 342);
+            this.panel2.Size = new System.Drawing.Size(658, 526);
             this.panel2.TabIndex = 1;
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(4, 5);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(433, 336);
+            this.dataGridView2.RowHeadersWidth = 62;
+            this.dataGridView2.Size = new System.Drawing.Size(650, 517);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // btnAddBH
             // 
@@ -85,9 +92,10 @@
             this.btnAddBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddBH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddBH.ForeColor = System.Drawing.Color.White;
-            this.btnAddBH.Location = new System.Drawing.Point(331, 370);
+            this.btnAddBH.Location = new System.Drawing.Point(26, 570);
+            this.btnAddBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddBH.Name = "btnAddBH";
-            this.btnAddBH.Size = new System.Drawing.Size(98, 43);
+            this.btnAddBH.Size = new System.Drawing.Size(147, 66);
             this.btnAddBH.TabIndex = 5;
             this.btnAddBH.Text = "Thêm";
             this.btnAddBH.UseVisualStyleBackColor = false;
@@ -100,9 +108,10 @@
             this.btnEditBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditBH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditBH.ForeColor = System.Drawing.Color.White;
-            this.btnEditBH.Location = new System.Drawing.Point(449, 370);
+            this.btnEditBH.Location = new System.Drawing.Point(1026, 569);
+            this.btnEditBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditBH.Name = "btnEditBH";
-            this.btnEditBH.Size = new System.Drawing.Size(98, 43);
+            this.btnEditBH.Size = new System.Drawing.Size(147, 66);
             this.btnEditBH.TabIndex = 6;
             this.btnEditBH.Text = "Xoá";
             this.btnEditBH.UseVisualStyleBackColor = false;
@@ -115,9 +124,10 @@
             this.btnMuaHang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMuaHang.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMuaHang.ForeColor = System.Drawing.Color.White;
-            this.btnMuaHang.Location = new System.Drawing.Point(553, 370);
+            this.btnMuaHang.Location = new System.Drawing.Point(1181, 570);
+            this.btnMuaHang.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnMuaHang.Name = "btnMuaHang";
-            this.btnMuaHang.Size = new System.Drawing.Size(98, 43);
+            this.btnMuaHang.Size = new System.Drawing.Size(147, 66);
             this.btnMuaHang.TabIndex = 7;
             this.btnMuaHang.Text = "Mua Hàng";
             this.btnMuaHang.UseVisualStyleBackColor = false;
@@ -126,9 +136,10 @@
             // txtSearchBH
             // 
             this.txtSearchBH.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBH.Location = new System.Drawing.Point(15, 378);
+            this.txtSearchBH.Location = new System.Drawing.Point(336, 586);
+            this.txtSearchBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearchBH.Name = "txtSearchBH";
-            this.txtSearchBH.Size = new System.Drawing.Size(206, 26);
+            this.txtSearchBH.Size = new System.Drawing.Size(302, 35);
             this.txtSearchBH.TabIndex = 8;
             // 
             // btnSearchBH
@@ -138,49 +149,56 @@
             this.btnSearchBH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearchBH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchBH.ForeColor = System.Drawing.Color.White;
-            this.btnSearchBH.Location = new System.Drawing.Point(227, 370);
+            this.btnSearchBH.Location = new System.Drawing.Point(181, 570);
+            this.btnSearchBH.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchBH.Name = "btnSearchBH";
-            this.btnSearchBH.Size = new System.Drawing.Size(98, 43);
+            this.btnSearchBH.Size = new System.Drawing.Size(147, 66);
             this.btnSearchBH.TabIndex = 9;
             this.btnSearchBH.Text = "Tim kiem";
             this.btnSearchBH.UseVisualStyleBackColor = false;
             this.btnSearchBH.Click += new System.EventHandler(this.btnSearchBH_Click);
             // 
-            // textBox2
+            // txtTotal
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(657, 378);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 26);
-            this.textBox2.TabIndex = 10;
+            this.txtTotal.AutoSize = true;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.ForeColor = System.Drawing.Color.White;
+            this.txtTotal.Location = new System.Drawing.Point(831, 586);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(86, 29);
+            this.txtTotal.TabIndex = 11;
+            this.txtTotal.Text = "Total : ";
             // 
-            // label1
+            // txtItemSelected
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(758, 381);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Total : ";
+            this.txtItemSelected.AutoSize = true;
+            this.txtItemSelected.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemSelected.ForeColor = System.Drawing.Color.White;
+            this.txtItemSelected.Location = new System.Drawing.Point(669, 589);
+            this.txtItemSelected.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.txtItemSelected.Name = "txtItemSelected";
+            this.txtItemSelected.Size = new System.Drawing.Size(71, 29);
+            this.txtItemSelected.TabIndex = 12;
+            this.txtItemSelected.Text = "Item: ";
             // 
             // UC_BanHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.btnSearchBH);
+            this.Controls.Add(this.txtItemSelected);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.txtSearchBH);
+            this.Controls.Add(this.btnSearchBH);
             this.Controls.Add(this.btnMuaHang);
             this.Controls.Add(this.btnEditBH);
             this.Controls.Add(this.btnAddBH);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UC_BanHang";
-            this.Size = new System.Drawing.Size(902, 430);
+            this.Size = new System.Drawing.Size(1353, 662);
             this.Load += new System.EventHandler(this.UC_BanHang_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -200,9 +218,9 @@
         private System.Windows.Forms.Button btnMuaHang;
         private System.Windows.Forms.TextBox txtSearchBH;
         private System.Windows.Forms.Button btnSearchBH;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtTotal;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Label txtItemSelected;
     }
 }

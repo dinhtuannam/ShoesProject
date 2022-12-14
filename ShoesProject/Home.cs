@@ -219,9 +219,9 @@ namespace ShoesProject
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
-            if (quyen.QLPQ1 == "Accept")
+            if (quyen.BanHang1 == "Accept")
             {
-                UC_BanHang ucbh = new UC_BanHang();
+                UC_BanHang ucbh = new UC_BanHang(employee.Id);
                 addUserControl(ucbh);
             }
             else
