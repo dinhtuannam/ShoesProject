@@ -285,7 +285,6 @@
             this.label2.Size = new System.Drawing.Size(59, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "TÊN";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtID
             // 
@@ -373,7 +372,6 @@
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.Size = new System.Drawing.Size(115, 35);
             this.cbSearch.TabIndex = 13;
-            this.cbSearch.SelectedIndexChanged += new System.EventHandler(this.cbSearch_SelectedIndexChanged);
             this.cbSearch.SelectedValueChanged += new System.EventHandler(this.GenresSearch_SelectedValueChanged);
             // 
             // label7

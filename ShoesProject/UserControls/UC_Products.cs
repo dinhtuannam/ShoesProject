@@ -154,34 +154,71 @@ namespace ShoesProject.UserControls
             return item[0];
         }
 
+        private bool validateProduct()
+        {
+            Regex regex = new Regex(@"^-?[0-9][0-9,\.]+$");
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên sản phẩm");
+                return false;
+            }
+            if(txtPrice.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập giá sản phẩm");
+                return false;
+            }
+            if (!regex.IsMatch(getPrice()))
+            {
+                MessageBox.Show("Giá sản phẩm không hợp lệ");
+                return false;
+            }
+            if(txtDes.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mô tả sản phẩm");
+                return false;
+            }
+            if(txtImg.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập nguồn hình ảnh");
+                return false;
+            }
+            if(txtQuantity.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập số lượng sản phẩm");
+                return false;
+            }
+            if (!regex.IsMatch(txtQuantity.Text))
+            {
+                MessageBox.Show("Số lượng sản phẩm không hợp lệ");
+                return false;
+            }
+            if(GenresSelected == "")
+            {
+                MessageBox.Show("Vui lòng chọn thể loại sản phẩm");
+                return false;
+            }
+            return true;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (DAO_Product.Instance.insertProduct(getData()))
+            if (validateProduct())
             {
-                MessageBox.Show("Thêm sản phẩm thành công ");
-                string location = "C:\\Users\\Administrator\\Desktop\\ShoesProject\\Shoes-img\\product-img";
-                string path = Path.Combine(location, txtImg.Text + ".png");
-                Image a = ProductPic.Image;
-                a.Save(path);
-                setNull();
-                loadProductTable(LoadAllProductAction);
+                if (DAO_Product.Instance.insertProduct(getData()))
+                {
+                    MessageBox.Show("Thêm sản phẩm thành công ");
+                    string location = "C:\\Users\\Administrator\\Desktop\\ShoesProject\\Shoes-img\\product-img";
+                    string path = Path.Combine(location, txtImg.Text + ".png");
+                    Image a = ProductPic.Image;
+                    a.Save(path);
+                    setNull();
+                    loadProductTable(LoadAllProductAction);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm sản phẩm thất bại . Vui lòng thử lại ");
+                }
             }
-            else
-            {
-                MessageBox.Show("Thêm sản phẩm thất bại . Vui lòng thử lại ");
-            }
-
-        }
-
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void txtGenres_SelectedValueChanged(object sender, EventArgs e)
@@ -191,35 +228,38 @@ namespace ShoesProject.UserControls
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (DAO_Product.Instance.updateProduct(getData()))
+            if (validateProduct())
             {
-                MessageBox.Show("Cập nhật sản phẩm thành công ");
-                setNull();
-                loadProductTable(LoadAllProductAction);
-            }
-            else
-            {
-                MessageBox.Show("Cập nhật sản phẩm thất bại . Vui lòng thử lại ");
+                if (DAO_Product.Instance.updateProduct(getData()))
+                {
+                    MessageBox.Show("Cập nhật sản phẩm thành công ");
+                    setNull();
+                    loadProductTable(LoadAllProductAction);
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật sản phẩm thất bại . Vui lòng thử lại ");
+                }
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (DAO_Product.Instance.deleteProduct(txtID.Text))
-            {
-                MessageBox.Show("Xóa sản phẩm thành công ");
-                setNull();
-                loadProductTable(LoadAllProductAction);
-            }
+            if (txtID.Text == "")
+                MessageBox.Show("vui lòng chọn sản phẩm cần xóa");
             else
             {
-                MessageBox.Show("Xóa sản phẩm thất bại . Vui lòng thử lại ");
+                if (DAO_Product.Instance.deleteProduct(txtID.Text))
+                {
+                    MessageBox.Show("Xóa sản phẩm thành công ");
+                    setNull();
+                    loadProductTable(LoadAllProductAction);
+                }
+                else
+                {
+                    MessageBox.Show("Xóa sản phẩm thất bại . Vui lòng thử lại ");
+                }
             }
-        }
-
-        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button7_Click(object sender, EventArgs e)
