@@ -45,6 +45,8 @@ namespace ShoesProject.UserControls
 
         private void loadChart(DataTable data)
         {
+            chart1.Series.Clear();
+            chart1.Series.Add("TKSP");
             //chart1.ChartAreas["ChartArea1"].AxisX.Title = "Tên Sản Phẩm";
             chart1.ChartAreas["ChartArea1"].AxisY.Title = "Số lượng";
             for( int i = 0; i < data.Rows.Count; i++)
@@ -68,19 +70,19 @@ namespace ShoesProject.UserControls
             txtMonthTo.DataSource = Array2;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txtMonthFrom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            loadTableChart(FilterDataAction);
+            month1 = txtMonthFrom.SelectedItem.ToString();
         }
 
-        private void txtMonthTo_SelectedValueChanged(object sender, EventArgs e)
+        private void txtMonthTo_SelectedIndexChanged(object sender, EventArgs e)
         {
             month2 = txtMonthTo.SelectedItem.ToString();
         }
 
-        private void txtMonthFrom_SelectedValueChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            month1 = txtMonthFrom.SelectedItem.ToString();
+            loadTableChart(FilterDataAction);
         }
 
         private void button2_Click(object sender, EventArgs e)

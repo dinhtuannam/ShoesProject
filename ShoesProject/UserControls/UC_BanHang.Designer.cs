@@ -91,6 +91,7 @@
             this.btnAddBH.TabIndex = 5;
             this.btnAddBH.Text = "Thêm";
             this.btnAddBH.UseVisualStyleBackColor = false;
+            this.btnAddBH.Click += new System.EventHandler(this.btnAddBH_Click);
             // 
             // btnEditBH
             // 
@@ -105,6 +106,7 @@
             this.btnEditBH.TabIndex = 6;
             this.btnEditBH.Text = "Xoá";
             this.btnEditBH.UseVisualStyleBackColor = false;
+            this.btnEditBH.Click += new System.EventHandler(this.btnEditBH_Click);
             // 
             // btnMuaHang
             // 
@@ -119,6 +121,7 @@
             this.btnMuaHang.TabIndex = 7;
             this.btnMuaHang.Text = "Mua Hàng";
             this.btnMuaHang.UseVisualStyleBackColor = false;
+            this.btnMuaHang.Click += new System.EventHandler(this.btnMuaHang_Click);
             // 
             // txtSearchBH
             // 

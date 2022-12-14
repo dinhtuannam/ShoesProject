@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -67,8 +67,8 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(34, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(20, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 150);
             this.panel1.TabIndex = 8;
@@ -85,6 +85,7 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "View";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -98,26 +99,29 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtMonthTo
             // 
             this.txtMonthTo.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonthTo.FormattingEnabled = true;
             this.txtMonthTo.Location = new System.Drawing.Point(167, 42);
-            this.txtMonthTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMonthTo.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonthTo.Name = "txtMonthTo";
             this.txtMonthTo.Size = new System.Drawing.Size(68, 25);
             this.txtMonthTo.TabIndex = 12;
+            this.txtMonthTo.SelectedIndexChanged += new System.EventHandler(this.txtMonthTo_SelectedIndexChanged);
             // 
             // txtMonthFrom
             // 
             this.txtMonthFrom.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonthFrom.FormattingEnabled = true;
             this.txtMonthFrom.Location = new System.Drawing.Point(167, 9);
-            this.txtMonthFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMonthFrom.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonthFrom.Name = "txtMonthFrom";
             this.txtMonthFrom.Size = new System.Drawing.Size(68, 25);
             this.txtMonthFrom.TabIndex = 11;
+            this.txtMonthFrom.SelectedIndexChanged += new System.EventHandler(this.txtMonthFrom_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -134,7 +138,7 @@
             // 
             this.txtYear2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear2.Location = new System.Drawing.Point(299, 42);
-            this.txtYear2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear2.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear2.Name = "txtYear2";
             this.txtYear2.Size = new System.Drawing.Size(68, 26);
             this.txtYear2.TabIndex = 9;
@@ -177,7 +181,7 @@
             // 
             this.txtYear1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear1.Location = new System.Drawing.Point(299, 9);
-            this.txtYear1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear1.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear1.Name = "txtYear1";
             this.txtYear1.Size = new System.Drawing.Size(68, 26);
             this.txtYear1.TabIndex = 4;
@@ -208,8 +212,8 @@
             // ChartTable
             // 
             this.ChartTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ChartTable.Location = new System.Drawing.Point(34, 182);
-            this.ChartTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChartTable.Location = new System.Drawing.Point(20, 183);
+            this.ChartTable.Margin = new System.Windows.Forms.Padding(2);
             this.ChartTable.Name = "ChartTable";
             this.ChartTable.RowHeadersWidth = 62;
             this.ChartTable.RowTemplate.Height = 28;
@@ -218,16 +222,16 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
             this.chart1.Location = new System.Drawing.Point(425, 14);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "TKSP";
-            this.chart1.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "TKSP";
+            this.chart1.Series.Add(series4);
             this.chart1.Size = new System.Drawing.Size(498, 374);
             this.chart1.TabIndex = 9;
             this.chart1.Text = "chart1";

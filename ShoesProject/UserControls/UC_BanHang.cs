@@ -1,4 +1,5 @@
 ﻿using ShoesProject.DAO;
+using ShoesProject.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,22 @@ namespace ShoesProject.UserControls
         private void btnSearchBH_Click(object sender, EventArgs e)
         {
             loadTableChart(SearchSanPhamAction);
+        }
+
+        private void btnAddBH_Click(object sender, EventArgs e)
+        {
+            DataTable cart = new DataTable();
+            
+        }
+
+        private void btnEditBH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMuaHang_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
