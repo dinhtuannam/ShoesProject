@@ -154,6 +154,12 @@ namespace ShoesProject.UserControls
             return item[0];
         }
 
+        private String getQuantity()
+        {
+            string[] item = txtQuantity.Text.Split(' ');
+            return item[0];
+        }
+
         private bool validateProduct()
         {
             Regex regex = new Regex(@"^-?[0-9][0-9,\.]+$");
@@ -187,7 +193,7 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("Vui lòng nhập số lượng sản phẩm");
                 return false;
             }
-            if (!regex.IsMatch(txtQuantity.Text))
+            if (!regex.IsMatch(getQuantity()))
             {
                 MessageBox.Show("Số lượng sản phẩm không hợp lệ");
                 return false;
