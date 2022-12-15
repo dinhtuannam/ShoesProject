@@ -41,7 +41,16 @@ namespace ShoesProject.UserControls
             if (action == filterQuyenAction)
                 dt = DAO_PhanQuyen.Instance.filterQuyen(QuyenFilterSelected, CNFilterSelected);
             QuyenTable.DataSource = dt;
+            setTable();
+        }
+
+        private void setTable()
+        {
             QuyenTable.Columns[3].Width = 254;
+            QuyenTable.Columns[0].HeaderText = "ID Quyền";
+            QuyenTable.Columns[1].HeaderText = "ID Chức năng";
+            QuyenTable.Columns[2].HeaderText = "Tên Quyền";
+            QuyenTable.Columns[3].HeaderText = "Tên Chức năng";
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

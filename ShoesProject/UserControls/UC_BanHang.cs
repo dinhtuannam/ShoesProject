@@ -55,8 +55,31 @@ namespace ShoesProject.UserControls
             if (action == SearchSanPhamAction)
                 data = DAO_BanHang.Instance.searchSanPham(txtSearchBH.Text, SearchAction);
             dataGridView1.DataSource = data;
+            resizeTable();
         }
 
+        private void resizeTable()
+        {
+            dataGridView1.Columns[0].Width = 60;
+            dataGridView1.Columns[2].Width = 60;
+            dataGridView1.Columns[3].Width = 60;
+            dataGridView1.Columns[4].Width = 50;
+        }
+
+        private void resizeTable2()
+        {
+            dataGridView2.Columns[0].Width = 60;
+            dataGridView2.Columns[1].Width = 140;
+            dataGridView2.Columns[2].Width = 60;
+            dataGridView2.Columns[3].Width = 60;
+            dataGridView2.Columns[4].Width = 50;
+
+            dataGridView2.Columns[0].HeaderText = "ID";
+            dataGridView2.Columns[1].HeaderText = "Tên";
+            dataGridView2.Columns[2].HeaderText = "Thể loại";
+            dataGridView2.Columns[3].HeaderText = "Số lượng";
+            dataGridView2.Columns[4].HeaderText = "Tổng tiền";
+        }
 
         private void UC_BanHang_Load(object sender, EventArgs e)
         {
@@ -79,6 +102,7 @@ namespace ShoesProject.UserControls
             }
             txtTotal.Text = "Total :"+total.ToString();
             dataGridView2.DataSource = tmp;
+            resizeTable2();
         }
 
         private void btnAddBH_Click(object sender, EventArgs e)
