@@ -60,7 +60,7 @@ namespace ShoesProject.UserControls
             }
             else
             {
-                DAO_Quyen.Instance.getQuyenByID(txtsearch.Text.Trim());
+               dataGridView1.DataSource= DAO_Quyen.Instance.getQuyenByID(txtsearch.Text.Trim());
             }
         }
 
@@ -87,21 +87,41 @@ namespace ShoesProject.UserControls
             DAO_Quyen.Instance.addQuyen(txtid.Text.Trim(), txtname.Text.Trim());
 
             loadTable();
+            lbtrangthai.Text = "Thêm quyền thành công";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (txtid.Text.Trim() == "" || txtname.Text.Trim() == "")
             {
-                lbtrangthai.Text = "vui lòng nhập đày đủ thông tin";
+                lbtrangthai.Text = "Vui lòng nhập đày đủ thông tin";
                 return;
             }
             if (!DAO_Quyen.Instance.isQuyenIDExist(txtid.Text.Trim()))
             {
-                lbtrangthai.Text = "ID ko tồn tại";
+                lbtrangthai.Text = "ID không tồn tại";
                 return;
             }
             DAO_Quyen.Instance.updateQuyen(txtid.Text.Trim(), txtname.Text.Trim());
+            loadTable();
+            lbtrangthai.Text = "Chỉnh sửa quyền thành công";
+        }
+
+       
+
+        private void btnRemove_Click_1(object sender, EventArgs e)
+        {
+            if(txtid.Text.Trim()== "")
+            {
+                lbtrangthai.Text = "Vui lòng nhập id để xoá";
+            }
+            if (!DAO_Quyen.Instance.remove(txtid.Text.Trim()))
+            {
+                lbtrangthai.Text = String.Format("Vui lòng xoá những thứ có ràng buộc với quyền {0}",txtid.Text.Trim());
+                return;
+            }
+            loadTable();
+            lbtrangthai.Text = "Xoá quyền thành công";
         }
     }
 }

@@ -154,6 +154,7 @@ namespace ShoesProject.UserControls.Bills
             DAO_Bill.Instance.deleteCTHDByID(id);
             DAO_Bill.Instance.deleteBill(id);
             loadTable("loadalldata");
+            lbtrangthai.Text = "Xoá thành công";
         }
         private void btnDetail_Click(object sender, EventArgs e)
         {

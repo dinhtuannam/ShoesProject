@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace ShoesProject
 {
@@ -130,6 +131,34 @@ namespace ShoesProject
                 txtPass.PasswordChar = '\0';
             }
             
+        }
+
+        private void LoginForm_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (validate() && login())
+                {
+                    this.Hide();
+                    Home home = new Home(txtName.Text);
+                    home.ShowDialog();
+                    this.Close();
+                }
+            }
+        }
+
+        private void txtPass_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (validate() && login())
+                {
+                    this.Hide();
+                    Home home = new Home(txtName.Text);
+                    home.ShowDialog();
+                    this.Close();
+                }
+            }
         }
     }
 }

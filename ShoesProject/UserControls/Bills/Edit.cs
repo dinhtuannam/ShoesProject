@@ -177,13 +177,6 @@ namespace ShoesProject.UserControls.Bills
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-
-
-
-           
-
-            
-
             int row = dataGridView1.Rows.Count;
             if (row == 0)
             {
@@ -239,13 +232,8 @@ namespace ShoesProject.UserControls.Bills
                     DAO_Bill.Instance.decreaseProduct(idsp[i], int.Parse(soluong[i]));
                 }
             }
-            DAO_Bill.Instance.updateBill(txtid.Text.Trim(),idnhanvien,txtidcustomer.Text.Trim(), dtpicker.Value.ToString("yyyyMMdd hh:mm:ss tt"), txttotal.Text, cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].ToString());
-           
-            DAO_Bill.Instance.deleteCTHDByID(txtid.Text.Trim());
-
-
-           
-            
+            DAO_Bill.Instance.updateBill(txtid.Text.Trim(),idnhanvien,txtidcustomer.Text.Trim(), dtpicker.Value.ToString("yyyyMMdd hh:mm:ss tt"), txttotal.Text, cbboxtrangthai.Items[cbboxtrangthai.SelectedIndex].ToString());          
+            DAO_Bill.Instance.deleteCTHDByID(txtid.Text.Trim());           
             DAO_Bill.Instance.addCTHD(txtid.Text.Trim(),idsp,soluong,totalsp);
             Close();
         }

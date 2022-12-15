@@ -65,11 +65,14 @@
             // QuyenTable
             // 
             this.QuyenTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.QuyenTable.Location = new System.Drawing.Point(40, 230);
+            this.QuyenTable.Location = new System.Drawing.Point(27, 150);
+            this.QuyenTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.QuyenTable.MultiSelect = false;
             this.QuyenTable.Name = "QuyenTable";
+            this.QuyenTable.ReadOnly = true;
             this.QuyenTable.RowHeadersWidth = 62;
             this.QuyenTable.RowTemplate.Height = 28;
-            this.QuyenTable.Size = new System.Drawing.Size(954, 385);
+            this.QuyenTable.Size = new System.Drawing.Size(636, 250);
             this.QuyenTable.TabIndex = 0;
             this.QuyenTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -88,9 +91,10 @@
             this.panel5.Controls.Add(this.txtIDQuyen);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(40, 12);
+            this.panel5.Location = new System.Drawing.Point(27, 8);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(954, 199);
+            this.panel5.Size = new System.Drawing.Size(637, 130);
             this.panel5.TabIndex = 24;
             // 
             // txtTenCN
@@ -99,26 +103,29 @@
             this.txtTenCN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenCN.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenCN.ForeColor = System.Drawing.Color.White;
-            this.txtTenCN.Location = new System.Drawing.Point(630, 117);
+            this.txtTenCN.Location = new System.Drawing.Point(420, 76);
+            this.txtTenCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenCN.Name = "txtTenCN";
             this.txtTenCN.ReadOnly = true;
-            this.txtTenCN.Size = new System.Drawing.Size(308, 33);
+            this.txtTenCN.Size = new System.Drawing.Size(205, 22);
             this.txtTenCN.TabIndex = 35;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(385, 177);
+            this.panel3.Location = new System.Drawing.Point(257, 115);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(553, 1);
+            this.panel3.Size = new System.Drawing.Size(369, 1);
             this.panel3.TabIndex = 34;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(385, 80);
+            this.panel4.Location = new System.Drawing.Point(257, 52);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(553, 1);
+            this.panel4.Size = new System.Drawing.Size(369, 1);
             this.panel4.TabIndex = 33;
             // 
             // txtIDCN
@@ -127,10 +134,11 @@
             this.txtIDCN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDCN.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDCN.ForeColor = System.Drawing.Color.White;
-            this.txtIDCN.Location = new System.Drawing.Point(658, 33);
+            this.txtIDCN.Location = new System.Drawing.Point(439, 21);
+            this.txtIDCN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIDCN.Name = "txtIDCN";
             this.txtIDCN.ReadOnly = true;
-            this.txtIDCN.Size = new System.Drawing.Size(280, 33);
+            this.txtIDCN.Size = new System.Drawing.Size(187, 22);
             this.txtIDCN.TabIndex = 32;
             // 
             // label3
@@ -138,9 +146,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(406, 33);
+            this.label3.Location = new System.Drawing.Point(271, 21);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 37);
+            this.label3.Size = new System.Drawing.Size(169, 26);
             this.label3.TabIndex = 31;
             this.label3.Text = "ID Chức Năng :";
             // 
@@ -149,9 +158,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(406, 117);
+            this.label4.Location = new System.Drawing.Point(271, 76);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 37);
+            this.label4.Size = new System.Drawing.Size(142, 26);
             this.label4.TabIndex = 30;
             this.label4.Text = "Chức Năng :";
             // 
@@ -161,26 +171,29 @@
             this.txtTenQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenQuyen.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenQuyen.ForeColor = System.Drawing.Color.White;
-            this.txtTenQuyen.Location = new System.Drawing.Point(140, 117);
+            this.txtTenQuyen.Location = new System.Drawing.Point(93, 76);
+            this.txtTenQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenQuyen.Name = "txtTenQuyen";
             this.txtTenQuyen.ReadOnly = true;
-            this.txtTenQuyen.Size = new System.Drawing.Size(238, 33);
+            this.txtTenQuyen.Size = new System.Drawing.Size(159, 22);
             this.txtTenQuyen.TabIndex = 29;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(18, 177);
+            this.panel2.Location = new System.Drawing.Point(12, 115);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 1);
+            this.panel2.Size = new System.Drawing.Size(240, 1);
             this.panel2.TabIndex = 28;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(18, 80);
+            this.panel1.Location = new System.Drawing.Point(12, 52);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(360, 1);
+            this.panel1.Size = new System.Drawing.Size(240, 1);
             this.panel1.TabIndex = 27;
             // 
             // txtIDQuyen
@@ -189,10 +202,11 @@
             this.txtIDQuyen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDQuyen.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDQuyen.ForeColor = System.Drawing.Color.White;
-            this.txtIDQuyen.Location = new System.Drawing.Point(176, 33);
+            this.txtIDQuyen.Location = new System.Drawing.Point(117, 21);
+            this.txtIDQuyen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIDQuyen.Name = "txtIDQuyen";
             this.txtIDQuyen.ReadOnly = true;
-            this.txtIDQuyen.Size = new System.Drawing.Size(202, 33);
+            this.txtIDQuyen.Size = new System.Drawing.Size(135, 22);
             this.txtIDQuyen.TabIndex = 26;
             // 
             // label2
@@ -200,9 +214,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 33);
+            this.label2.Location = new System.Drawing.Point(7, 21);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 37);
+            this.label2.Size = new System.Drawing.Size(118, 26);
             this.label2.TabIndex = 25;
             this.label2.Text = "ID Quyen :";
             // 
@@ -211,9 +226,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 117);
+            this.label1.Location = new System.Drawing.Point(7, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 37);
+            this.label1.Size = new System.Drawing.Size(91, 26);
             this.label1.TabIndex = 24;
             this.label1.Text = "Quyền :";
             // 
@@ -226,9 +242,10 @@
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.CNCbox);
             this.panel6.Controls.Add(this.QuyenCbox);
-            this.panel6.Location = new System.Drawing.Point(1016, 12);
+            this.panel6.Location = new System.Drawing.Point(677, 8);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(319, 199);
+            this.panel6.Size = new System.Drawing.Size(213, 130);
             this.panel6.TabIndex = 25;
             // 
             // addBtn
@@ -237,10 +254,9 @@
             this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(161, 139);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addBtn.Location = new System.Drawing.Point(107, 90);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(125, 39);
+            this.addBtn.Size = new System.Drawing.Size(83, 25);
             this.addBtn.TabIndex = 39;
             this.addBtn.Text = "Thêm";
             this.addBtn.UseVisualStyleBackColor = false;
@@ -252,10 +268,9 @@
             this.deleterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleterBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleterBtn.ForeColor = System.Drawing.Color.White;
-            this.deleterBtn.Location = new System.Drawing.Point(15, 139);
-            this.deleterBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.deleterBtn.Location = new System.Drawing.Point(10, 90);
             this.deleterBtn.Name = "deleterBtn";
-            this.deleterBtn.Size = new System.Drawing.Size(125, 39);
+            this.deleterBtn.Size = new System.Drawing.Size(83, 25);
             this.deleterBtn.TabIndex = 38;
             this.deleterBtn.Text = "Xóa";
             this.deleterBtn.UseVisualStyleBackColor = false;
@@ -266,9 +281,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(10, 81);
+            this.label8.Location = new System.Drawing.Point(7, 53);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(142, 29);
+            this.label8.Size = new System.Drawing.Size(97, 19);
             this.label8.TabIndex = 37;
             this.label8.Text = "Chức Năng";
             // 
@@ -277,9 +293,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(10, 19);
+            this.label7.Location = new System.Drawing.Point(7, 12);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 29);
+            this.label7.Size = new System.Drawing.Size(59, 19);
             this.label7.TabIndex = 36;
             this.label7.Text = "Quyền";
             // 
@@ -287,10 +304,9 @@
             // 
             this.CNCbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CNCbox.FormattingEnabled = true;
-            this.CNCbox.Location = new System.Drawing.Point(159, 75);
-            this.CNCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.CNCbox.Location = new System.Drawing.Point(106, 49);
             this.CNCbox.Name = "CNCbox";
-            this.CNCbox.Size = new System.Drawing.Size(127, 35);
+            this.CNCbox.Size = new System.Drawing.Size(86, 26);
             this.CNCbox.TabIndex = 35;
             this.CNCbox.SelectedValueChanged += new System.EventHandler(this.CNCbox_SelectedValueChanged);
             // 
@@ -298,10 +314,9 @@
             // 
             this.QuyenCbox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuyenCbox.FormattingEnabled = true;
-            this.QuyenCbox.Location = new System.Drawing.Point(159, 19);
-            this.QuyenCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.QuyenCbox.Location = new System.Drawing.Point(106, 12);
             this.QuyenCbox.Name = "QuyenCbox";
-            this.QuyenCbox.Size = new System.Drawing.Size(127, 35);
+            this.QuyenCbox.Size = new System.Drawing.Size(86, 26);
             this.QuyenCbox.TabIndex = 34;
             this.QuyenCbox.SelectedValueChanged += new System.EventHandler(this.QuyenCbox_SelectedValueChanged);
             // 
@@ -310,9 +325,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 24);
+            this.label5.Location = new System.Drawing.Point(15, 16);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 33);
+            this.label5.Size = new System.Drawing.Size(112, 22);
             this.label5.TabIndex = 32;
             this.label5.Text = "Tên Quyền";
             // 
@@ -320,10 +336,9 @@
             // 
             this.QuyenFilter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuyenFilter.FormattingEnabled = true;
-            this.QuyenFilter.Location = new System.Drawing.Point(28, 61);
-            this.QuyenFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.QuyenFilter.Location = new System.Drawing.Point(19, 40);
             this.QuyenFilter.Name = "QuyenFilter";
-            this.QuyenFilter.Size = new System.Drawing.Size(259, 35);
+            this.QuyenFilter.Size = new System.Drawing.Size(174, 26);
             this.QuyenFilter.TabIndex = 33;
             this.QuyenFilter.SelectedValueChanged += new System.EventHandler(this.QuyenFilter_SelectedValueChanged);
             // 
@@ -331,10 +346,9 @@
             // 
             this.CNFilter.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CNFilter.FormattingEnabled = true;
-            this.CNFilter.Location = new System.Drawing.Point(28, 166);
-            this.CNFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.CNFilter.Location = new System.Drawing.Point(19, 108);
             this.CNFilter.Name = "CNFilter";
-            this.CNFilter.Size = new System.Drawing.Size(259, 35);
+            this.CNFilter.Size = new System.Drawing.Size(174, 26);
             this.CNFilter.TabIndex = 35;
             this.CNFilter.SelectedValueChanged += new System.EventHandler(this.CNFilter_SelectedValueChanged);
             // 
@@ -343,9 +357,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(22, 115);
+            this.label6.Location = new System.Drawing.Point(15, 75);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(225, 33);
+            this.label6.Size = new System.Drawing.Size(155, 22);
             this.label6.TabIndex = 34;
             this.label6.Text = "Tên Chức Năng";
             // 
@@ -355,10 +370,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(28, 241);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(19, 157);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(259, 39);
+            this.button5.Size = new System.Drawing.Size(173, 25);
             this.button5.TabIndex = 36;
             this.button5.Text = "view";
             this.button5.UseVisualStyleBackColor = false;
@@ -370,10 +384,9 @@
             this.cancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cancelBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelBtn.ForeColor = System.Drawing.Color.White;
-            this.cancelBtn.Location = new System.Drawing.Point(28, 309);
-            this.cancelBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelBtn.Location = new System.Drawing.Point(19, 201);
             this.cancelBtn.Name = "cancelBtn";
-            this.cancelBtn.Size = new System.Drawing.Size(259, 39);
+            this.cancelBtn.Size = new System.Drawing.Size(173, 25);
             this.cancelBtn.TabIndex = 37;
             this.cancelBtn.Text = "cancel";
             this.cancelBtn.UseVisualStyleBackColor = false;
@@ -388,22 +401,24 @@
             this.panel7.Controls.Add(this.QuyenFilter);
             this.panel7.Controls.Add(this.CNFilter);
             this.panel7.Controls.Add(this.label6);
-            this.panel7.Location = new System.Drawing.Point(1016, 230);
+            this.panel7.Location = new System.Drawing.Point(677, 150);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(319, 385);
+            this.panel7.Size = new System.Drawing.Size(213, 251);
             this.panel7.TabIndex = 26;
             // 
             // UC_PhanQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.QuyenTable);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UC_PhanQuyen";
-            this.Size = new System.Drawing.Size(1353, 646);
+            this.Size = new System.Drawing.Size(902, 420);
             this.Load += new System.EventHandler(this.UC_PhanQuyen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QuyenTable)).EndInit();
             this.panel5.ResumeLayout(false);

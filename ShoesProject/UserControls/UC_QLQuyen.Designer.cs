@@ -43,6 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnRemove = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -288,11 +289,35 @@
             this.txtname.Size = new System.Drawing.Size(142, 29);
             this.txtname.TabIndex = 38;
             // 
+            // btnRemove
+            // 
+            this.btnRemove.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRemove.BorderRadius = 20;
+            this.btnRemove.BorderThickness = 1;
+            this.btnRemove.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnRemove.CustomBorderColor = System.Drawing.Color.White;
+            this.btnRemove.CustomBorderThickness = new System.Windows.Forms.Padding(1);
+            this.btnRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRemove.FillColor = System.Drawing.Color.Transparent;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRemove.Image = ((System.Drawing.Image)(resources.GetObject("btnRemove.Image")));
+            this.btnRemove.Location = new System.Drawing.Point(715, 241);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(179, 45);
+            this.btnRemove.TabIndex = 41;
+            this.btnRemove.Text = "Xoá";
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
+            // 
             // UC_QLQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(43)))));
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtname);
@@ -332,5 +357,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox txtname;
+        private Guna.UI2.WinForms.Guna2Button btnRemove;
     }
 }

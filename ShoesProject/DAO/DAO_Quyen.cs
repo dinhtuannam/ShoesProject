@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ShoesProject.DAO
 {
@@ -47,8 +48,22 @@ namespace ShoesProject.DAO
         }
         public int updateQuyen(string id,string name)
         {
-            string query = "update quyen set namequyen = @name where idquyen = @id ";
+            string query = "update quyen set tenquyen = @name where idquyen = @id ";
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, id });
+        }
+       public bool remove(string id)
+        {
+            string query = "select * from taikhoan where idquyen = @id ";
+            string query1 = "Select * from ctq where idquyen = @id ";
+            string query2 = "delete from quyen where idquyen = @id ";
+            
+
+            if (DataProvider.Instance.ExecuteScalar(query, new object[] { id }) != null || DataProvider.Instance.ExecuteScalar(query1, new object[] { id }) != null)
+            {
+                return false;
+            }
+            DataProvider.Instance.ExecuteNonQuery(query2, new object[] { id });
+            return true;
         }
     }
 }
