@@ -73,7 +73,8 @@ namespace ShoesProject
                     tmp.QLPQ1 = "Accept";
                 if (words[0] == "CN9")
                     tmp.BanHang1 = "Accept";
-               
+                if (words[0] == "CN10")
+                    tmp.QLQ1 = "Accept";
             }
             return tmp;
         }
@@ -173,7 +174,7 @@ namespace ShoesProject
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            if (quyen.TKKD1 == "Accept")
+            if (quyen.QLTL1 == "Accept")
             {
                 UC_Genres uc = new UC_Genres();
                 addUserControl(uc);
@@ -213,8 +214,12 @@ namespace ShoesProject
 
         private void guna2Button9_Click(object sender, EventArgs e)
         {
-            addUserControl(UC_QLQuyen.Instance);
-            UC_QLQuyen.Instance.loadTable();
+            if (quyen.QLQ1 == "Accept")
+            {
+                addUserControl(UC_QLQuyen.Instance);
+                UC_QLQuyen.Instance.loadTable();
+            }
+            else MessageBox.Show("Bạn không được phép truy cập vào đây");
         }
 
         private void guna2Button10_Click(object sender, EventArgs e)

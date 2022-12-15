@@ -123,5 +123,15 @@ namespace ShoesProject.UserControls
             loadTable();
             lbtrangthai.Text = "Xoá quyền thành công";
         }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

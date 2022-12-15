@@ -17,8 +17,9 @@ namespace ShoesProject.DTO
         string TKSP;
         string QLPQ;
         string BanHang;
+        string QLQ;
 
-        public DTO_PhanQuyen(string qLSP, string qLNV, string qLKH, string qLTL, string qLHD, string tKKD, string tKSP, string qLPQ, string banHang)
+        public DTO_PhanQuyen(string qLSP, string qLNV, string qLKH, string qLTL, string qLHD, string tKKD, string tKSP, string qLPQ, string banHang,string qlq)
         {
             QLSP = qLSP;
             QLNV = qLNV;
@@ -29,7 +30,7 @@ namespace ShoesProject.DTO
             TKSP = tKSP;
             QLPQ = qLPQ;
             BanHang = banHang;
-            
+            QLQ = qlq;
         }   
 
         public DTO_PhanQuyen() {
@@ -42,6 +43,7 @@ namespace ShoesProject.DTO
             TKSP = "";
             QLPQ = "";
             BanHang = "";
+            QLQ = "";
         }
 
         public string QLSP1 { get => QLSP; set => QLSP = value; }
@@ -53,5 +55,6 @@ namespace ShoesProject.DTO
         public string TKSP1 { get => TKSP; set => TKSP = value; }
         public string QLPQ1 { get => QLPQ; set => QLPQ = value; }
         public string BanHang1 { get => BanHang; set => BanHang = value; }
+        public string QLQ1 { get => QLQ; set => QLQ = value; }
     }
 }
