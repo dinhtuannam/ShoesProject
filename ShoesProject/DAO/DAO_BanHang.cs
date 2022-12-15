@@ -49,9 +49,16 @@ namespace ShoesProject.DAO
         {
             int result;
             string IDHD = GenerateID();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (!DAO_Bill.Instance.IsEnough(list[i].ID1, IDHD, list[i].Quantity1))
+                {
+                    return false;
+                }
+            }
             string date = DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss");
-            string query = "insert into HOADON(idHD,idNV,idKH,ngaydat,tongtien,trangthai) values( @idHD , @idNV , 'BOT' , @ngaydat , @tongtien , 'confirmed' )";
-            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { IDHD , IDEmp , date, total });
+            string query = "insert into HOADON(idHD,idNV,idKH,ngaydat,tongtien,trangthai) values( @idHD , @idNV , 'BOT' , @ngaydat , @tongtien , 'unconfirmed' )";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { IDHD, IDEmp, date, total });
             for (int i = 0; i < list.Count; i++)
             {
                 string query2 = "insert into CTHD(idHD,idSP,soluong,tongtien) values( @idHD , @idSP , @soluong , @tongtien ) ";
