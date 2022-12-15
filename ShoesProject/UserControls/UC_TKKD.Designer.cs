@@ -68,7 +68,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(22, 22);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(386, 150);
             this.panel1.TabIndex = 8;
@@ -103,10 +103,11 @@
             // 
             // txtMonthTo
             // 
+            this.txtMonthTo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMonthTo.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonthTo.FormattingEnabled = true;
             this.txtMonthTo.Location = new System.Drawing.Point(167, 42);
-            this.txtMonthTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMonthTo.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonthTo.Name = "txtMonthTo";
             this.txtMonthTo.Size = new System.Drawing.Size(68, 25);
             this.txtMonthTo.TabIndex = 12;
@@ -114,10 +115,11 @@
             // 
             // txtMonthFrom
             // 
+            this.txtMonthFrom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtMonthFrom.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMonthFrom.FormattingEnabled = true;
             this.txtMonthFrom.Location = new System.Drawing.Point(167, 9);
-            this.txtMonthFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMonthFrom.Margin = new System.Windows.Forms.Padding(2);
             this.txtMonthFrom.Name = "txtMonthFrom";
             this.txtMonthFrom.Size = new System.Drawing.Size(68, 25);
             this.txtMonthFrom.TabIndex = 11;
@@ -138,7 +140,7 @@
             // 
             this.txtYear2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear2.Location = new System.Drawing.Point(299, 42);
-            this.txtYear2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear2.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear2.Name = "txtYear2";
             this.txtYear2.Size = new System.Drawing.Size(68, 26);
             this.txtYear2.TabIndex = 9;
@@ -181,7 +183,7 @@
             // 
             this.txtYear1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtYear1.Location = new System.Drawing.Point(299, 9);
-            this.txtYear1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtYear1.Margin = new System.Windows.Forms.Padding(2);
             this.txtYear1.Name = "txtYear1";
             this.txtYear1.Size = new System.Drawing.Size(68, 26);
             this.txtYear1.TabIndex = 4;
@@ -216,7 +218,7 @@
             legend1.Name = "Legend1";
             this.chart.Legends.Add(legend1);
             this.chart.Location = new System.Drawing.Point(430, 22);
-            this.chart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chart.Margin = new System.Windows.Forms.Padding(2);
             this.chart.Name = "chart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -231,7 +233,7 @@
             // 
             this.ChartTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ChartTable.Location = new System.Drawing.Point(22, 190);
-            this.ChartTable.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChartTable.Margin = new System.Windows.Forms.Padding(2);
             this.ChartTable.MultiSelect = false;
             this.ChartTable.Name = "ChartTable";
             this.ChartTable.ReadOnly = true;
@@ -248,7 +250,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chart);
             this.Controls.Add(this.ChartTable);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UC_TKKD";
             this.Size = new System.Drawing.Size(902, 419);
             this.Load += new System.EventHandler(this.UC_TKKD_Load);

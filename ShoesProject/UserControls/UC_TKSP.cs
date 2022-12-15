@@ -37,7 +37,7 @@ namespace ShoesProject.UserControls
             if (action == getDataAction)
                 data = DAO_TKSP.Instance.getChart();
             if (action == FilterDataAction)
-                data = DAO_TKSP.Instance.filterDate(month1, month2, txtYear1.Text, txtYear2.Text);
+                data = DAO_TKSP.Instance.filterDate(month1, month2, int.Parse(txtYear1.Text.Trim()).ToString("0000"), int.Parse(txtYear2.Text.Trim()).ToString("0000"));
 
             ChartTable.DataSource = data;
             loadChart(data);
@@ -61,7 +61,7 @@ namespace ShoesProject.UserControls
             Array1.Add("");
             List<string> Array2 = new List<string>();
             Array2.Add("");
-            for (int i = 0; i <= 12; i++)
+            for (int i = 1; i <= 12; i++)
             {
                 Array1.Add(i.ToString());
                 Array2.Add(i.ToString());
@@ -82,6 +82,15 @@ namespace ShoesProject.UserControls
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (txtMonthFrom.Text.Trim() == "" || txtMonthTo.Text.Trim() == "")
+            {
+                return;
+            }
+            if (int.Parse(txtYear1.Text.Trim()) < 1900 || int.Parse(txtYear2.Text.Trim()) > 2078)
+            {
+                MessageBox.Show("Vui lòng nhập năm trong khoảng 1900 đến năm 2078");
+                return;
+            }
             loadTableChart(FilterDataAction);
         }
 

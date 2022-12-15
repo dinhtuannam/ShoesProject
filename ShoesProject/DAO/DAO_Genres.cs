@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -52,10 +53,17 @@ namespace ShoesProject.DAO
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { name, trangthai, id });
 
         }
-        public int removeQLTL(string id)
+        public bool removeQLTL(string id)
         {
-            string query = "delete from theloai where idtl= @id";
-            return DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            try {
+                string query = "delete from theloai where idtl= @id";
+                DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
         public DataTable GetQLTLById(string id)
         {

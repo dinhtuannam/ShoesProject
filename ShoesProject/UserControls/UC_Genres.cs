@@ -84,7 +84,14 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("ID không hợp lệ");
                 return;
             }
-            DAO_Genres.Instance.removeQLTL(txtid.Text);
+            if (!DAO_Genres.Instance.removeQLTL(txtid.Text))
+            {
+                MessageBox.Show("Vui lòng xoá những thứ ràng buộc với nó");
+            }
+            else
+            {
+                MessageBox.Show("Xoá thành công");
+            }
             refreshtable();
         }
 
