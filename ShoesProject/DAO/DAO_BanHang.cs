@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Markup;
 using System.Xml.Linq;
 
 
@@ -37,10 +39,32 @@ namespace ShoesProject.DAO
         {
             string query = "";
             if (action == "Name")
-                query = "Select * from sanpham where tenSP like '%" + data + "%' and trangthai = 'active'";
+                query = "Select idSP, tenSP, idTL, gia, soluong from sanpham where tenSP like '%" + data + "%' and trangthai = 'active'";
             else if (action == "ID")
-                query = "Select * from sanpham where idSP like '%" + data + "%' and trangthai = 'active'";
+                query = "Select idSP, tenSP, idTL, gia, soluong from sanpham where idSP like '%" + data + "%' and trangthai = 'active'";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public bool Buy(List<DTO_BanHang> list,string IDEmp, long total)
+        {
+            int result;
+            string IDHD = GenerateID();
+            string date = DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss");
+            string query = "insert into HOADON(idHD,idNV,idKH,ngaydat,tongtien,trangthai) values( @idHD , @idNV , 'BOT' , @ngaydat , @tongtien , 'confirmed' )";
+            result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { IDHD , IDEmp , date, total });
+            for (int i = 0; i < list.Count; i++)
+            {
+                string query2 = "insert into CTHD(idHD,idSP,soluong,tongtien) values( @idHD , @idSP , @soluong , @tongtien ) ";
+                result += DataProvider.Instance.ExecuteNonQuery(query2, new object[] { IDHD, list[i].ID1, list[i].Quantity1, list[i].Price1 });
+            }
+            return result > 1;
+        }
+
+        private string GenerateID()
+        {
+            Random rnd = new Random();
+            string str = "HD" + Convert.ToString(rnd.Next(1, 9999));
+            return str;
         }
     }
 }
