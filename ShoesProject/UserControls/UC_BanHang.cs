@@ -107,29 +107,34 @@ namespace ShoesProject.UserControls
 
         private void btnAddBH_Click(object sender, EventArgs e)
         {
-            bool result = false;
-            for(int i = 0; i < BuyList.Count; i++)
+            if (itemSelected.ID1 == "")
+                MessageBox.Show("Vui lòng chọn sản phẩm");
+            else
             {
-                if (BuyList[i].ID1 == itemSelected.ID1)
+                bool result = false;
+                for (int i = 0; i < BuyList.Count; i++)
                 {
-                    BuyList[i].Quantity1++;
-                    BuyList[i].Price1 = itemSelected.Price1 * BuyList[i].Quantity1;
-                    result = true;
+                    if (BuyList[i].ID1 == itemSelected.ID1)
+                    {
+                        BuyList[i].Quantity1++;
+                        BuyList[i].Price1 = itemSelected.Price1 * BuyList[i].Quantity1;
+                        result = true;
+                    }
                 }
-            }         
 
-            if (!result)
-            {
-                DTO_BanHang bh = new DTO_BanHang();
-                bh.ID1 = itemSelected.ID1;
-                bh.Name1 = itemSelected.Name1;
-                bh.Genres1 = itemSelected.Genres1;
-                bh.Quantity1 = itemSelected.Quantity1;
-                bh.Price1 = itemSelected.Price1 * bh.Quantity1;
-                BuyList.Add(bh);
+                if (!result)
+                {
+                    DTO_BanHang bh = new DTO_BanHang();
+                    bh.ID1 = itemSelected.ID1;
+                    bh.Name1 = itemSelected.Name1;
+                    bh.Genres1 = itemSelected.Genres1;
+                    bh.Quantity1 = itemSelected.Quantity1;
+                    bh.Price1 = itemSelected.Price1 * bh.Quantity1;
+                    BuyList.Add(bh);
+                }
+
+                loadTableStorage();
             }
-                
-            loadTableStorage();
         }
 
         private void btnEditBH_Click(object sender, EventArgs e)
