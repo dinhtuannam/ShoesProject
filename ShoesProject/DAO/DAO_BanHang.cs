@@ -45,7 +45,7 @@ namespace ShoesProject.DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool Buy(List<DTO_BanHang> list,string IDEmp, long total)
+        public bool Buy(List<DTO_BanHang> list, long total)
         {
             int result;
             string IDHD = GenerateID();
@@ -57,6 +57,7 @@ namespace ShoesProject.DAO
                 }
             }
             string date = DateTime.Now.ToString("MM-dd-yyyy HH:mm:ss");
+            object IDEmp = DBNull.Value;
             string query = "insert into HOADON(idHD,idNV,idKH,ngaydat,tongtien,trangthai) values( @idHD , @idNV , 'BOT' , @ngaydat , @tongtien , 'unconfirmed' )";
             result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { IDHD, IDEmp, date, total });
             for (int i = 0; i < list.Count; i++)

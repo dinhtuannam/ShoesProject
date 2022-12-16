@@ -226,7 +226,7 @@ namespace ShoesProject
         {
             if (quyen.BanHang1 == "Accept")
             {
-                UC_BanHang ucbh = new UC_BanHang(employee.Id);
+                UC_BanHang ucbh = new UC_BanHang();
                 addUserControl(ucbh);
             }
             else

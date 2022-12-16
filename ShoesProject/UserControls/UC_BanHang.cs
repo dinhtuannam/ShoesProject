@@ -22,12 +22,12 @@ namespace ShoesProject.UserControls
         List<DTO_BanHang> BuyList = new List<DTO_BanHang>();
         DTO_BanHang itemSelected = new DTO_BanHang();
         string itemDeleteSelected;
-        string IDEmp = "";
+       
         long total = 0;
-        public UC_BanHang(string id)
+        public UC_BanHang()
         {
             InitializeComponent();
-            IDEmp = id;
+            
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -154,14 +154,14 @@ namespace ShoesProject.UserControls
                 MessageBox.Show("Vui lòng chọn sản phẩm cần mua");
             else
             {
-                if (DAO_BanHang.Instance.Buy(BuyList, IDEmp, total))
+                if (DAO_BanHang.Instance.Buy(BuyList, total))
                 {
                     MessageBox.Show("Mua hàng thành công");
                     BuyList.Clear();
                     loadTableStorage();
                 }                   
                 else
-                    MessageBox.Show("Vui lòng thử lại");
+                    MessageBox.Show("Không đủ số lượng");
 
             }
         }
