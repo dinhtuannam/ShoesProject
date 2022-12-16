@@ -80,14 +80,26 @@ namespace ShoesProject.UserControls
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            if(txtMonthFrom.Text.Trim() == ""||txtMonthTo.Text.Trim() =="")
+            if(txtMonthFrom.Text.Trim() == ""||txtMonthTo.Text.Trim() ==""||txtYear1.Text.Trim()==""||txtYear2.Text.Trim()=="")
             {
+                MessageBox.Show("Vui lòng đầy đủ thông tin");
                 return;
             }
-            
-            if(int.Parse(txtYear1.Text.Trim()) <1900 || int.Parse(txtYear2.Text.Trim()) > 2078)
+            try
             {
-                MessageBox.Show("Vui lòng nhập năm trong khoảng 1900 đến năm 2078");
+                if (int.Parse(txtYear1.Text.Trim()) < 1900 || int.Parse(txtYear2.Text.Trim()) > 2078)
+                {
+                    MessageBox.Show("Vui lòng nhập năm trong khoảng 1900 đến năm 2078");
+                    return;
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Vui lòng nhập số năm hợp lệ");
+                return;
+            }
+            if (int.Parse(txtYear1.Text) > int.Parse(txtYear2.Text))
+            {
+                MessageBox.Show("Vui lòng nhập năm thứ 1 bé hơn năm thứ 2");
                 return;
             }
             loadTableChart(FilterDataAction);

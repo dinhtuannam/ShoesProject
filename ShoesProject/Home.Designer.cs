@@ -67,7 +67,7 @@
             this.panel3.Controls.Add(this.guna2Button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(125, 492);
             this.panel3.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.pictureBox1.Image = global::ShoesProject.Properties.Resources.Shoesism2;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(125, 95);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,7 +99,7 @@
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button5.Location = new System.Drawing.Point(2, 435);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(123, 45);
             this.guna2Button5.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.guna2Button10.ForeColor = System.Drawing.Color.White;
             this.guna2Button10.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button10.Location = new System.Drawing.Point(0, 360);
-            this.guna2Button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button10.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.Size = new System.Drawing.Size(123, 33);
             this.guna2Button10.TabIndex = 9;
@@ -145,7 +145,7 @@
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
             this.guna2Button9.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button9.Location = new System.Drawing.Point(0, 323);
-            this.guna2Button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button9.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.Size = new System.Drawing.Size(123, 33);
             this.guna2Button9.TabIndex = 8;
@@ -168,7 +168,7 @@
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button8.Location = new System.Drawing.Point(0, 285);
-            this.guna2Button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button8.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.Size = new System.Drawing.Size(125, 33);
             this.guna2Button8.TabIndex = 7;
@@ -191,7 +191,7 @@
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button7.Location = new System.Drawing.Point(0, 173);
-            this.guna2Button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button7.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(121, 33);
             this.guna2Button7.TabIndex = 6;
@@ -214,7 +214,7 @@
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button6.Location = new System.Drawing.Point(2, 397);
-            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button6.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(121, 33);
             this.guna2Button6.TabIndex = 5;
@@ -237,7 +237,7 @@
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button4.Location = new System.Drawing.Point(2, 248);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(121, 33);
             this.guna2Button4.TabIndex = 3;
@@ -260,7 +260,7 @@
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button3.Location = new System.Drawing.Point(2, 211);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(121, 33);
             this.guna2Button3.TabIndex = 2;
@@ -283,7 +283,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button2.Location = new System.Drawing.Point(2, 136);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(121, 33);
             this.guna2Button2.TabIndex = 1;
@@ -306,7 +306,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2Button1.Location = new System.Drawing.Point(2, 99);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(121, 33);
             this.guna2Button1.TabIndex = 0;
@@ -316,7 +316,7 @@
             // panelContainer
             // 
             this.panelContainer.Location = new System.Drawing.Point(124, 67);
-            this.panelContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(902, 425);
             this.panelContainer.TabIndex = 3;
@@ -327,7 +327,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Location = new System.Drawing.Point(126, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 67);
             this.panel1.TabIndex = 4;
@@ -337,7 +337,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(3, 35);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(312, 1);
             this.panel4.TabIndex = 2;
@@ -346,7 +346,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(565, 35);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(335, 1);
             this.panel2.TabIndex = 1;
@@ -355,7 +355,7 @@
             // 
             this.pictureBox2.Image = global::ShoesProject.Properties.Resources.font1;
             this.pictureBox2.Location = new System.Drawing.Point(317, 4);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(245, 61);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +373,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
